@@ -1,0 +1,10 @@
+aboutSuccess:
+  metas:
+    title: About Us
+
+tutorialSuccess:
+  metas:
+    title: Tutorials
+  layout:  frames
+  javascripts:
+    - swfobject/swfobject.js

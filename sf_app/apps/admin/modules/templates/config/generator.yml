@@ -1,0 +1,49 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           WebsiteTemplate
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             true
+    singular:              template
+    plural:                templates
+    route_prefix:          website_template
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        num_used:     { label: Usage, is_sortable: true }
+        thumb:        { label: "" }
+        category_id:  { label: Category }
+        customer_id:  { label: Customer }
+        status_string: { label: Status }
+        type_string:   { label: Type }
+        template_category: { label: Category }
+      list:
+        title:  Website Templates
+        display:  [_thumb, reference, title, type, template_category, description, usage, type_string, status_string]
+        batch_actions: []
+        object_actions:
+          _edit: ~
+          up:   { action: moveUp }
+          down: { action: moveDown }
+          #show: { action: show }
+        max_per_page: 50
+        query_methods: [leftJoinWithTemplateCategory]
+        sort:    [rank, asc]
+      filter:
+        #class: false
+        display: [category_id, type, status]
+      form:
+        fields:
+          reference: { help: Do not rename lightly! Used to locate templates on the server }
+        display: [title, category_id, reference, type, customer_id, description, status]
+      edit:
+        title: Edit Template "%%title%%"
+        actions:
+          #_delete: { credentials: superadmin, confirm: "This will physically remove this template and cannot be undone! Are you sure?" }
+          _list:   { label: Back }
+          _save: ~
+      new:
+        title: Add New Template

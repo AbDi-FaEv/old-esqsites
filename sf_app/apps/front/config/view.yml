@@ -1,0 +1,23 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        EsqSites - Websites For Lawyers
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    robots:       index, follow
+
+  stylesheets:
+    - blueprint/screen
+    - blueprint/ie
+    - blueprint/plugins/buttons/screen
+    - front: { position: last }
+    - forms
+
+  javascripts:
+    - jquery/jquery.cycle.js
+
+  has_layout:     true
+  layout:         layout

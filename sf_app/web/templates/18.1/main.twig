@@ -1,0 +1,126 @@
+<!-- 18.1 twig -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="templates/18.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="fdo">
+<table width="760" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="bg">
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="750" height="171" background="templates/18.1/images/img_top.jpg"><table width="710" border="0" align="center" cellpadding="0" cellspacing="0" class="name">
+        <tr>
+          <td>&nbsp;</td>
+          <td><div align="right">{{website.firmName}}</div></td>
+        </tr>
+      </table></td>
+    <td width="5">&nbsp;</td>
+  </tr>
+  <tr height="5">
+    <td width="5" height="5"></td>
+    <td width="750"></td>
+    <td width="5" height="5"></td>
+  </tr>
+  <tr>
+    <td width="5">&nbsp;</td>
+    <td width="750" height="35" background="templates/18.1/images/bg_menu.jpg" class="texto_blank"><div align="center">
+        <table width="720" border="0" cellpadding="0" cellspacing="0" class="texto_blank">
+          <tr>
+            <td>
+              <div align="left">
+                <strong>
+                 {% for loop_page in website.mainMenu %}
+                 <a class="menu" href="{{loop_page.url}}">{{loop_page.linkName}}</a>
+                 {% if not loop.last %}&nbsp;|&nbsp;{% endif %}
+                 {% endfor %}
+                </strong>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div></td>
+    <td width="5">&nbsp;</td>
+  </tr>
+  <tr height="5">
+    <td height="5"></td>
+    <td></td>
+    <td height="5"></td>
+  </tr>
+  <tr>
+    <td width="5" height="100%">&nbsp;</td>
+    <td width="750" height="100%" valign="top"><table width="700" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="180" valign="top"><table width="180" border="0" cellpadding="0" cellspacing="0" class="texto">
+              <tr>
+                <td height="278" class="imgcolum">&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>{{website.address}}<br />
+                  {{website.city}}, {{website.state}} {{website.zip}}<br />
+                  <STRONG>Phone</STRONG>:{{website.phone|format_phone}}<br />
+                  <STRONG>Fax</STRONG>:{{website.fax|format_phone}}<br />
+                  <a class="linkmail" href="mailto:{{website.email}}">{{website.email}}</a>
+                  <div id=badge_container" style="margin-top:4px;">
+                    {% if website.socialMedia.avvo  %}
+                      <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                    {% endif %}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+          <td width="30">&nbsp;</td>
+          <td width="490" valign="top"><table width="490" border="0" cellpadding="0" cellspacing="0" class="texto">
+              <tr>
+                <td height="50" class="title">{{page.title}}</td>
+              </tr>
+              <tr>
+                <td height="1"><img src="templates/18.1/images/point.jpg" width="490" height="1"></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>{{page.body}}</td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+    <td width="5" height="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="5" background="templates/18.1/images/bg_bottom.jpg">&nbsp;</td>
+    <td width="750" height="57" background="templates/18.1/images/bg_bottom.jpg"><table width="720" border="0" align="center" cellpadding="0" cellspacing="0" class="texto">
+        <tr>
+          <td width="218"><strong>Legal Web Design by <span class="texto_red">ESQ Sites</span></strong></td>
+          <td width="502">
+            <div align="right">
+            {% for loop_page in website.footerMenu %}
+              <a class="texto" href="{{loop_page.url}}">{{loop_page.linkName}}</a>
+            {% endfor %}
+            </div>
+          </td>
+        </tr>
+      </table></td>
+    <td width="5" background="templates/18.1/images/bg_bottom.jpg">&nbsp;</td>
+  </tr>
+</table>
+<p class="body">&nbsp;</p>
+</body>
+</html>

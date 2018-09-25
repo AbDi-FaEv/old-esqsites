@@ -1,0 +1,8 @@
+.comment_status				{font-weight:bold;}
+.comment_status.save		{color:green;}
+.comment_status.unchecked	{color:blue;}
+.comment_status.spam		{color:red;}
+.comment_status.autospam	{color:red;}
+
+#sf_fieldset_post	{width:64%;float:left;}
+#sf_fieldset_publishing	{width:34%;float:right;}

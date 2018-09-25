@@ -1,0 +1,42 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Coupon
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              coupon
+    plural:                coupons
+    route_prefix:          coupon
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        setup:                { label: Setup Discount }
+        status_string:        { label: Status }
+        website_attribute:    { label: Plan }
+        website_attribute_id: { label: Plan }
+        coupon_to_hosting_plan_link_list: { label: Applicable Hosting Plans }
+        bar_association_id:   { help: use this to automatically associate customers with this coupon with a specific bar association }
+        num_used:             { label: Usage }
+        max_usage:            { label: Max Usage, help: use this to create "limited to first 5 signups" type of promotions }
+        activation_date:      { help: "if set, coupon will only become active after this date" }
+        expiration_date:      { help: "if set, coupon will become inactive after this date" }
+        description:          { label: Custom Description, help: (overrides auto) use this if you want to show the customer a different description from the auto-generated version }
+      list:
+        display: [=code, status_string, auto_description, _num_used, updated_at]
+        object_actions:
+          _edit: ~
+          show:  { action: show }
+        sort:    [code, asc]
+        max_per_page: false
+      filter:
+        #class:   false
+        display: [code, status]
+      form:
+        display: [code, _auto_description, description, setup, coupon_to_hosting_plan_link_list, bar_association_id, max_usage, activation_date, expiration_date, status]
+      edit:
+        title: Edit Coupon "%%code%%"
+      new:
+        title: Create New Coupon

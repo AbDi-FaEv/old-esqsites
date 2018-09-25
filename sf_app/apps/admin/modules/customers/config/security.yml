@@ -1,0 +1,10 @@
+all:
+  credentials: customer
+delete:
+  credentials: customer_delete
+edit:
+  credentials: customer_edit
+update:
+  credentials: customer_edit
+new:
+  credentials: customer_create

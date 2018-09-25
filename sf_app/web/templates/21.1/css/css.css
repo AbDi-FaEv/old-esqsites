@@ -1,0 +1,97 @@
+body 
+{
+	margin-left: 0px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#e2dbc9;
+}
+.txt_01 {
+	color: #335e7d;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+}
+.txt_02 {
+	color: #335e7d;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bold;
+}
+.txt_03 {
+	color: #ffffff;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+	font-weight: bold;
+}
+.txt_04 {
+	color: #91c5df;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 18px;
+}
+.txt_05 {
+	color: #e2dbc9;
+	font-family: Times New Roman, Arial, verdana, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	line-height: 40px;
+}
+.txt_06 {
+	color: #382513;
+	font-family: Times New Roman, Arial, verdana, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	line-height: 30px;
+}
+.txt_07 {
+	color: #ffffff;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 23px;
+	font-style: normal;
+}
+.txt_08 {
+	color: #335e7d;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: bold;
+}
+.link01 {
+	text-decoration: none;
+	color: #91c5df;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+.link01:hover {
+	text-decoration: underline;
+	color: #91c5df;
+	font-family: Arial, verdana, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+.link02 {
+	text-decoration: none;
+	color: #335e7d;
+	font-family: Times New Roman, Arial, verdana, sans-serif;
+/*	font-size: 18px; */
+	font-size: 17px;
+	font-style: normal;
+	background-color:#e2dbc9;
+}
+.link02:hover {
+	text-decoration: none;
+	color: #ffffff;
+	font-family: Times New Roman, Arial, verdana, sans-serif;
+/*	font-size: 18px; */
+	font-size: 17px;
+	font-style: normal;
+	background-color:#335e7d;
+}

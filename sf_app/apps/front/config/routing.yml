@@ -1,0 +1,145 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: index, action: index }
+
+tutorials:
+  url:   /tutorials
+  param: { module: index, action: tutorials }
+
+bar_associations:
+  url:   /bar-associations
+  param: { module: bars, action: index }
+
+bar_association:
+  url:   /bar-associations/:slug
+  class:  sfPropel15Route
+  options: { model: BarAssociation, type: object }
+  param: { module: bars, action: show }
+
+tutorial:
+  url:   /tutorials/:id
+  param: { module: index, action: tutorial }
+
+cg_transaction_hook:
+  url:   /api/cg-transaction
+  param: { module: api, action: CgTransaction }
+
+cg_cancellation_hook:
+  url:   /api/cg-cancellation
+  param: { module: api, action: CgCancellation }
+
+error:
+  url:   /error/:secret
+  param: { module: index, action: error }
+
+about:
+  url:   /about
+  param: { module: index, action: about }
+  
+demo_request:
+  url:   /request-a-demo
+  param: { module: index, action: demoRequest }
+
+demo_request_thanks:
+  url:   /request-a-demo/thank-you
+  param: { module: index, action: demoRequestThanks }
+
+check_domain:
+  url:   /domain-check
+  param: { module: index, action: checkDomain }
+
+resources:
+  url:  /resources
+  param: { module: resources, action: index }
+
+coming_soon:
+  url:  /coming-soon
+  param: { module: index, action: comingSoon }
+
+resource_category:
+  url:  /resources/:id
+  class: sfPropelRoute
+  options: { model: ResourceCategory, type: object }
+  param: { module: resources, action: category }
+
+checkout_return:
+  url:   /checkout/return
+  param: { module: checkout, action: return }
+
+order_summary:
+  url:   /checkout/order-summary
+  param: { module: checkout, action: orderSummary }
+
+receipt:
+  url:   /checkout/receipt
+  param: { module: checkout, action: receipt }
+
+gallery:
+  url:  /websites/designs/:id
+  param: { module: esqTemplateSelector, action: selectTemplate, id: ~ }
+
+plans:
+  url:  /websites/hosting-plans
+  param: { module: checkout, action: plans }
+
+plan_select:
+  url:  /websites/hosting-plans/:id
+  param: { module: checkout, action: plans }
+
+preview_info:
+  url:  /websites/customize
+  param: { module: checkout, action: previewInfo }
+
+preview:
+  url:  /websites/preview
+  param: { module: checkout, action: preview }
+
+preview_top:
+  url:  /websites/preview/top
+  param: { module: checkout, action: previewTop }
+
+services:
+  url:  /services
+  param: { module: index, action: services }
+
+checkout:
+  url:  /checkout
+  param: { module: checkout, action: checkout }
+
+switch_preview_template:
+  class: sfPropelRoute
+  options: { model: WebsiteTemplate, type: object }
+  url:  /websites/preview/:id
+  param: { module: checkout, action: switchPreviewTemplate }
+
+terms:
+  url:  /terms-conditions
+  param: { module: index, action: terms }
+
+test_email:
+  url:  /checkout/test-email/:secret/:website/:send
+  param: { module: checkout, action: testEmail, send: false }
+
+test:
+  url:  /test
+  param: { module: index, action: test }
+
+legal:
+  url:  /legal-notices
+  param: { module: index, action: legal }
+
+privacy:
+  url:  /privacy
+  param: { module: index, action: privacy }
+
+break:
+  url:  /break
+  param: { module: index, action: break }
+
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+#
+#default:
+#  url:   /:module/:action/*

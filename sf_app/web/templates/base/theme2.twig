@@ -1,0 +1,13 @@
+{% extends 'theme1' %}
+
+{# overriding header_guts to add main menu #}
+{% block header_guts %}
+  {{ parent() }}
+  {{ block('mainmenu') }}
+{% endblock header_guts %}
+
+{# overriding sidebar to remove main menu #}
+{% block sidebar %}
+  {{ block('contact') }}
+  {{ block('social') }}
+{% endblock sidebar %}

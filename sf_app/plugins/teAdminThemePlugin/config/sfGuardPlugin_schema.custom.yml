@@ -1,0 +1,10 @@
+propel:
+  sf_guard_user:
+    _attributes:    { phpName: sfGuardUser, allowPkInsert: true }
+    email:          { type: varchar(255), required: true }
+    first_name:     { type: varchar(255) }
+    last_name:      { type: varchar(255) }
+
+  sf_guard_permission:
+    _attributes:    { phpName: sfGuardPermission }
+    title:           { type: varchar(255), size: 255, required: true, index: unique }

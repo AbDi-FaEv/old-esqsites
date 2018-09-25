@@ -1,0 +1,7 @@
+#te_faqs .faq               {padding:.5em 0;border-bottom:1px solid #eee}
+#te_faqs .faq .question a	{padding-left:20px;display:block;font-size:1.1em}
+#te_faqs .faq .question a:hover,
+#te_faqs .faq .question a:active	{text-decoration:none;color:#000;}
+#te_faqs .faq .question a	{background:url(../images/bullet_toggle_plus.png) no-repeat 0 .25em;}
+#te_faqs .faq .closed a     {background:url(../images/bullet_toggle_minus.png) no-repeat 0 .25em;}
+#te_faqs .answer            {margin-left:20px}

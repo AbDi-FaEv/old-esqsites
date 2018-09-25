@@ -1,0 +1,45 @@
+<div class="logincontainer">&nbsp;
+<div id="ctr" align="center">
+  <div class="login">
+    <div class="login-form">
+      <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post">
+        <h1><?php echo sfConfig::get("app_sf_admin_dash_login_title", "Administration Login"); ?></h1>
+        <div class="form-block">&nbsp;
+          <?php echo $form->renderGlobalErrors() ?>
+          <?php if(isset($form['_csrf_token'])): ?>
+            <?php echo $form['_csrf_token']->render(); ?> 
+          <?php endif; ?>
+          <div class="inputlabel"><?php echo $form['username']->renderLabel() ?>:</div>
+          <div>
+            <?php echo $form['username']->renderError() ?>
+            <?php echo $form['username']->render(array('class' => 'inputbox')); ?>
+          </div><br style="clear:both">
+          <div class="inputlabel"><?php echo $form['password']->renderLabel() ?>:</div>
+          <div>
+            <?php echo $form['password']->renderError() ?>
+            <?php echo $form['password']->render(array('class' => 'inputbox')); ?>
+          </div><br style="clear:both">
+          <div class="inputlabel"><?php echo $form['remember']->renderLabel('Remember Me?') ?></div>
+			<div>
+            <?php echo $form['remember']->render(array('class' => 'inputcheck')); ?>
+			</div>
+            
+		  <br style="clear:both">
+          <input type="submit" name="submit" class="button clr" value="Login" />
+        </div>
+      </form>
+    </div>
+    <div class="login-text">
+      <div class="ctr adminlogo">&nbsp;</div>
+      <?php if($login_text = sfConfig::get("app_sf_admin_dash_login_text")): ?>
+        <?php echo $login_text; ?>
+      <?php else: ?>
+      <p>Welcome to <?php echo sfAdminDash::getProperty('site') ?></p>
+      <p>Use a valid username and password to gain access to the administration console.</p>
+      <?php endif; ?>
+    </div>
+
+    <div class="clr"></div>
+  </div>
+</div>&nbsp;
+</div>

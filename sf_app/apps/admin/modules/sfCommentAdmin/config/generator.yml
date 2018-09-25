@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           sfComment
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              sfComment
+    plural:                sfComments
+    route_prefix:          sf_comment
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:            Notes
+        display:          [text, author, created_at]
+        object_actions:
+          _edit: ~
+          _delete: ~
+        sort:             [created_at, desc]
+      filter:
+        display:          [author_id, created_at]
+      form:    ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,44 @@
+sfTemplatingPlugin
+==================
+
+The `sfTemplatingPlugin` is a symfony plugin that provides support for
+using arbitrary templates from anywhere within a symfony project.
+
+The plugin integrates the [Symfony Templating component](http://components.symfony-project.org/templating/)
+neatly into the symfony framework itself.
+
+With the plugin, you can easily create templates for uses other than actions
+and components. It is also useful when you need templating features but don't
+have access to the full symfony environment (in a symfony task for example),
+or when you need to share a template amongst multiple applications.
+
+The plugin includes classes that:
+
+* Automatically escape HTML (similar to a symfony action template).
+* Handle escaping in the same way as symfony (sfOutputEscaper).
+* Handle the loading of core (Helper, Url, Asset, Tag, Escaping) and standard
+  (as defined in config) symfony helpers for you.
+* Allows you to load other symfony helpers using use_helper() just like a normal symfony template.
+
+Installation
+------------
+
+* Install the plugin (via a package):
+
+        $ symfony plugin:install -s alpha sfTemplatingPlugin
+
+* Install the plugin (via a Subversion checkout):
+
+        $ svn co http://svn.symfony-project.com/plugins/sfTemplatingPlugin/branches/0.1 plugins/sfTemplatingPlugin
+        
+* Enable the plugin in `config/ProjectConfiguration.class.php`:
+
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfTemplatingPlugin',
+            ));
+          }
+        }

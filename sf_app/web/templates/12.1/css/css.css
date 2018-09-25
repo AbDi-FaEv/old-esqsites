@@ -1,0 +1,101 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #003366;
+	line-height: 14pt;
+}
+
+.text_blank {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.text_blank01 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.t01 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; color: #870000}
+
+.t02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #0066CC;
+	font-weight: bold;
+}
+
+.t03 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14pt; color: #FFFFFF}
+
+A {TEXT-DECORATION: none; color: #FFFFFF}
+A:hover {TEXT-DECORATION: underline; color: #870000}
+
+A.menu {TEXT-DECORATION: none; color: #75B389}
+A.menu:hover {TEXT-DECORATION: none; color: #FFFFFF}
+
+A.link02 {TEXT-DECORATION: none; color: #5C6110}
+A.link02:hover {TEXT-DECORATION: none; color: #000000}
+
+.fdo01 {background-color: #B9C4C6}
+.fdo02 {background-color: #D3DBDC}
+.fdo03 {background-color: #E2E6E7}
+.fdo04 {background-color: #F2F4F4}
+.fdo05 {background-color: #CACFD2}
+.fdo06 {background-color: #003366}
+
+#body a {
+  color: #870000;
+}
+
+body 
+{
+background-image:
+url(../images/fdo.jpg)
+}
+
+.background_top 
+{
+background-image:
+url(../images/top.jpg)
+}
+
+.background_bottom
+{
+background-image:
+url(../images/fdo_bottom.jpg)
+}
+
+.background_menu 
+{
+background-image:
+url(../images/fdo_menu.jpg)
+}
+
+.background_central 
+{
+background-image:
+url(../images/central.jpg)
+}
+
+.background_t01 
+{
+background-image:
+url(../images/t01.jpg)
+}
+
+.background_text 
+{
+background-image:
+url(../images/fdo_text.jpg)
+}
+
+.image01 {
+  background-image: url(../images/img01.jpg);
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 140px;
+  padding: 0;
+}

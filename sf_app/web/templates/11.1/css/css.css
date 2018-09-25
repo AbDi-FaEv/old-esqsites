@@ -1,0 +1,50 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #82100A;
+	line-height: 14pt;
+}
+
+.text_big {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; color: #F1E1C8}
+
+.text_fr {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #BA170F;
+	color: #BA170F;
+	font-weight: bold;
+}
+
+.text_fr02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #EBCEA3;
+	font-weight: bold;
+}
+
+.menu_text {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.link_text {
+	color: #FFFFFF;
+}
+
+.news_link_text {
+	color: #BA170F;
+}
+
+.news_link_text:hover {
+	color:#BA170F;
+}
+
+A {TEXT-DECORATION: none; color: #0000FF; }
+A:hover {TEXT-DECORATION: underline; color: #FFFFFF}
+
+/*
+A.menu {TEXT-DECORATION: none; color: #EBCEA3}
+A.menu:hover {TEXT-DECORATION: none; color: #FFFFFF}
+
+A.news {TEXT-DECORATION: none; color: #82100A}
+A.news:hover {TEXT-DECORATION: underline; color: #FFFFFF} */

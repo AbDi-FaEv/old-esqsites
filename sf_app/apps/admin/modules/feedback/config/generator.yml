@@ -1,0 +1,30 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           MemberFeedback
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          member_feedback
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        customer_id:  { label: Customer }
+      list:
+        title:    Customer Feedback
+        layout:   stacked
+        params:   <strong>%%subject%%</strong><br />%%_message%%<br /><em>submitted by %%customer%% (%%reply_email%%) on %%created_at%%</em> 
+        display:  [customer, reply_email, subject, message, created_at]
+        sort:     [created_at, desc]
+        actions:  []
+        object_actions:
+          _delete: ~
+      filter:
+        display:  [customer_id, reply_email]
+      form:    ~
+      edit:    ~
+      new:     ~

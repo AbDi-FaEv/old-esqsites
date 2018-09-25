@@ -1,0 +1,192 @@
+/*
+CSS for template 4.1
+*/
+
+.esq_link_text {
+	FONT-SIZE: 10px;
+	COLOR: black;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	*/
+}
+
+td.menu_bar {
+	background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px
+}
+
+.menutext {
+	FONT-SIZE: 10px;
+	COLOR: black;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	*/
+}
+
+.menutext:hover {
+	
+	/* font-family : Arial, san-serif;
+	font-size : 13px;
+	color : gold;
+	text-decoration : none;
+	font-weight: bold;
+	background-color: #999999;
+	border-bottom: 0px solid #FFFFFF;
+	display: block;
+	background-image:  url('images/menu_bg_rollover.jpg.jpg');
+	background-repeat: no-repeat; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+
+
+	FONT-SIZE: 10px;
+	COLOR: gold;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('images/menu_bg_rollover.jpg');
+	background-repeat: repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+}
+
+.lawOfficesOf {
+	FONT-SIZE: 15px;
+	COLOR: black;
+	FONT-FAMILY:  Verdana, Arial, Helvetica, sans-serif; /* Times New Roman, Times, serif; */
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.slogan {
+	FONT-SIZE: 25px;
+	COLOR: black;
+	FONT-FAMILY:  Verdana, Arial, Helvetica, sans-serif; /* Times New Roman, Times, serif; */
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.lefttext {
+	FONT-SIZE: 9px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 12px;
+}
+.bottomtext {
+	FONT-SIZE: 9px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 12px;
+}
+.formtextbody {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+.innertext2 {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 13px;
+
+
+}
+.innertext2a {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 13px;
+
+
+}
+
+.t01 {
+	FONT-SIZE: 9px;
+	COLOR: #454491;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+
+
+
+}
+
+.t01:hover {
+	FONT-SIZE: 9px;
+	COLOR: #8A8A8A;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.leftlink {
+	FONT-SIZE: 9px;
+	COLOR: #ffffff;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.leftlink:hover {
+	FONT-SIZE: 9px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.bottomlink {
+	FONT-SIZE: 9px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.bottomlink:hover {
+	FONT-SIZE: 9px;
+	COLOR: #568BCD;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.bodytext {
+	FONT-SIZE: 10px;
+	COLOR: #454491;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.bodytext:hover {
+	FONT-SIZE: 10px;
+	COLOR: #4073B9;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.inputborder
+{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	FONT-FAMILY: verdana;
+	height: 15px;
+	background-color: #E8EFF9;
+	border: 1px solid #000000;
+
+}

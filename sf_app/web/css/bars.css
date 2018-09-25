@@ -1,0 +1,66 @@
+#sf_admin_container a {color:#9F3131;}
+#sf_admin_container a:hover {color:#9F3131;}
+
+#sf_admin_container {border:none;margin:0px;}
+.container  {border:1px solid #aeaeae;background-color:white;margin-top:20px;-moz-border-radius: 10px; -webkit-border-radius: 10px;}
+#content    {margin-top:15px;}
+
+#sf_admin_container h2  {background:none;font-size:1.5em;text-transform:none;margin-bottom:10px;padding-left:0px;}
+
+table.revenue thead th  {border-bottom:3px double white;}
+table.revenue td {border-bottom:1px solid #eaeaea;color:#5b5b5b;}
+table.revenue tr.totals td  {font-weight:bold;border:none;color:#000;}
+
+h2 .note {font-size:0.6em;letter-spacing:-0.05em;}
+
+#downloads div.section  {width:30%;float:left;margin-right:10px;padding-right:10px;border-right:3px double #eaeaea;}
+#downloads div.section.last  {float:left;margin-right:0px;padding-right:0px;border-right:none;}
+
+#downloads  table {width:100%;}
+#downloads  table td {vertical-align: top;height:120px;}
+#downloads  table .description  {color:#7F7F7F;font-size:0.9em;margin:0px;padding-top:5px;}
+#downloads  table .fileinfo {text-align:right;font-size:0.8em;color:#aeaeae;}
+#downloads  img {border:1px solid #eaeaea;padding:5px;border-right-color:#aeaeae;border-bottom-color:#aeaeae;}
+#downloads  img.left  {float:left;margin-right:10px;}
+
+#downloads h2       {background:url('../images/icon_download.png') no-repeat;padding-left:40px;}
+#downloads h3       {text-transform:none;font-size:1.1em;text-align:center;line-height:1.8em;}
+
+#revenue_report h2  {background:url('../images/dollar.png') no-repeat;padding-left:40px;}
+
+#downloads ul {padding:0px;margin:0px;}
+#downloads li {list-style-type:none;border-bottom:1px solid #eaeaea;padding-bottom:5px;}
+#downloads li a {color:#9e3535;margin-bottom:10px;display:block;}
+#downloads li .specs {color:#aeaeae;font-size:0.9em;}
+
+#sf_admin_theme_header {background:none !important;margin-left:0px;padding-left:0px;}
+#sf_admin_container thead th {background-image:url(/gswsAdminThemePlugin/images/glossbar.jpg);font-weight:normal;text-transform: uppercase;font-size:0.9em;}
+
+#livehelp {float:right;}
+#livehelp img   {height:40px;width:96px;}
+#livehelp span {display:block;font-size:0.85em;text-align:right;color:#aeaeae;margin-top:4px;}
+
+#jump_page_info input {width:250px !important;display:inline;border:1px solid #eaeaea;color:#aeaeae;}
+
+#dashboard_buttons {float:left;width:510px;margin-right:20px;}
+#dashboard_info {border-top:1px solid #aeaeae;padding-top:20px;float:left;width:380px;}
+
+#revenue_levels {float:right;width:280px;}
+#revenue_levels table {border:2px solid #aeaeae;width:100%;margin:0px;}
+#revenue_levels td, #revenue_levels th  {text-align:center;border:1px solid #eaeaea;padding:4px;}
+#revenue_levels .note {color:#aeaeae;font-style: italic;margin-top:5px;}
+#revenue_levels .note em {text-decoration:underline;}
+
+#customers_needed {color:red;font-size:0.9em;}
+#customers_needed em {color:red;text-decoration: underline;font-style:normal;font-weight: bold;font-size:1.3em;}
+
+#signup_chart {margin-bottom:20px;border:1px solid #aeaeae;padding:10px;}
+
+table.framed  {border:1px solid #aeaeae;}
+
+.caption  {font-size:0.9em;color:#aeaeae;}
+img#bar_logo {margin-top:10px;}
+
+#date_filter  {float:right;border:1px solid #aeaeae;background-color:#eaeaea;padding:5px;-moz-border-radius: 5px; -webkit-border-radius: 5px;margin-bottom:2px;}
+#date_filter label  {margin:0px;display:inline;width:auto;float:none;}
+#date_filter form {display:inline;}

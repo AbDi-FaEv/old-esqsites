@@ -1,0 +1,23 @@
+{% extends 'fullpage' %}
+
+{% block header %}
+  {{ parent() }}
+  {{ block('date') }}
+{% endblock %}
+
+{% block body %}
+  <div id="sidebar">
+    {% block sidebar %}
+      {{ block('mainmenu') }}
+      {{ block('contact') }}
+      {{ block('social') }}
+    {% endblock sidebar %}
+  </div>
+  <div id="main">
+    {% block main %}
+      {{ block('banner') }}
+      {{ block('pagecontent') }}
+    {% endblock main %}
+  </div>
+  <div class="clear"></div>
+{% endblock body %}

@@ -1,0 +1,5 @@
+all:
+  credentials: te_calendar_event_crud
+
+index:
+  credentials: [[te_calendar_event_list, te_calendar_event_crud]]

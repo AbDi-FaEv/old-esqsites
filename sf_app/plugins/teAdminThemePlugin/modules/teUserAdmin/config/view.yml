@@ -1,0 +1,6 @@
+all:
+  metas:
+    title:        User Administration &raquo; Users
+  javascripts:
+    - /teAdminThemePlugin/js/jquery.showpassword.js
+    - /teAdminThemePlugin/js/jquery.pwdstr.js

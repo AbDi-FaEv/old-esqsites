@@ -1,0 +1,55 @@
+# default rules
+login:
+  url:  /login
+  params: { module: index, action: login }
+
+logout:
+  url:  /logout
+  params: { module: index, action: logout }
+
+filter_chart:
+  url:  /filter-chart
+  params: { module: index, action: filterChart }
+
+forgot_password:
+  url:  /forgot-password
+  params: { module: index, action: forgotPassword }
+
+account:
+  url:  /account
+  params: { module: index, action: updateAccount }
+
+downloads:
+  url:  /downloads
+  params: { module: index, action: downloads }
+
+members:
+  url:  /members
+  params: { module: index, action: members }
+
+revenue:
+  url:  /revenue
+  params: { module: index, action: revenue }
+
+signups:
+  url:   /signups
+  params: { module: index, action: signups }
+
+signup_data:
+  url:  /signups.json
+  params: { module: index, action: signupData }
+
+contact:
+  url:  /contact
+  params: { module: teContactForm, action: index }
+
+homepage:
+  url:   /
+  param: { module: sfAdminDash, action: dashboard }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

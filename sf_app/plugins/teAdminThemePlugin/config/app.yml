@@ -1,0 +1,27 @@
+all:
+  sf_admin_dash:
+    translator:
+      teEventCalendarAdmin:     Events
+      teDocumentAdmin:          Documents
+      teDocumentCategoryAdmin:  Documents / Categories
+      tePressReleaseAdmin:      Press Releases
+      teBlogPostCategoryAdmin:  Blog Post Categories
+      teBlogPostAdmin:          Blog Posts
+      teBlogCommentAdmin:       Blog Comments
+      teJobPostingAdmin:        Job Postings
+      teJobPostingCategoryAdmin: Job Postings / Categories
+      teJobPostingReplyAdmin:   Job Postings / Applications
+      teUserAdmin:              Users
+      teGroupAdmin:             Groups
+      tePermissionAdmin:        Permissions
+      teCmsPageAdmin:           CMS / Pages
+      teCmsTemplateAdmin:       CMS / Templates
+      teCmsSiteAdmin:           CMS / Sites
+      teCmsSlotDefinitionAdmin: CMS /Slot Definitions
+      teFileEditor:             Files
+      teMediaItemAdmin:         Media Items
+      teAdminTheme:             Administration
+      teConfigAdmin:            Config
+      teFormSubmissionAdmin:    Forms
+      teGiftCardAdmin:          Gift Cards
+      tePhotoAlbumAdmin:        Photo Albums

@@ -1,0 +1,27 @@
+<h1>Legal Web Solutions and Services Offered by EsqSites123.com</h1>
+
+<p>The internet is the new marketing   channel businesses are utilizing to attract new clients and customers.&nbsp;   EsqSites recognizes the value that the web offers, that's why we provide   a complete solution for attorneys and small firms looking to build their   web presence fast, efficiently and inexpensively.&nbsp; Some of the   services offered are:</p>
+<ul>
+  <li>&ldquo;Practice   Specific&rdquo; web site designs&nbsp;	    </li>
+  <li>Website   hosting and maintenance</li>
+  <li>Content   Management </li>
+  <li>Email Forwarding Management </li>
+</ul>
+
+<h2>Web Design Templates  </h2>
+<p>EsqSites understands lawyers   need to practice law and manage their office.&nbsp;&nbsp; Our professional   graphics staff has developed &ldquo;practice specific&rdquo; web templates,   to suit most any area of law.&nbsp; Such themes include, personal injury,   divorce, criminal law, bankruptcy and mediation just to name a few.&nbsp;</p>
+<p><a href="/gallery/">Visit our design gallery</a> to   view the existing web designs available to you. Our design gallery is   constantly updated.&nbsp; Moreover, if you should decide the design   of your site has grown stale,&nbsp; the area of law you practice has   changed or you just want a &ldquo;new look&rdquo; for your website, you can   &ldquo;swap out&rdquo; your existing design and select a new design.&nbsp; There   is not additional charge to change your design.&nbsp; More importantly,   this can be done in a matter of a few &ldquo;mouse click&rdquo; in less than   five minutes.&nbsp; Its that simple.&nbsp;</p>
+
+<h2>Web Hosting and Domain Names </h2>
+<p>EsqSites123.com also provides   web hosting as a standard feature with each web site so that you don't   ever have to deal with a third party. We like to think of it as &ldquo;one   stop shopping&rdquo;.&nbsp; Simply enter your contact and billing information   and your web site can be built in under 10 minutes!</p>
+<p>Many web design companies will   create&nbsp; &ldquo;sub-domains&rdquo; for your website.&nbsp; EsqSites does   not host customer&nbsp; web sites in this matter.&nbsp; You are the   owner of your domain name.&nbsp; Should you choose to discontinue your   relationship with EsqSites (and we hope you don&rsquo;t) you get to take   your domain name with you. </p>
+
+<h2>Content Management </h2>
+<p>Each of our clients receives   access to their very own personalized attorney &ldquo;dashboard&rdquo;.&nbsp;   The &ldquo;dashboard&rdquo; allows you to update your web site whenever you   want.&nbsp; This service is included with your monthly hosting fees   and there is no limit on the amount or frequency of changes. You can   also upload pictures and photos and import them into your website. Our   content management system gives you&nbsp; the ability to easily create   &amp; edit web pages with the following functionality:</p>
+<p> 		    <strong>Static   pages</strong>:&nbsp;&nbsp; A static web page is a web page that always comprises   the same information in response to all download requests from all users.&nbsp;   For example, information which is contained on your &ldquo;home page&rdquo;   may consist of text, pictures and photos.&nbsp;</p>
+<p>&nbsp;<strong>List   style pages</strong>: Also a static web page, a list style page allows you   the ability to add and subtract information from a particular web page.&nbsp;&nbsp;   For example, if you have a long list of verdicts &amp; settlements you   want to display on your web site, you can easily enter the information   and display it on a &ldquo;list page&rdquo;.&nbsp;</p>
+<p>&nbsp;<strong>Dynamic   Map &amp; Directions</strong>: You and your staff no longer have to spend   time telling clients how to get to your office.&nbsp; Our &ldquo;Directions&rdquo;   page utilizes &ldquo;Goggle maps&rdquo; and instantly makes your address static.&nbsp;   The next time a client wants directions to your office, simply direct   them to your website!&nbsp;&nbsp;</p>
+<p>	    <strong>Case   Submission / Contact Forms:</strong>&nbsp;&nbsp; This is where the web really   has its value.&nbsp; Unlike other advertising, the web allows potential   clients to communicate with you 24 hours a day seven days a week.&nbsp;&nbsp;   Let&rsquo;s say you have a personal injury practice.&nbsp; A potential client   is searching for an attorney and locates your web site.&nbsp;&nbsp;   One problem.&nbsp; Its 2:00 a.m.&nbsp; Although your phone number may   be prominently displayed, the client is not likely to call your office   at that hour of the night.&nbsp; The case submission for allows a client,   in the privacy of their own home, to compose a short email to you describing   their legal problem and send it to you.&nbsp; In the morning when you   arrive at the office and check your email, you have a potential client!&nbsp;</p>
+
+<h2>Getting Started </h2>
+<p>Remember, an effective internet   presence 24 hours a day 7 days a week guarantees your practice the exposure   necessary to maximize your earning potential. This level of service   turns your web site into a &quot;profit center&quot;. To get started,   <a href="/gallery/">visit out design gallery &gt;&gt;</a>&nbsp;</p>

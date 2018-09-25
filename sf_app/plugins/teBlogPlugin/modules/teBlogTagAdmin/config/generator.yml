@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Tag
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              Tag
+    plural:                Tags
+    route_prefix:          te_blog_tag_admin
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:             Blog Tags
+        display:           [name]
+        actions:           []
+        sort:              [name, asc]
+      filter:
+        class:             false
+      form:
+        class:             teBlogTagForm
+      edit:
+        title:             Edit Tag
+      new: ~

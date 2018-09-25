@@ -1,0 +1,5 @@
+login:
+  require_ssl: false
+
+forgotPassword:
+  is_secure: false

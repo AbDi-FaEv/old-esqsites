@@ -1,0 +1,41 @@
+autoload:
+  
+  ckeditor:
+    name: ckeditor
+    path: %SF_WEB_DIR%/js/ckeditor
+    recursive: false
+
+  smarty:
+    name: smarty
+    path: %SF_LIB_DIR%/vendor/Smarty
+    recursive: true
+
+  icontact:
+    name: icontact
+    path: %SF_LIB_DIR%/vendor/iContact
+    recursive: true
+
+  twig:
+    name: twig
+    path: %SF_LIB_DIR%/vendor/Twig
+    recursive: true
+
+  openflash:
+    name: openflash
+    path: %SF_LIB_DIR%/vendor/openflash/php5-ofc-library/lib
+    recursive: true
+
+  cheddargetter:
+    name: cheddargetter
+    path: %SF_LIB_DIR%/vendor/cheddargetter
+    recursive: true
+
+  di_container:
+    name: sf_di_container
+    path: %SF_LIB_DIR%/vendor/dependency_injection
+    recursive: true
+
+  phpexcel:
+    name: phpexcel
+    path: %SF_LIB_DIR%/vendor/phpexcel
+    recursive: true

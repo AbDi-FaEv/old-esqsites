@@ -1,0 +1,5 @@
+autoload:
+  htmlpurifier:
+    name:           propel addon
+    path:           <?php echo realpath(dirname(__FILE__).'/../lib/vendor/htmlpurifier')."\n" ?>
+    recursive:      true

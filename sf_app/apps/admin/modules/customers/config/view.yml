@@ -1,0 +1,7 @@
+all:
+  metas:
+    title: Customers
+
+editSuccess:
+  javascripts:
+    - jquery/jquery.maskedinput.js

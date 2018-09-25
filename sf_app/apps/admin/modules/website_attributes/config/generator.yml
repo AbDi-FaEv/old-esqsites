@@ -1,0 +1,39 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           WebsiteAttribute
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             true
+    singular:              plan
+    plural:                plans
+    route_prefix:          website_attribute
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        status_string:       { label: Status }
+        max_main_menu_pages: { label: Max Pages }
+        num_used:            { label: Usage }
+        includes_payment_page: { label: Payment Page }
+      list:
+        title:   Website Plans
+        display: [=description, max_main_menu_pages, max_emails, price, setup_price, _num_used, status_string]
+        batch_actions: []
+        object_actions:
+          _edit:  ~
+          #show:  { action: show }
+        query_methods: [withNumUsed]
+      filter:
+        class: false
+      form:
+        display:
+          NONE: [description, max_main_menu_pages, max_emails, status]
+          Pricing: [price, setup_price]
+          Extra Features: [includes_payment_page]
+          Integration: [cg_code]
+      edit:
+        title:  Edit Plan "%%description%%"
+      new:
+        title:  Create New Plan

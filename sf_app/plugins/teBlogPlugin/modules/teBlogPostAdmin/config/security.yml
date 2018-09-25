@@ -1,0 +1,5 @@
+all:
+  credentials: [[te_blog_post_crud, te_blog_post_crud_own]]
+
+list:
+  credentials: te_blog_post_list

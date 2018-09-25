@@ -1,0 +1,97 @@
+{% extends 'base.twig' %}
+{# this file defines content blocks that can be used across all templates via "{{ block('blockname') }}" #}
+
+{% block head %}
+  <title>{% block title %}{{page.metaTitle}}{% endblock %}</title>
+  <meta name="description" content="{{ website.metaDescription }}" />
+  <meta name="keywords" content="{{ website.metaKeywords }}" />
+  {{ block('assets') }}
+{% endblock head %}
+
+{% block assets %}
+  {% if(template.stylesheets) %}
+    {% for stylesheet in template.stylesheets %}
+      <link rel="stylesheet" type="text/less" media="screen" href="{{ stylesheet }}" />
+    {% endfor %}
+  {% endif %}
+  {% if(template.javascripts) %}
+    {% for script in template.javascripts %}
+      <script type="text/javascript" src="{{ script }}"></script>
+    {% endfor %}
+  {% endif %}
+{% endblock assets %}
+
+{% block contact %}
+  {% include 'includes/contact.twig' %}
+{% endblock contact %}
+
+{% block social %}
+  {% include 'includes/social.twig' %}
+{% endblock social %}
+
+{% block header %}
+  <div id="header">
+    {{ block('header_guts') }}
+  </div>
+{% endblock header %}
+
+{% block header_guts %}
+  <div class="company"><h1>{{website.firmName|break}}</h1></div>
+  {{ block('mini_contact') }}
+{% endblock header_guts %}
+
+{% block date %}
+  <div class="date"><p>{{none|date('l, F d, Y')}}</p></div>
+{% endblock date %}
+
+{% block mini_contact %}
+  <div class="phone"><p><label>Call Us:</label> {{website.phone|format_phone}}</p></div>
+{% endblock mini_contact %}
+
+{% block banner %}
+  {% if template.images.main is defined %}
+    <div class="banner">
+      <img src="{{template.images.main.src}}" alt="{{website.firmName}}" width="{{template.images.main.width}}" />
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  <div id="footer">
+    {{ block('footer_guts') }}
+  </div>
+{% endblock footer %}
+
+{% block footer_guts %}
+  <h3 class="company">{{website.firmName}}</h3>
+  <div id="footer-menu">
+    {{website.footerMenu}}
+  </div>
+  {{ block('copyright') }}
+  {{ block('credit') }}
+{% endblock footer_guts %}
+
+{% block mainmenu %}
+  <div id="main-menu">
+    {{ website.mainMenu }}
+  </div>
+{% endblock mainmenu %}
+
+{% block copyright %}
+  <p class="copyright">Copyright &copy; {{none|date("Y")}} - {{website.firmName}} - All Rights Reserved.</p>
+{% endblock copyright %}
+
+{% block credit %}
+  <p class="credit">Legal Web Design by <a href="http://esqsites123.com/" target="_blank">EsqSites123.com</a></p>
+{% endblock credit %}
+
+{% block pagecontent %}
+<div id="page-content">
+  <div id="page-title">
+    <h2>{{page.title}}</h2>
+  </div>
+  <div id="page-body">
+    {{page.body}}
+  </div>
+</div>
+{% endblock pagecontent %}

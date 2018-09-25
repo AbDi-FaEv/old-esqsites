@@ -1,0 +1,5 @@
+all:
+  layout: layout_wrapped
+
+editSuccess:
+  javascripts:  [jquery/jquery.maskedinput.js]

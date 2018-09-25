@@ -1,0 +1,52 @@
+parameters:
+  #symfony params are being merged during instantiation
+  cg.url:         https://cheddargetter.com
+  cg.username:    esq123@robmccann.co.uk
+  cg.password:    65B6rJDFk9ATu
+  cg.product:     esq
+
+  #live: https://app.beta.icontact.com/icp
+  #sandbox: https://app.sandbox.icontact.com/icp
+  icontact.api_url: https://app.icontact.com/icp
+  icontact.app_id: sMOiw9uKhDetJCT7ozCmuir40VZUhxuz 
+  icontact.username: esqsites123
+  icontact.password: hu5edRuj
+  icontact.account_id: 142668
+  icontact.folder_id: 749
+
+  typepad.key: 8a6580678294d479bb186eacd5a3d0f4
+
+services:
+  spam.api:
+    class: esqSpamCheckerApi
+    arguments: [%typepad.key%]
+  icontact.api:
+    class: iContactService
+    arguments: [%icontact.api_url%, %icontact.username%, %icontact.password%, %icontact.app_id%, %icontact.account_id%, %icontact.folder_id%]
+  cg.api:
+    class: esqCheddarGetterClient
+    arguments: [%cg.url%, %cg.username%, %cg.password%, %cg.product%]
+  template.loader:
+    class: esqTwigLoaderFilesystem
+    arguments: [%app_templates_dir%]
+  twig.extension.assets:
+    class: Asset_Twig_Extension
+  twig.extension.esq:
+    class: esqTwigExtension
+  twig.security_policy:
+    class: Twig_Sandbox_SecurityPolicy
+    arguments:
+      - [if, for, block, include, display, extends] #tags
+      - [date, format_phone, include_title, include_stylesheets, include_javascripts] #filters
+      - { esqWebsiteDecorator: [__toString, firmName, getmainMenu, getfooterMenu, address, city, state, zip, phone, fax, email, socialMedia], Page: [__toString, geturl, getlinkName], esqMenuDecorator: [__toString], esqPageBlank: [__toString, url, title, getbody] } #methods
+      - {} #properties
+  template.extension.sandbox:
+    class: Twig_Extension_Sandbox
+    arguments: ['@twig.security_policy', true] #global escape
+  template.engine:
+    class: Twig_Environment
+    arguments: ['@template.loader', {base_template_class: esqTwigTemplate, cache: %sf_app_cache_dir%/twig, debug: %sf_debug%, strict_variables: false, autoescape: false}]
+    calls:
+      - [addExtension, ['@twig.extension.assets']]
+      - [addExtension, ['@twig.extension.esq']]
+      #- [addExtension, ['@template.extension.sandbox']]

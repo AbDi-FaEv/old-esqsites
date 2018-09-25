@@ -1,0 +1,8 @@
+/* template page */
+#category      {width:100%;}
+
+#templates                {width:100%;margin-left:0px;}
+#templates li             {float:left;list-style:none;padding:2px;margin:2px;border:1px solid #eaeaea;}
+#templates a.activeSlide  {background-color:red;}
+#templates a:focus        {outline:none;}
+#slideshow img            {padding:5px;border:1px solid #eaeaea;}

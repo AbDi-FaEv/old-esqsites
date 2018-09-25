@@ -1,0 +1,29 @@
+# default values
+all:
+
+  title:
+    delimiter: ' &raquo; '
+
+# ADMIN DASHBOARD PLUGIN
+  sf_admin_dash:
+    logout_route:    "@logout"
+    include_path:    false
+    include_jquery:  false
+    site:         ESQSites
+    image_dir:    /teAdminThemePlugin/images/icons/
+    items:
+      Downloads / Files:
+        url:    "downloads"
+        image:  /images/icons/arrow-down-icon.png
+      Members:
+        url:    members
+        image:  /images/icons/customer.png
+      Account Settings:
+        url:    "account"
+        image:  /images/icons/settings.png
+      Revenue Report:
+        url:    "revenue"
+        image:  /images/icons/stats.png
+      Contact ESQ:
+        url:    "contact"
+        image:  /images/icons/email.png

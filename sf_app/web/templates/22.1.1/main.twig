@@ -1,0 +1,11 @@
+{% extends 'theme1' %}
+
+{% block head %}
+  {{ parent() }}
+  {% if website.id == '06caa38dc6bd2a2aebf306a7cc9c6e41' %}
+    {% if page.url == 'Welcome' %}
+      <script src="http://static.dudamobile.com/DM_redirect.js" type="text/javascript"></script>
+      <script type="text/javascript"> DM_redirect("http://mobile.dudamobile.com/site/katewillmorelaw", true); </script>
+    {% endif %}
+  {% endif %}
+{% endblock %}

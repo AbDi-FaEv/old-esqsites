@@ -1,0 +1,16 @@
+RewriteEngine On
+DirectoryIndex control.php
+
+# allows us to use css and image references
+RewriteCond %{REQUEST_URI} !((css|images)$)
+
+# Should use this for any Google site map files :)
+#RewriteCond %{REQUEST_URI} !(mike\.html$)
+
+# allows pictures to be displayed
+RewriteCond %{REQUEST_URI} !(.*\.(jpg|JPG|png|PNG|gif|GIF|pdf|PDF)$)
+
+# used for case submission captcha
+RewriteCond %{REQUEST_URI} !(source\/common\/verificationimage\.php(.*)$)
+
+RewriteRule ^(.*)$ control.php

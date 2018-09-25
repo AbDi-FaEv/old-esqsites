@@ -1,0 +1,11 @@
+{% extends 'blocks' %}
+
+{% block fullbody %}
+  <div id="container">
+    {{ block('header') }}
+    <div id="body">
+      {{ block('body') }}
+    </div>
+    {{ block('footer') }}
+  </div>
+{% endblock fullbody %}

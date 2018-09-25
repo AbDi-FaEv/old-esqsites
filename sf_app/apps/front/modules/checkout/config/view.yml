@@ -1,0 +1,34 @@
+checkoutSuccess:
+  metas:
+    title: "Step 5: Purchase Your Website"
+  javascripts:
+    - jquery/jquery.scrollTo.js
+    - jquery/jquery.maskedinput.js
+    - jquery/loadmask/jquery.loadmask.js
+  stylesheets:
+    - /js/jquery/loadmask/jquery.loadmask.css
+
+plansSuccess:
+  metas:
+    title: "Step 2: Select a Hosting Package"
+  javascripts:
+    - jquery/jquery.corner.js
+
+previewInfoSuccess:
+  metas:
+    title: "Step 3: Customize Your Website"
+  javascripts:
+    - jquery/jquery.maskedinput.js
+
+previewSuccess:
+  metas:
+    title: "Step 4: Preview Your Website"
+    
+previewTopSuccess:
+  layout: preview
+  javascripts:
+    - jcarousel/lib/jquery.jcarousel.js
+  stylesheets:
+    - /js/jcarousel/lib/jquery.jcarousel.css
+    - /js/jcarousel/skins/tango/skin
+    - preview: { position: last }

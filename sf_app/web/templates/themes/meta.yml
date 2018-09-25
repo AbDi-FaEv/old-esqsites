@@ -1,0 +1,16 @@
+images:
+  stock1:
+    src:  /templates/themes/stock1.jpg
+    name: American Bald Eagle
+  stock2:
+    src: /templates/themes/stock2.jpg
+    name: Chicago Skyline
+  stock3:
+    src: /templates/themes/stock3.jpg
+    name: Trust & Last Will
+  stock4:
+    src: /templates/themes/stock4.jpg
+    name: Steps of Justice
+  stock5:
+    src: /templates/themes/stock5.jpg
+    name: New York Skyline

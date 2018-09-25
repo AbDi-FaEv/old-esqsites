@@ -1,0 +1,1 @@
+<?php include_partial("ajaxForm", array("form" => $form));

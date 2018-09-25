@@ -1,0 +1,39 @@
+<!-- 16.1 twig -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link type="text/css"rel="stylesheet" href="templates/16.1/css/css.css"/>
+  <link type="text/css"rel="stylesheet" href="templates/base/css/base.css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+</head>
+<body>
+<div class="page">
+<h1>{{website.firmName}}</h1>
+<div class="header">
+  <div class="menu">
+    {{website.mainMenu}}
+  </div>
+</div>
+<div class="content">
+  <div class="central">
+    <h2>{{page.title}}</h2>
+    {{page.body}}
+  </div>
+  <div class="right">
+    <p>
+    {% include 'includes/legacy_contact' %}
+    {% if website.socialMedia.avvo  %}
+      <br /><br /><a href="{{website.socialMedia.avvo}}" style="margin-top:5px" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+    {% endif %}
+    </p>
+  </div>
+</div>
+<div class="footer">{{website.firmName}}<br />
+  Legal Web Design by Esq Sites</div>
+</div>
+
+</body>
+</html>

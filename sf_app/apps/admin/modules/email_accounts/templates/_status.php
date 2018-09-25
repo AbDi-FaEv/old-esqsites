@@ -1,0 +1,1 @@
+<?php echo $account -> getStatus() == EmailAccount::STATUS_ACTIVE ? image_tag("lightbulb") : image_tag("lightbulb_off"); ?>

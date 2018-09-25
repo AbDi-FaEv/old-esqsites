@@ -1,0 +1,29 @@
+digraph G {
+nodeesq_customers [label="{<table>esq_customers|<cols>id (VARCHAR) [PK]\lmb_client_id (INTEGER)\ltype (INTEGER)\lusername (VARCHAR)\lpassword (VARCHAR)\lemail (VARCHAR)\lfirst_name (VARCHAR)\lmiddle_name (VARCHAR)\llast_name (VARCHAR)\lbirthdate (VARCHAR)\lphone (VARCHAR)\lfax (VARCHAR)\lstatus (INTEGER)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodeesq_websites [label="{<table>esq_websites|<cols>id (VARCHAR) [PK]\lcustomer_id (VARCHAR) [FK]\ltype (INTEGER)\lrank (INTEGER)\lfirm_name (VARCHAR)\lfirm_type (VARCHAR)\lwebsite_name (VARCHAR)\lprimary_domain_id (VARCHAR)\lemail (VARCHAR)\laddress (VARCHAR)\lcity (VARCHAR)\lstate (VARCHAR)\lzip (VARCHAR)\lphone (VARCHAR)\lfax (VARCHAR)\ltemplate_id (VARCHAR) [FK]\lwebsite_attribute_id (VARCHAR) [FK]\lstatus (INTEGER)\lpath (VARCHAR)\lhost_id (VARCHAR)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodeesq_domain_names [label="{<table>esq_domain_names|<cols>id (VARCHAR) [PK]\lwebsite_id (VARCHAR) [FK]\lname (VARCHAR)\ltype (VARCHAR)\lregistration_type (VARCHAR)\lis_a_record_only (BOOLEAN)\lrank (INTEGER)\ldomain_name_attribute_id (VARCHAR)\lmax_emails (INTEGER)\lstatus (INTEGER)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodeesq_website_attributes [label="{<table>esq_website_attributes|<cols>id (VARCHAR) [PK]\lrank (INTEGER)\ldescription (VARCHAR)\lmax_main_menu_pages (INTEGER)\lmax_sub_menu_pages (INTEGER)\lmax_emails (INTEGER)\lmb_product_id (INTEGER)\lmb_cycle_id (INTEGER)\lprice (FLOAT)\lsetup_price (FLOAT)\ldomain_name_attribute_id (VARCHAR)\lstatus (INTEGER)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodeesq_templates [label="{<table>esq_templates|<cols>id (VARCHAR) [PK]\lrank (INTEGER)\ltype (VARCHAR)\lreference (VARCHAR)\lcategory_id (VARCHAR) [FK]\ltitle (VARCHAR)\ldescription (LONGVARCHAR)\lcustomer_id (VARCHAR) [FK]\lstatus (INTEGER)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodeesq_template_categories [label="{<table>esq_template_categories|<cols>id (VARCHAR) [PK]\lname (VARCHAR)\ldescription (LONGVARCHAR)\lcreated_at (TIMESTAMP)\lupdated_at (TIMESTAMP)\l}", shape=record];
+nodesf_guard_group [label="{<table>sf_guard_group|<cols>id (INTEGER) [PK]\lname (VARCHAR)\ldescription (LONGVARCHAR)\l}", shape=record];
+nodesf_guard_permission [label="{<table>sf_guard_permission|<cols>id (INTEGER) [PK]\lname (VARCHAR)\ldescription (LONGVARCHAR)\l}", shape=record];
+nodesf_guard_group_permission [label="{<table>sf_guard_group_permission|<cols>group_id (INTEGER) [FK]\lpermission_id (INTEGER) [FK]\l}", shape=record];
+nodesf_guard_user [label="{<table>sf_guard_user|<cols>id (INTEGER) [PK]\lusername (VARCHAR)\lalgorithm (VARCHAR)\lsalt (VARCHAR)\lpassword (VARCHAR)\lcreated_at (TIMESTAMP)\llast_login (TIMESTAMP)\lis_active (BOOLEAN)\lis_super_admin (BOOLEAN)\l}", shape=record];
+nodesf_guard_user_permission [label="{<table>sf_guard_user_permission|<cols>user_id (INTEGER) [FK]\lpermission_id (INTEGER) [FK]\l}", shape=record];
+nodesf_guard_user_group [label="{<table>sf_guard_user_group|<cols>user_id (INTEGER) [FK]\lgroup_id (INTEGER) [FK]\l}", shape=record];
+nodesf_guard_remember_key [label="{<table>sf_guard_remember_key|<cols>user_id (INTEGER) [FK]\lremember_key (VARCHAR)\lip_address (VARCHAR) [PK]\lcreated_at (TIMESTAMP)\l}", shape=record];
+
+nodeesq_websites:cols -> nodeesq_customers:table [label="customer_id=id "];
+nodeesq_websites:cols -> nodeesq_templates:table [label="template_id=id "];
+nodeesq_websites:cols -> nodeesq_website_attributes:table [label="website_attribute_id=id "];
+nodeesq_domain_names:cols -> nodeesq_websites:table [label="website_id=id "];
+nodeesq_templates:cols -> nodeesq_template_categories:table [label="category_id=id "];
+nodeesq_templates:cols -> nodeesq_customers:table [label="customer_id=id "];
+nodesf_guard_group_permission:cols -> nodesf_guard_group:table [label="group_id=id "];
+nodesf_guard_group_permission:cols -> nodesf_guard_permission:table [label="permission_id=id "];
+nodesf_guard_user_permission:cols -> nodesf_guard_user:table [label="user_id=id "];
+nodesf_guard_user_permission:cols -> nodesf_guard_permission:table [label="permission_id=id "];
+nodesf_guard_user_group:cols -> nodesf_guard_user:table [label="user_id=id "];
+nodesf_guard_user_group:cols -> nodesf_guard_group:table [label="group_id=id "];
+nodesf_guard_remember_key:cols -> nodesf_guard_user:table [label="user_id=id "];
+}

@@ -1,0 +1,168 @@
+customize:
+  url:   /customize/:action
+  params: { module: customizations }
+
+template_customization:
+  class: sfPropel15RouteCollection
+  options:
+    model:                TemplateCustomization
+    module:               customizations
+    prefix_path:          /customizations
+    column:               id
+    with_wildcard_routes: true
+
+domain:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Domain
+    module:               domains
+    prefix_path:          domains
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+forgot_password:
+  url:  /forgot-password
+  params: { module: index, action: forgotPassword }
+
+help:
+  url:  /help/:topic
+  params: { module: help, action: show }
+
+show_billing:
+  url:      /account/billing
+  params:   { module: account, action: showBilling }
+
+edit_billing:
+  url:      /account/billing/:id/edit
+  class:    sfPropel15Route
+  options:  { model: Website, type: object }
+  params:   { module: account, action: editBilling }
+  requirements:
+    sf_method: [get, put, post]
+
+login:
+  url:  /login
+  params: { module: index, action: login }
+
+logout:
+  url:  /logout
+  params: { module: index, action: logout }
+
+page_group:
+  class: sfPropel15RouteCollection
+  options:
+    model:                PageGroup
+    module:               pagegroups
+    prefix_path:          pagegroups
+    column:               id
+    with_wildcard_routes: true
+    actions:              [list, new, create, edit, update, delete]
+    object_actions:       { move: put }
+  requirements:  { id: "[\d\w]+" }
+
+website_new:
+  url: /websites/add
+  params: { module: websites, action: new }
+
+website_select:
+  url: /websites/:id/select
+  class: sfPropel15Route
+  params: { module: websites, action: select }
+  options:
+    model:  Website
+    type:   object
+
+website_edit:
+  url: /websites/:id/edit
+  class: sfPropel15Route
+  params: { module: websites, action: edit }
+  options:
+    model:  Website
+    type:   object
+  requirements:
+    sf_method: [get, put]
+
+email_account:
+  class: sfPropel15RouteCollection
+  options:
+    model:                EmailAccount
+    module:               emails
+    prefix_path:          emails
+    column:               id
+    with_wildcard_routes: true
+    object_actions: { reactivate: put }
+  requirements:  { id: "[\d\w]+" }
+  
+page:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Page
+    module:               pages
+    prefix_path:          pages
+    column:               id
+    with_show:            true
+    with_wildcard_routes: true
+    object_actions:
+      toggleStatus: put
+      move: put
+  requirements:  { id: "[\d\w]+" }
+
+client_message:
+  class: sfPropel15RouteCollection
+  options:
+    model:                ClientMessage
+    module:               clientmessages
+    prefix_path:          clientmessages
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+account:
+  url:    /account/:action
+  params: { module: account, action: show }
+
+
+template_select:
+  url:    /websites/design
+  params: { module: esqTemplateSelector, action: selectTemplate }
+
+google_tools:
+  url:    /websites/analytics
+  params: { module: websites, action: analytics }
+
+payment_tools:
+  url:    /websites/collect-payments
+  params: { module: websites, action: paymentAccount }
+
+websites_show:
+  url:   /websites/info
+  params: { module: websites, action: show }
+
+site_info:
+  url:   /websites/show
+  params: { module: websites, action: show }
+
+site_view:
+  url:   /websites/view
+  params: { module: websites, action: view }
+
+social_media:
+  url:  /websites/social-media
+  params: { module: websites, action: socialMedia }
+
+hosting_plan:
+  url:  / websites/hosting
+  params: { module: websites, action: hosting }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: sfAdminDash, action: dashboard }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

@@ -1,0 +1,50 @@
+.texto {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #333333; line-height:1.5em}
+
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #333333;
+	line-height:1.5em;
+	font-weight: bold;
+}
+
+.name {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 19pt;
+	color: #2B3677;
+	line-height:1.5em;
+	font-weight: normal;
+}
+
+
+.texto_red {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #FF3300; line-height:1.5em}
+
+.texto_blank { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #FFFFFF; line-height:normal}
+
+A {TEXT-DECORATION: none; color: #333333}
+A:hover {TEXT-DECORATION: underline; color: #FF3300}
+
+A.menu {TEXT-DECORATION: none; color: #FFFFFF}
+A.menu:hover {TEXT-DECORATION: underline; color: #FF3300}
+
+
+.fdo {
+	background-image: url(../images/fdo.jpg);
+	background-repeat: repeat;
+}
+.fdo_menu {
+	background-image: url(../images/bg_menu.jpg);
+	background-repeat: repeat;
+}
+.top {
+	background-image: url(../images/img_top.jpg);
+	background-repeat: repeat;
+}
+.bg {
+	background-color: #FFFFFF;
+}
+.imgcolum {
+	background-image: url(../images/imgcolum.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}

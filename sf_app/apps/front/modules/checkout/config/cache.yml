@@ -1,0 +1,3 @@
+_domainRecommendations:
+  enabled:  true
+  lifetime: 360

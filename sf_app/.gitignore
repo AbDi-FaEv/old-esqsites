@@ -1,0 +1,10 @@
+cache/*
+cache.backup/*
+doc/*
+esq
+file+
+file-
+log/*
+data/sql/*
+
+go-pear.phar

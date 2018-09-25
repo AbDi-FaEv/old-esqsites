@@ -1,0 +1,147 @@
+<!-- 10.1 twig -->
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/10.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body background="templates/10.1/images/fdo02.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="10" background="templates/10.1/images/fdo_left.jpg">&nbsp;</td>
+    <td width="760" valign="top"><table width="760" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="90" align="center" background="templates/10.1/images/top.jpg">
+<table width="740" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="545" height="50" valign="bottom">
+                  <font color="#FFFFFF" size="5" face="Arial, Helvetica, sans-serif">
+                    <font color="#836706">{{website.firmName|break}}</font>
+                  </font>
+                </td>
+                <td width="195"><div align="right" class="text02"><font size="2">Call Us<br>
+                <strong>{{website.phone|format_phone}}</strong></font></div></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="15" align="center" background="templates/10.1/images/fdo_menu.jpg"> </td>
+        </tr>
+        <tr>
+          <td height="100%"><table width="760" height="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="210" colspan="2" background="templates/10.1/images/central.jpg"><table width="760" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="439">&nbsp;</td>
+                      <td width="293"><div align="right"><font color="#FFFFFF" size="5" face="Arial, Helvetica, sans-serif">{{website.firmName}}</font></div></td>
+                      <td width="28">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="164" height="100%" valign="top" background="templates/10.1/images/fdo01.jpg">
+                  <table width="164" border="0" cellspacing="0" cellpadding="0">
+                    {% for loop_page in website.mainMenu %}
+                    {# This is the highlighted menu tab #}
+                    {% if loop_page.url == page.url %}
+                      <tr>
+                        <td width="164" height="31" background="templates/10.1/images/t01.jpg" class="text02"><strong>&nbsp;&nbsp;&nbsp;
+                        <a class="text02" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong></td>
+                      </tr>
+                      <tr>
+                      <td align="center"></td>
+                     </tr>
+                     {% else %}
+                     {# These are the regular menu tabs #}
+                    <tr>
+                      <td width="164" height="31" background="templates/10.1/images/t01.jpg" class="text02"><strong>&nbsp;&nbsp;&nbsp;
+                      <a class="text02" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong></td>
+                    </tr>
+                    <tr>
+                      <td align="center"></td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                <tr>
+                  <td>
+                    {% if website.socialMedia.avvo  %}
+                      <div style="margin:5px 0px;">
+                        <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                      </div>
+                    {% endif %}
+                  </td>
+                </tr>
+                </table></td>
+                <td width="596" height="100%" align="center" valign="top" background="templates/10.1/images/fdo03.jpg">
+<table width="93%" border="0" cellpadding="0" cellspacing="0" class="text02">
+                    <tr>
+                      <td height="10">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="10"><strong><font size="4">{{page.title}}</font></strong></td>
+                    </tr>
+                    <tr>
+                      <td height="1"><img src="templates/10.1/images/line440.jpg" width="440" height="1"></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        {{page.body}}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td height="100" align="center" background="templates/10.1/images/f_contact.jpg">
+                        <table width="420" height="70" border="0" cellpadding="0" cellspacing="0" class="text02">
+                          <tr>
+                            <td width="84">&nbsp;</td>
+                            <td width="336" valign="middle"><strong>CONTACT US</strong><br>
+                              Phone: {{website.phone|format_phone}}<br />
+                              {% if website.email %}
+                              Email: <a href="mailto:{{website.email}}">{{website.email}}</a><br /><br />
+                              {% endif %}
+                              {{website.address}}<br />
+                              {{website.city}} {{website.state}} {{website.zip}}
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="36" background="templates/10.1/images/fdo_bottom.jpg"><table width="740" border="0" align="center" cellpadding="0" cellspacing="0" class="detail">
+              <tr>
+                <td width="458">
+                  {{website.firmName}} | <a href="http://esqsites123.com">Legal web design made easy</a> - Esqsites123.com</td>
+                <td width="282"><div align="right"><strong>
+                {% for loop_page in website.footerMenu %}
+                  <a href="{{loop_page.url}}" class="link_text">{{loop_page.linkName}}</a>
+                  {% if not loop.last %}
+                    <font color="white"> | </font>
+                  {% endif %}
+                {% endfor %}
+				</strong></div></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+    <td width="10" background="templates/10.1/images/fdo_right.jpg">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

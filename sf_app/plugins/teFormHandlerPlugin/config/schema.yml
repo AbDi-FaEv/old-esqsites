@@ -1,0 +1,11 @@
+propel:
+  _attributes:        { package: plugins.teFormHandlerPlugin.lib.model }
+  
+  te_form_submissions:
+    _attributes:     { phpName: teFormSubmission }
+    id:
+    form_type:       varchar(255)
+    content:         longvarchar
+    is_viewed:       { type: boolean, default: false }
+    _propel_behaviors:
+      timestampable: {}

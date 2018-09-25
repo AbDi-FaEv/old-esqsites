@@ -1,0 +1,4 @@
+all:
+  title:
+    direction: "forward" # forward or backward
+    delimiter: ' | '

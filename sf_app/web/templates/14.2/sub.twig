@@ -1,0 +1,171 @@
+<!-- 14.2 twig -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="templates/14.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="fdo">
+<table id="main" width="791" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="160" class="top"><table width="791" height="160" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="548"><table width="548" height="160" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="100" valign="top"> <table width="548" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="398" height="30">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td width="398" height="70" class="Logo">{{website.firmName|break}}</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="60"><table width="548" height="60" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="60" class="Logo_bottom">{{none|date('F jS Y')}}</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          <td width="243"><table width="243" height="160" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="100" class="contacto">
+                  {{website.address}}<br />
+                  {{website.city}}, {{website.state}} {{website.zip}}<br />
+                  email: <a href="mailto:{{website.email}}" class="email" style="text-decoration:underline">{{website.email}}</a></td>
+              </tr>
+              <tr>
+                <td height="60" class="Contacto_tel"><span class="t01">{{website.phone|format_phone}}</span></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td valign="top"> <table width="791" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="17" class="fdo_izq">&nbsp;</td>
+          <td width="759" valign="top"><table width="759" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top"> <table width="759" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="26" class="menu_linea1"><table border="0" align="left" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td class="menu_txt">
+                            {% block menu %}
+                              {% for loop_page in website.mainMenu %}
+                              {# This is the highlighted menu tab #}
+                              {% if loop_page.url == page.url %}
+                                <a href="{{loop_page.url}}" class="menu_link">{{loop_page.linkName}}</a>
+                              {% else %}
+                              {# These are the regular menu tabs #}
+                                <a href="{{loop_page.url}}" class="menu_link">{{loop_page.linkName}}</a>
+                              {% endif %}
+                              {% if not loop.last %}&nbsp; | &nbsp;{% endif %}
+                              {% endfor %}
+                            {% endblock menu %}
+							</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign="top"><table width="759" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="530" valign="top" class="home_color"> <table width="530" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><table width="530" border="0" cellspacing="0" cellpadding="0">
+
+                                <tr>
+                                  <td height="31" class="txt_grafico">{{page.title}}</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td height="0" valign="top">
+                              <table width="530" height="367" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td height="262" class="home_grafico1">
+                                    {{page.body}}
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                      <td width="229" valign="top" class="columna"> <table width="229" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td height="45" class="columna_grafico">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><table width="229" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td height="40" class="columna_destacado">CONTACT</td>
+                                </tr>
+                                <tr>
+                                  <td class="columna_txt"><strong>{{website.firmName|break}}</strong><br />
+                                    {{website.address}}<br />
+                                    {{website.city}}, {{website.state}} {{website.zip}}<br />
+                                    Phone: {{website.phone|format_phone}}<br />
+                                    Fax: {{website.fax|format_phone}}<br />
+                                    <a href="mailto:{{website.email}}" class="email2"  style="text-decoration:underline">{{website.email}}</a>
+                                    {% if website.socialMedia.avvo  %}
+                                      <div style="margin:5px 0px;">
+                                        <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                                      </div>
+                                    {% endif %}
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td valign="top">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          <td width="15" class="fdo_dch">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <table width="791" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="17" class="fdo_izq">&nbsp;</td>
+          <td width="759" class="menu_linea1" height="26"><div align="center">
+              <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="882" class="menu_txt" align="left">
+                  {{ block('menu') }}
+                  </td>
+                  <td width="377" align="right" class="menu_txt">
+                  {% for loop_page in website.footerMenu %}
+                    <a href="{{loop_page.url}}">{{loop_page.linkName}}</a>
+                    {% if not loop.last %}
+                    <font color="white"> &nbsp;&nbsp;|&nbsp;&nbsp; </font>
+                    {% endif %}
+                  {% endfor %}
+                  </td>
+                </tr>
+              </table>
+            </div></td>
+          <td width="15" class="fdo_dch">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="30" class="bottom">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

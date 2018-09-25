@@ -1,0 +1,24 @@
+propel:
+  _attributes:        { package: plugins.teEventCalendarPlugin.lib.model }
+  _propel_behaviors:
+    auto_add_pk: {}
+
+  te_calendar_events:
+    _attributes:      { phpName: teCalendarEvent }
+    date:             { type: date, required: true }
+    time:             time
+    title:            { type: varchar(255), primaryString: true, required: true }
+    extract:          longvarchar
+    description:      longvarchar
+    location:         varchar(255)
+    is_published:     { type: boolean, default: false }
+    created_by:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: Creator }
+    updated_by:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: Updater }
+    _uniques:
+      title_date:     [title, date]
+    _propel_behaviors:
+      timestampable: {}
+      sluggable:     {permanent: true}
+    _behaviors:
+      sfPropelActAsSignableBehavior:
+        columns:      { created: te_calendar_events.CREATED_BY, updated: te_calendar_events.UPDATED_BY }

@@ -1,0 +1,42 @@
+<!-- 1.4 twig -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+</head>
+<body>
+  <div class="page">
+  <span><h1>{{website.firmName|break}}</h1></span>
+  <div class="header">
+    <div class="menu">
+      <ul>
+        {{website.mainMenu}}
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="central">
+      <div>
+       {{page.body}}
+      </div>
+    </div>
+    <div class="right">
+      <p>
+        {{website.address}}<br />
+        {{website.city}} {{website.state}}, {{website.zip}}<br />
+        {{website.phone|format_phone}}<br />
+        {{website.fax|format_phone}}<br/>
+        {{website.email}}
+      </p>
+    </div>
+  </div>
+  <div class="footer">
+    {{website.firmName}}<br />
+    Legal Web Design by Esq Sites
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teTaskLog
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              teTaskLog
+    plural:                teTaskLogs
+    route_prefix:          te_task_log
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:             Task Logs
+        display:           [task_name, status, summary, started_at, ended_at]
+        object_actions:
+          show:            { label: View, action: show }
+          _delete:         ~
+        actions:           []
+        sort:              [started_at, desc]
+      filter:
+        display:           [task_name, started_at, status]
+      form:    ~
+      edit:    ~
+      new:     ~

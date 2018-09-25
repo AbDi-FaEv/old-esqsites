@@ -1,0 +1,10 @@
+propel:
+  _attributes:       { package: plugins.teFaqPlugin.lib.model }
+  
+  te_faq:
+    _attributes: { phpName: teFaq }
+    question:  { type: longvarchar, required: true }
+    answer:    { type: longvarchar, required: true }
+    _propel_behaviors:
+      auto_add_pk:    {}
+      timestampable:  {}

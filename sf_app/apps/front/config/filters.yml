@@ -1,0 +1,15 @@
+rendering: ~
+security:  ~
+
+# insert your own filters here
+
+sfSslRequirement:
+  class: sfSslRequirementFilter
+
+sf_google_analytics_plugin:
+  class: sfGoogleAnalyticsFilter
+
+cache:     ~
+common:
+  class: sfCommonFilter
+execution: ~

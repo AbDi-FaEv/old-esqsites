@@ -1,0 +1,43 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teBlogPost
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              post
+    plural:                posts
+    route_prefix:          te_blog_post_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        author:       { is_sortable: true }
+        te_blog_post_to_category_link_list: { label: Category }
+      list:
+        query_methods: [leftJoinAuthor]
+        with:         [Author]
+        title:        false
+        display:      [is_published, author, =title, nb_comments, published_at, created_at ]
+        sort:         [created_at, desc]
+        object_actions:
+          _edit: ~
+        batch_actions:
+          publish:    { credentials: te_blog_post_publish }
+          unpublish:  { label: Un-Publish, credentials: te_blog_post_publish }
+          _delete:    ~
+      filter:
+        display:  [author_id, title, te_blog_post_to_category_link_list, is_published, published_at, created_at]
+      form:
+        fields:
+          content:    { attributes: { width: 100%, height: 500px }}
+          te_blog_post_to_category_link_list: { label: Categories }
+          slug:       { label: URL title, help: (optional) leave blank to auto-generate }
+        display:
+          Post:     [title, slug, content, extract ]
+          Publishing: [tags, te_blog_post_to_category_link_list, author_id, published_at, tags, is_published, allow_comments]
+      edit:
+        title:  Edit Post "%%title%%"
+      new:
+        title:  Create New Post

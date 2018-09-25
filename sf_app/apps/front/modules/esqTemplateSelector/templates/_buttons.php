@@ -1,0 +1,1 @@
+<input id="design_submit" src="<?php echo image_path("buttons/select_this_design.jpg"); ?>" type="image" value="Select This Design" />

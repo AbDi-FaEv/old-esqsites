@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:80
+
+    # This is the configuration for esqsites123
+    Listen 127.0.0.1:80
+
+    <VirtualHost 127.0.0.1:80>
+      ServerName esqsites123.localhost
+      DocumentRoot "C:\Users\Richtermeister\Desktop\DevServer\GSWS\esq_symfony\web"
+      DirectoryIndex index.php
+      <Directory "C:\Users\Richtermeister\Desktop\DevServer\GSWS\esq_symfony\web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf "C:\Users\Richtermeister\Desktop\DevServer\symfony1.2.5\data\web\sf"
+      <Directory "C:\Users\Richtermeister\Desktop\DevServer\symfony1.2.5\data\web\sf">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>

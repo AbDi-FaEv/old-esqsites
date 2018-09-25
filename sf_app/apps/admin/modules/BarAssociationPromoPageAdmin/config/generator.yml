@@ -1,0 +1,26 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           BarAssociationPromoPage
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              BarAssociationPromoPage
+    plural:                BarAssociationPromoPages
+    route_prefix:          bar_association_promo_page_admin
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:
+        title: Edit Bar Promo Page
+      new:
+        title: Add New Bar Promo Page
+        actions:
+          _list: ~
+          _save: ~

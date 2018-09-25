@@ -1,0 +1,54 @@
+html            {background:url('../images/background.jpg') repeat-x #e2e6e9;}
+body            {margin:0px;}
+
+.adminlogo      {background-image:url(../images/gsws_logo.jpg);}
+.odd {background-color:#f0f2f3;border-bottom:1px solid #aeaeae;}
+
+#sf_admin_container a       {color:#781214;}
+legend                      {font-weight:bold;text-transform:uppercase;}
+fieldset                    {margin-bottom:10px;border:1px solid #ccc;}
+#sf_admin_container			{border:1px solid #777e85;background-color:#FFF;-moz-border-radius: 7px; -webkit-border-radius: 7px;}
+#sf_admin_path				{padding:10px !important;background-color:#FFF;color:#781214;border:1px solid #777e85;-moz-border-radius: 7px; -webkit-border-radius: 7px;}
+#sf_admin_path a            {color:#781214;}
+#sf_admin_path a:hover      {color:#781214;}
+
+
+.sf_admin_list th     {background:url(../images/glossbar.jpg) repeat-x #E0EDC5;color:#676e76;white-space:nowrap;}
+#sf_admin_container h2 {background:url(../images/glossbar.jpg) repeat-x #E0EDC5;color:#484d52;border:1px solid #99a2ad;}
+#sf_admin_container .sf_admin_filter th,
+#sf_admin_container .sf_admin_list th  {background:url(../images/glossbar.jpg);color:#484d52;border:1px solid #99a2ad;}
+#sf_admin_container fieldset h2{background:url(../images/glossbar.jpg);color:#484d52;border:1px solid #99a2ad;}
+#sf_admin_menu		{background:none;background-color:#676e76;color:white;margin:0px;margin-bottom:10px;padding:5px;border-bottom:1px solid #e2e6e9;}
+
+#sf_admin_menu a    {color:white;}
+#sf_admin_menu li.nodehover a    {color:black;}
+li.nodehover        {background-color:#949ca3;}
+li.node ul          {background-color:#949ca3;border:1px solid #676e76;border-top:none;}
+
+#sf_admin_container h1  {color:#781214;}
+#sf_admin_theme_footer  {color:#676e75;}
+#logout a               {color:#FFF;}
+#sf_admin_container #te_login_history td    {vertical-align:middle;text-align:center;padding:4px;}
+
+#sf_admin_content .sf_admin_form_row  {background-color:#f0f2f3 !important;}
+
+.cpanel                   {border:none;margin-bottom:0px;padding:2px 2px 5px;}
+.cpanel div.icon a        {-moz-border-radius: 7px; -webkit-border-radius: 7px;float:left;color:#781214 !important;border:1px solid white;background-color:white;}
+.cpanel div.icon a:hover  {color:#333;background-color:#e2e6e9;padding:3px 4px 0 6px;border:1px solid #99a2ad;}
+
+#sf_admin_container th a {color:#484d52;}
+#sf_admin_container th a:hover {color:#676e76;}
+#sf_admin_container .sf_admin_row.even       {background-color:#f0f2f3;}
+#sf_admin_container table {border-collapse:collapse;}
+
+#sf_admin_container .sf_admin_filter td {background-color:#f0f2f3;}
+#sf_admin_container table td  {color:#676e75;}
+
+/*
+interferes with ext-js
+#sf_admin_container td,
+#sf_admin_container th {border: 0;border-bottom: 1px solid #cacfd4;border-top: 1px solid #cacfd4;text-align: left;vertical-align: top;}
+#sf_admin_container tr {background-color: #fff;border-left: 1px solid #cacfd4;border-right: 1px solid #cacfd4;}
+*/
+#logout a:hover, #logout a:active {color:white;text-decoration:underline;}
+#sf_admin_theme_header {margin:0px;height:39px;width:64px;background:url(/teAdminThemePlugin/images/icons/home.png) no-repeat 15px 8px;float:left;}

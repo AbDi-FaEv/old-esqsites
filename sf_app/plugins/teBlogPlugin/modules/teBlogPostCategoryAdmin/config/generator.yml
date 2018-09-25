@@ -1,0 +1,29 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teBlogPostCategory
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          te_blog_post_category_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        slug:              { label: URL title }
+      list:
+        title: ""
+        display:           [name, slug, num_posts]
+        batch_actions:     []
+      filter:
+        class: false
+      form:
+        fields:
+          slug:           { help: (optional) leave empty to auto-generate this from title }
+      edit:
+        title:            Edit Category "%%name%%"
+      new:
+        title:            Add New Category 

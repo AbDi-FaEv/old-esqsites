@@ -1,0 +1,128 @@
+all:
+
+  title:
+    delimiter: ' &raquo; '
+
+# ADMIN DASHBOARD PLUGIN
+  sf_admin_dash:
+    site:         ESQSites123
+    image_dir:    /teAdminThemePlugin/images/icons/
+    items:
+    translator:
+      website_attributes:
+        title:  Plans
+    categories:
+      Customers:
+        credentials:     [[customer, domain, website, email]]
+        items:
+          Customers:
+            credentials: customer
+            url:    customer
+            image:  /images/icons/customer.png
+          Domains:
+            credentials: [domain]
+            url:    domain
+            image:  /images/icons/domains.png
+          Websites:
+            credentials: [website]
+            url:    website
+            image:  /images/icons/website.png
+          Email Accounts:
+            credentials: [email]
+            url:    email_account
+            image:  /images/icons/email.png
+      Marketing:
+        credentials:     [[plan, bar_association, coupon, member_feedback, faq, blog]]
+        items:
+          Website Plans:
+            credentials: [plan]
+            url:    website_attribute
+            image:  /images/icons/stats.png
+          Bar Associations:
+            credentials: [bar_association]
+            url:    bar_association_admin
+            image:  /images/icons/bar_association.png
+          Coupons:
+            credentials: [coupon]
+            url:    coupon
+            image:  /images/icons/tag.png
+          Feedback:
+            credentials: [member_feedback]
+            url:    member_feedback
+            image:  /images/icons/feedback.png
+          Testimonials:
+            credentials: [testimonials]
+            url:    te_testimonial_admin
+            image:  comments.png
+          FAQs:
+            credentials: [faq]
+            image:  faq.png
+            url:    te_faq_admin
+          Blog:
+            credentials: [blog]
+            url:    te_blog_post_admin
+            image:  /images/icons/blog.png
+          Events:
+            url:    te_event_calendar_admin
+            image:  calendar.png
+      System:
+        credentials:     [[host, template, page_type]]
+        items:
+          Hosts:
+            credentials: [host]
+            url:    host
+            image:  /images/icons/server.png
+          Templates:
+            credentials: [template]
+            url:    website_template
+            image:  /images/icons/template.png
+          Page Types:
+            credentials: [page_type]
+            url:    page_content_display_type
+          Domain Monitor:
+            url:    monitoring/index
+          Notes:
+            url:    sf_comment
+          Revenue:
+            url:    "@revenue"
+            image: /images/icons/revenue.png
+          Task Logs:
+            url:    te_task_log
+            image:  task-log
+      User Administration:
+        credentials:     [[user]]
+        items:
+          Users:
+            credentials: [user]
+            image:  users.png
+            url:    sf_guard_user
+
+  sfPropelActAsCommentableBehaviorPlugin:
+    allowed_tags:     ~
+    anonymous:
+      enabled:        false
+      layout:         false
+    count:
+      enabled:        false
+      method:         setSfCommentCount
+      namespace:      frontend
+    date_format:      words
+    max_tokens:       20
+    use_gravatar:     false
+    namespaces:
+      admin:          
+    salt:             c0mm3nt4bl3
+    use_css:          false
+    use_routes:       true
+    user:
+      enabled:        true
+      layout:         { text: required }
+      table:          sf_guard_user
+      id:             id
+      class:          sfGuardUser
+      id_method:      getId
+      toString:       __toString
+      save_name:      false
+
+  sfModerationPlugin:
+    display_treshold: 3

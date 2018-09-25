@@ -1,0 +1,11 @@
+all:
+
+  sf_google_analytics_plugin:
+    tracker:    googleAsync
+    insertion:  head
+    
+  title:
+    direction: "backward" # forward or backward
+    delimiter: ' &raquo; '
+
+  filter_output: true

@@ -1,0 +1,38 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teCalendarEvent
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              event
+    plural:                events
+    route_prefix:          te_event_calendar_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        slug:          { label: URL title, help: (optional) leave empty to generate from title }
+        is_published:  { label: Published }
+      list:
+        title:      Events List
+        display:    [is_published, date, =title]
+        sort:       [date, asc]
+        actions:
+          _new:     { credentials: te_calendar_event_crud }
+        object_actions:
+          _edit:    { credentials: te_calendar_event_crud }
+          _delete:  { credentials: te_calendar_event_crud }
+        batch_actions:
+          _delete:  { credentials: te_calendar_event_crud }
+      filter:
+        display:    [date, title, is_published]
+      form:
+        fields:
+          description:          { attributes: { width: 100%, height: 500px } }
+        display:    [date, time, title, slug, extract, description, location, is_published]
+      edit:
+        title:      Edit Event "%%title%%"
+      new:
+        title:      Create New Event

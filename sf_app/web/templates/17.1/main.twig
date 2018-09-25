@@ -1,0 +1,144 @@
+<!-- 17.1 twig -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link href="templates/17.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="788" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="74" align="left" bgcolor="#270a02"><span style="font-size:24px; color: #ffffff;">{{website.firmName}}</span></td>
+  </tr>
+  <tr>
+    <td height="34" bgcolor="#a23b01"><div align="left" class="top">
+      <div align="left">
+        {% for loop_page in website.mainMenu %}
+          <a href="{{loop_page.url}}" class="linktop">{{loop_page.linkName}}</a>
+          {% if not loop.last %}&nbsp;&nbsp;&bull;&nbsp;&nbsp;{% endif %}
+        {% endfor %}
+      </div>
+    </div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#993a02"><img src="templates/17.1/images/line.jpg" width="788" height="2"></td>
+  </tr>
+  <tr>
+    <td height="31" bgcolor="#a23b01"><div align="right" class="marquis1">{{none|date("l, F j, Y")}}</div></td>
+  </tr>
+  <tr>
+    <td background="templates/17.1/images/shadow.jpg"><img src="templates/17.1/images/shadow.jpg" width="5" height="13"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f5f0ca"><img src="templates/17.1/images/esp_cel_inf.gif" width="1" height="14"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f5f0ca"><img src="templates/17.1/images/banner.jpg" width="788" height="111"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f5f0ca"><img src="templates/17.1/images/esp_cel_inf.gif" width="1" height="25"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f5f0ca"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="230" valign="top"><table width="230" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="230" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12"><img src="templates/17.1/images/001.jpg" width="12" height="52"></td>
+                <td background="templates/17.1/images/003.jpg" class="txt3">CONTACT</td>
+                <td width="62"><img src="templates/17.1/images/002.jpg" width="62" height="52"></td>
+              </tr>
+            </table></td>
+            </tr>
+          <tr>
+            <td bgcolor="#270a02">
+              <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="txt2">
+                    {{website.address}}<br />
+                    {{website.city}}, {{website.state}} {{website.zip}}<br />
+                    <strong>Phone</strong>: {{website.phone|format_phone}}<br />
+                    <strong>Fax</strong>: {{website.fax|format_phone}}<br />
+                    <a href="mailto:{{website.email}}" class="linkmail">{{website.email}}</a>
+                    <div id=badge_container" style="margin-top:4px;">
+                      {% if website.socialMedia.avvo  %}
+                        <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                      {% endif %}
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            </tr>
+          <tr>
+            <td><img src="templates/17.1/images/004.jpg" width="230" height="24"></td>
+            </tr>
+        </table></td>
+        <td width="43"><img src="templates/17.1/images/esp_cel_inf.gif" width="43" height="1"></td>
+        <td width="515" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12"><img src="templates/17.1/images/007.jpg" width="12" height="42"></td>
+                <td background="templates/17.1/images/009.jpg" class="marquis2"><div align="left">{{page.title}}</div></td>
+                <td width="13"><img src="templates/17.1/images/008.jpg" width="13" height="42"></td>
+              </tr>
+            </table>
+		</td>
+            </tr>
+	<tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="txt1" valign="top" style="padding-top:10px">
+                  {{page.body}}
+              </td>
+                <td><img src="templates/17.1/images/esp_cel_inf.gif" width="33" height="1"></td>
+                <td valign="top"></td>
+              </tr>
+            </table></td>
+            </tr>
+          <tr>
+            <td><img src="templates/17.1/images/esp_cel_inf.gif" width="1" height="22"></td>
+            </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="79%">
+	</td>
+            </tr>
+          <tr>
+            <td><img src="templates/17.1/images/esp_cel_inf.gif" width="1" height="25"></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f5f0ca">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="52" bgcolor="#270a02"><table width="788" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="540" class="foot"><a href="http://www.esqsites.com" target="_blank" class="linkfooter">Legal Web Design</a> by <strong>ESQ Sites</strong></td>
+        <td width="248">
+          <div align="right" class="foot">
+            {% for loop_page in website.footerMenu %}
+              <a href="{{loop_page.url}}" class="linkfooter">{{loop_page.linkName}}</a>
+            {% endfor %}
+          </div>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

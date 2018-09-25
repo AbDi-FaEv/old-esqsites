@@ -1,0 +1,46 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           sfComment
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          te_blog_comment_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        created_at:   { label: Submitted At }
+        author_email: { label: Author Email }
+        moderation_status: { label: Moderation Status }
+      list:
+        title:    ""
+        layout:  stacked
+        params:   |
+                 %%_status%% %%title%%<br />
+                 %%_short_text%%<br />
+                 <span class="help">by %%author_name%% (%%author_email%%) at %%created_at%%</span>
+        display: [author_name, author_email, title, created_at]
+        object_actions:
+          _edit: ~
+          show: { action: show, label: Show }
+        actions: []
+        batch_actions:
+          approve: ~
+          refuse: ~
+          _delete: ~
+      filter:
+        class:    teBlogCommentFormFilter
+        display:  [ moderation_status, author_email ]
+      form:
+        class:   teBlogCommentForm
+        display:
+          Comment: [title, text, created_at]
+          Author:  [author_name, author_email, author_website]
+          Admin:   [moderation_status]
+      edit:
+        title:   Edit Comment
+      new:     ~

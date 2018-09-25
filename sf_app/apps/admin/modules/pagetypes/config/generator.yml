@@ -1,0 +1,31 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           PageContentDisplayType
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              pagetype
+    plural:                pagetypes
+    route_prefix:          page_content_display_type
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        thumb:             { label: "" }
+      list:
+        display:           [_thumb, name, notes]
+        actions:           []
+        batch_actions:     []
+        object_actions:
+          _edit: ~
+      filter:
+        class: false
+      form:
+        actions:
+          _list: { label: Back }
+          _save: ~
+      edit:
+        title:   Edit Page Type "%%name%%"
+      new:     ~

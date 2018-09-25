@@ -1,0 +1,14 @@
+<div id="social">
+  {% if website.socialMedia.avvo %}
+    <a class="avvo" target="_blank" href="{{ website.socialMedia.avvo }}">View my profile on Avvo</a>
+  {% endif %}
+  {% if website.socialMedia.facebook %}
+    <a class="facebook" target="_blank" href="{{ website.socialMedia.facebook }}">Friend Us on Facebook</a>
+  {% endif %}
+  {% if website.socialMedia.twitter %}
+    <a class="twitter" target="_blank" href="{{ website.socialMedia.twitter }}">Follow Us on Twitter</a>
+  {% endif %}
+  {% if website.socialMedia.linkedin %}
+    <a class="linkedin" target="_blank" href="{{ website.socialMedia.linkedin }}">View Our Profile on LinkedIn</a>
+  {% endif %}
+</div>

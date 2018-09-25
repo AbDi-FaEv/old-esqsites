@@ -1,0 +1,22 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           TemplateCustomization
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              TemplateCustomization
+    plural:                TemplateCustomizations
+    route_prefix:          template_customization
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:
+        display:          [type]
+      form:    ~
+      edit:    ~
+      new:     ~

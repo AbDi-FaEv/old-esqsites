@@ -1,0 +1,6 @@
+all:
+  javascripts:
+    - jcarousel/lib/jquery.jcarousel.js
+  stylesheets:
+    - /js/jcarousel/lib/jquery.jcarousel.css
+    - /js/jcarousel/skins/tango/skin

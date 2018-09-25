@@ -1,0 +1,29 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teTestimonial
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          te_testimonial_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:    Testimonial List
+        display:  [date, is_published]
+        layout:   stacked
+        params:   |
+                  %%is_published%%<strong>%%source%%</strong> said:<br />"%%content%%"<br />
+                  <span class='help'>Date:%%date%% | Location: %%location%% | Company: %%company%%</span>
+      filter:
+        class:  false
+      form:    ~
+      edit:
+        title:    Edit Testimonial
+      new:
+        title:    Add New Testimonial

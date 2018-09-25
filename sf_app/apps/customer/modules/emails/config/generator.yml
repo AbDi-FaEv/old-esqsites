@@ -1,0 +1,29 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           EmailAccount
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          email_account
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:
+        title: Edit Email Account
+        actions:
+          _delete: ~
+          _list: { label: Back }
+          _save: { label: Update Email Forward }
+      new:
+        title: Add New Email Account
+        actions:
+          _list: { label: Back }
+          _save: { label: Create Email Forward }

@@ -1,0 +1,41 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Website
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          website
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        website_attribute_id: { label: Plan }
+        status_string:        { label: Status }
+        created_at:           { label: Registered }
+        template_id:          { label: Template }
+        cg_id:                { label: CheddarGetter ID }
+      list:
+        title:          Websites
+        display:        [firm_name, primary_domain, _status, created_at, last_billing_date]
+        object_actions:
+          show:         { action: show }
+        batch_actions:  []
+        sort:           [created_at, desc]
+        #with:           [PrimaryDomain]
+      filter:
+        display:        [status, firm_name, template_id, customer_id, website_attribute_id, cg_id, created_at, last_billing_date]
+      form:
+        class:          WebsiteAdminForm
+        fields:
+          website_attribute_id: { help: "Use this to upgrade / downgrade an account" }
+        display:        [firm_name, customer_id, firm_name, firm_type, template_id, website_attribute_id, last_billing_date, status]
+      edit:
+        title:         Edit Website "%%firm_name%%"
+      new:
+        actions:
+          _list: ~
+          _save: ~

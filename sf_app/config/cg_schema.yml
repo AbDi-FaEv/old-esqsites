@@ -1,0 +1,14 @@
+propel:
+  _attributes:      { package: lib.model.cg }
+
+  cg_notifications:
+    _attributes:     { phpName: CheddarGetterNotification }
+    content:         longvarchar
+    website_id:      { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade }
+    type:            { type: varchar(255) }
+    result:          { type: varchar(255) }
+    _propel_behaviors:
+      symfony:
+        form:        false
+      timestampable: {}
+      auto_add_pk:   {}

@@ -1,0 +1,4 @@
+all:
+  .settings:
+    # The directory where templates are stored
+    template_dir: '<?php echo sfConfig::get('sf_root_dir').DIRECTORY_SEPARATOR.'templates' ?>'

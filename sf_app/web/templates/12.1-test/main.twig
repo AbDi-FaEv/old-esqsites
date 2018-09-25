@@ -1,0 +1,8 @@
+{% extends 'theme1' %}
+
+{# hacky way to tack on custom styles and js - migrate this to symfony system via metas.yml #}
+{% block head %}
+  {{ parent() }}
+  <link rel="stylesheet" type="text/less" media="screen" href="/templates/12.1-test/less/screen.less" />
+  <script type="text/javascript" src="/templates/base/js/less.js"></script>
+{% endblock head %}

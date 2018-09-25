@@ -1,0 +1,29 @@
+# default rules
+#homepage:
+#  url:   /
+#  param: { module: default, action: index }
+#
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+#
+#default:
+#  url:   /:module/:action/*
+
+#preview:
+#  url:    /preview/:website_id/:absolute_url
+#  class:  esqPreviewSiteRoute
+#  params: { module: index, action: showPage, absolute_url: "" }
+#  requirements: { absolute_url: ".*" }
+
+#analytics:
+#  url:  /analytics.txt
+#  class:        esqSiteRoute
+#  params:       { module: index, action: showPage, absolute_url: "analytics.txt" }
+#  requirements: { absolute_url: "analytics.txt" }
+
+cms_page:
+  url:    /:absolute_url
+  class:  esqSiteRoute
+  params: { module: index, action: showPage, absolute_url: "" }
+  requirements: { absolute_url: ".*" }

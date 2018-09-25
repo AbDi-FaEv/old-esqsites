@@ -1,0 +1,37 @@
+all:
+  content_filter:
+    parser_class:    sfContentFilterParser
+
+    filters:
+      url:
+        class:      sfContentFilterUrl
+        cache:      true
+        options:
+          max_text_length: 72            # Urls longer than this will have their text shortened (but the url will still stay the same)
+          link_attributes: []
+      line_break:
+        class:      sfContentFilterLineBreak
+        cache:      true
+        options:    []
+      markdown:
+        class:      sfContentFilterMarkdown
+        cache:      true
+        options:
+          styled_boxes: [quote, tip, caution, note]
+      twitter:
+        class:      sfContentFilterTwitter
+        cache:      true
+        options:
+          username_link_attributes:
+            class: twitter_username
+          hash_link_attributes:
+            class: twitter_hash
+
+    input_types:
+      default:    [line_break, url]
+
+    cache:
+      enabled:  true
+      class:    sfFileCache
+      options:
+        cache_dir:  <?php echo sfConfig::get('sf_app_cache_dir') ?>/content_filter

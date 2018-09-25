@@ -1,0 +1,171 @@
+body        {color:#4c4c4c;}
+a 			{text-decoration: none;color:#1A71A6;outline:none;}
+a:hover		{text-decoration: underline;}
+
+#background {background:url('../images/front_background.jpg') no-repeat;background-position:bottom;}
+
+hr          {border-bottom:none;border-left:none;border-right:none;}
+
+ul.error_list	{list-style-type:none;color:red;}
+ul.error_list	{}
+
+#header			{position:relative;}
+#logo			{margin-top:10px;margin-bottom:20px;}
+
+#livehelp       {position:absolute;top:70px;right:0px;}
+#livehelp img   {height:40px;width:96px;}
+
+#topmenu 				{position:absolute;right:-15px;top:5px;text-align:right;list-style:none;}
+#topmenu a              {color:#9f9f9f;}
+.phonenumber_brand 		{color:#124d9f;font-size:13pt;font-weight:bold;}
+.phonenumber_numeric 	{font-size:10pt;margin-top:-3px;color:#9f9f9f;}
+
+#checkout_return        {position:absolute;right:0px;top:93px;text-align:right;background:#f7f7f7;border:1px solid #e8e8e8;padding:4px 10px 4px 10px;}
+#checkout_return a        {background:url('../images/basket.png') no-repeat 0 -2px;padding-left:20px;}
+
+#banner         {background:url('../images/banner.jpg') no-repeat;width:672px;height:304px;position:relative;margin-bottom:18px;}
+#banner_content {position:absolute;left:380px;top:70px;}
+#banner_content ul {margin-top:-10px;margin-left:25px;}
+#banner #cta    {margin-left:45px;margin-top:15px;}
+
+#mini_gallery           {min-height:233px;}
+#mini_gallery ul        {list-style-type:none;padding:0px;margin:0px;}
+#mini_gallery .caption  {font-style:italic;text-align:center;}
+#mini_gallery img       {width:200px;border:1px solid #ececec;padding:4px;background-color:white;}
+
+.quote          {font-size:1.2em;font-style:italic;margin-bottom:20px;}
+.quote .source  {text-align:right;font-size:0.75em;font-style:normal;margin-top:10px;margin-right:20px;}
+/*.quote_mark     {font-size:2em;display:inline;line-height:1em;}*/
+
+/*ul.services     {list-style-image:url('../images/bullet_arrow_right.png');}*/
+ul.blog         {list-style-image:url('../images/page_icon.gif');}
+
+#pre_footer     {background-color:#f4f4f4;border-top:1px solid #cdcdcd;clear:both;margin-top:15px;}
+#pre_footer *   {border-color:#cdcdcd;}
+#pre_footer h3  {color:#6b6b6b;}
+
+#pre_footer .services    {list-style-type:square;color:#aeaeae;}
+
+a.tick          {background:url('../images/bullet_arrow_right.png') no-repeat -4px 0;padding-left:12px;}
+
+#main			{min-height:400px;clear:both;padding-top:18px;}
+
+/* main menu */
+#mainmenu           {padding:0px;margin:0px;background: url('../images/menu_gradient.jpg') repeat-x;display:block;list-style-type:none;width:100%;border: 1px solid #c5c5c5;border-top:1px solid #ececec;height:41px;border-radius: 7px;width: 970px;width: 98;width: 9;}
+#mainmenu li        {float:left;display:inline-block;line-height:41px;}
+#mainmenu li.last a:hover {border-right: 0px!important;}    
+#mainmenu li.first a:hover {border-left: 0px!important;}
+#mainmenu a         {color:#08479b;font-size:15px;padding:12px 31px;margin-left:1px;background: url('../images/menu_gradient.jpg') repeat-x;}
+#mainmenu a:hover   {text-decoration:none;background-image:url('../images/menu_gradient_hover.jpg');border-left: 1px solid #c5c5c5;border-right: 1px solid #c5c5c5;margin:0px;}
+
+#footer			{text-align:center;}
+
+.form .help     {font-size:0.9em;}
+
+#design_submit  {float:right;}
+#category       {padding:4px;}
+
+/* checkout - hosting plans */
+.plan           {width:130px;color:white;font-size:1.2em;padding:15px;float:left;margin-right:25px;cursor:pointer;}
+.plan h2        {text-align:center;}
+.plan h2 a      {color:white;}
+.plan.starter  {background-color:#85D59C;}
+.plan.basic  {background-color:#8C8FCA;}
+.plan.standard  {background-color:#BF92C4;}
+.plan.deluxe  {background-color:#FFAB73;}
+.plan.premium  {background-color:#70B0D9;}
+
+.domain_names   {list-style-type:none;margin:0px;padding:10px;background-color:white;-moz-border-radius: 10px; -webkit-border-radius: 10px;}
+.domain_names a {background:url('../images/ok16.png') no-repeat;padding-left:25px;}
+.domain_names li {line-height:2.5em;border-bottom:1px dotted #ccc;}
+
+/* checkout - steps header */
+#checkout_steps     {margin:auto;margin-left:40px;margin-top:20px;text-align:center;}
+#checkout_steps li  {display:inline-block;float:left;}
+
+#checkout_steps li a   {background:url('../images/checkout_steps.png') no-repeat;height:37px;display:block;overflow:hidden;text-indent:-1000px}
+#checkout_steps .step1 a {width:154px;}
+#checkout_steps .step2 a {width:153px;background-position:-154px 0}
+#checkout_steps .step3 a {width:205px;background-position:-308px 0}
+#checkout_steps .step4 a {width:188px;background-position:-513px 0}
+#checkout_steps .step5 a {width:118px;background-position:-700px 0}
+
+#checkout_steps .step1.ok a {background-position:0 -37px;}
+#checkout_steps .step2.ok a {background-position:-154px -37px;}
+#checkout_steps .step3.ok a {background-position:-308px -37px;}
+#checkout_steps .step4.ok a {background-position:-513px -37px;}
+#checkout_steps .step5.ok a {background-position:-700px -37px;}
+
+#checkout_steps .step1 a:hover {background-position:0 -74px;}
+#checkout_steps .step2 a:hover {background-position:-154px -74px;}
+#checkout_steps .step3 a:hover {background-position:-308px -74px;}
+#checkout_steps .step4 a:hover {background-position:-513px -74px;}
+#checkout_steps .step5 a:hover {background-position:-700px -74px;}
+
+#checkout_steps .step1.current a {background-position:0 bottom;}
+#checkout_steps .step2.current a  {background-position:-154px bottom;}
+#checkout_steps .step3.current a  {background-position:-308px bottom;}
+#checkout_steps .step4.current a  {background-position:-513px bottom;}
+#checkout_steps .step5.current a  {background-position:-700px bottom;}
+
+a.button  {float:none;display:inline;}
+
+/* homepage */
+div.plans       {background:url('../images/bars.png') no-repeat 0px 6px;padding-left:55px;}
+div.plans a.tick  {line-height:25px;}
+div.demo_request  {background:url('../images/arrow_large_right.png') no-repeat 0px 6px;padding-left:55px;}
+div.demo_request a.tick  {line-height:25px;}
+
+fieldset        {background-color:#F2F2FF;}
+fieldset div    {border-color:#000;}
+fieldset legend    {padding:0 5px;}
+
+/* step 5 */
+.AuthorizeNetSeal {}
+#domain_buttons {margin-top:10px;}
+
+#plans                {}
+
+#submit {float:right;margin-top:10px;}
+
+/*step 4 - preview styles*/
+
+#preview_info         {float:left;margin-right:20px;}
+#preview_info select  {width:100%;}
+#preview_template p img   {border:none;padding:0px;float:left;margin-right:5px;}
+#preview_template img     {border:1px solid #ececec;padding:4px;background-color:white;}
+table#preview         {padding:0px;margin:0px;}
+
+#preview_browser_container		{visibility:hidden;}
+#preview_browser_container a	{margin-top:20px;}
+
+.jcarousel-skin-tango .jcarousel-item	{ height:45px;width:45px;padding:0px;margin-right:10px; }
+.jcarousel-item a img			{border:none;}
+.jcarousel-skin-tango .jcarousel-container-horizontal { width: 500px;height:45px;padding-top:4px;padding-bottom:4px; }
+.jcarousel-skin-tango .jcarousel-clip-horizontal { width: 100%;height:45px;}
+.jcarousel-skin-tango .jcarousel-next-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-horizontal	{top:11px;}
+
+/*end of preview styles*/
+
+#checkout_cc_type {width:100%;}
+
+#order_summary  {margin-top:10px;padding:10px 15px 0px 15px;border:1px solid #aeaeae;-moz-border-radius: 10px; -webkit-border-radius: 10px;}
+#order_summary  th  {vertical-align:top;}
+#order_summary  th, #order_summary  td  {border-bottom:1px dotted #ccc;}
+#order_summary  tr.total th, #order_summary  tr.total td  {border:none;border-top:3px double black;}
+
+#twitterbox {position:relative;}
+#twitterbox h3 {font-size:0.8em;margin-left:40px;margin-top:3px;}
+.tweets {margin-right:20px;font-size:0.9em;}
+.tweet  {padding:5px;padding-left:10px;border-bottom:1px dotted #aeaeae;}
+.tweet.last  {border-bottom:none;}
+.tweet.odd  {background-color:#eee;}
+
+#blogbox a.rss {background:url('../images/rss.png') no-repeat;padding-left:20px;float:right;}
+
+#resource_categories {list-style-type: none;padding:0px;margin:0px;}
+#resource_categories li {float:left;width:50%;background:url('../images/menu_gradient.jpg') repeat-x;height:50px;}
+#resource_categories a {font-size:1.3em;}
+
+.tutorials img  {border:1px solid #aeaeae;padding:4px;}

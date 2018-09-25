@@ -1,0 +1,22 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        ESQSites Admin Panel
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    robots:       noindex, nofollow
+
+  stylesheets:
+    - /teAdminThemePlugin/css/admin: { position: last }
+    - /gswsAdminThemePlugin/css/admin: { position: last }
+    - /teFormPlugin/css/forms
+    - /gswsAdminThemePlugin/css/ui/smoothness/jquery-ui-1.7.2.custom.css
+    - admin: { position: last }
+
+  javascripts: [jquery/jquery-ui]
+
+  has_layout:     true
+  layout:         layout

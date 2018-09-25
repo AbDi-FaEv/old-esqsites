@@ -1,0 +1,5 @@
+all:
+  javascripts:
+    - jquery/lightbox/js/jquery.lightbox-0.5.js
+  stylesheets:
+    - /js/jquery/lightbox/css/jquery.lightbox-0.5.css

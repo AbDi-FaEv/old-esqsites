@@ -1,0 +1,17 @@
+themes:
+  blue:  { name: Blue,  color: 174d89, stylesheet: templates/13.2/css/blue.css }
+  red:   { name: Red,   color: A8150E, stylesheet: templates/13.2/css/blue.css }
+  brown: { name: Brown, color: 6d4112, stylesheet: templates/13.2/css/blue.less }
+  green: { name: Green, color: 0E6732, stylesheet: templates/13.2/css/blue.less }
+
+default_theme: blue
+
+javascripts:
+  - //code.jquery.com/jquery.js
+  - templates/13.2/js/bootstrap.js
+
+images:
+  main:
+    width:   520
+    default: stock1
+    options: [stock1, stock2, stock3, stock4, stock5]

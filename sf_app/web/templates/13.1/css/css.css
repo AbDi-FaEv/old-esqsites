@@ -1,0 +1,153 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #6A88A7;
+	line-height: 14pt;
+}
+
+.text02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+	line-height: 14pt;
+}
+
+.text_blank {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.text_menu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.text_blank02 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+
+.t01 {  font-family: Times New Roman, Times, serif; font-size: 23pt; color: #F5BD26}
+
+.t02 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 12pt;
+	color: #6A88A7;
+	font-weight: none;
+}
+
+.t03 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #F5BD26;
+	font-weight: bold;
+}
+
+.t04 {
+	font-family: Times New Roman, Times, serif;
+	font-size: 16pt;
+	color: #F5BD26;
+	font-weight: none;
+}
+
+A {TEXT-DECORATION: none; color: #FFFFFF}
+A:hover {TEXT-DECORATION: underline; color: #F5BD26}
+
+.fdo01 {background-color: #07204A}
+.fdo02 {background-color: #154575}
+
+body 
+{
+background-image:
+url(../images/fdo01.jpg)
+}
+
+.background_top 
+{
+background-image:
+url(../images/top.jpg)
+}
+
+.background_topmenu 
+{
+background-image:
+url(../images/fdo_menutop.jpg)
+}
+
+.background_bottom
+{
+background-image:
+url(../images/fdo_bottom.jpg)
+}
+
+.background_menu 
+{
+background-image:
+url(../images/fdo_menu.jpg)
+}
+
+.background_central 
+{
+background-image:
+url(../images/central.jpg)
+}
+
+.imagelogo {
+  background-image: url(../images/logo.jpg);
+  background-repeat: no-repeat;
+  width: 296px;
+  height: 57px;
+  padding: 0;
+}
+
+.imagecontact {
+  background-image: url(../images/img_contact.jpg);
+  background-repeat: no-repeat;
+  width: 160px;
+  height: 50px;
+  padding: 0;
+}
+
+.imag_firm {
+  background-image: url(../images/img_firm.jpg);
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 120px;
+  padding: 0;
+}
+
+.celdaup {
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #154575;
+	border-right-color: #154575;
+	border-bottom-color: #154575;
+	border-left-color: #154575;
+}
+
+.celdaupdown {
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #154575;
+	border-right-color: #154575;
+	border-bottom-color: #154575;
+	border-left-color: #154575;
+}

@@ -1,0 +1,16 @@
+propel:
+  _attributes:     { package: plugins.teTaskLoggerPlugin.lib.model }
+
+  te_task_logs:
+    _attributes:   { phpName: teTaskLog }
+    id:            ~
+    task_name:     { type: varchar(255), required: true }
+    arguments:     { type: varchar(255) }
+    options:       { type: varchar(255) }
+    summary:       { type: varchar(255) }
+    started_at:    { type: timestamp }
+    ended_at:      { type: timestamp }
+    status:        { type: varchar(255) }
+    log_file:      { type: varchar(255) }
+    _propel_behaviors:
+      timestampable: { create_column: started_at, update_column: ended_at }

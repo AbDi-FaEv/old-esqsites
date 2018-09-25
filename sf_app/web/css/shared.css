@@ -1,0 +1,5 @@
+a.tick          {background:url('../images/bullet_arrow_right.png') no-repeat -4px 0;padding-left:12px;}
+a.iconleft      {padding-left:20px;background:left no-repeat;}
+a.iconright     {padding-right:20px;background:right no-repeat;}
+
+a.pdf           {background:url('../images/filetypes/pdf.png');}

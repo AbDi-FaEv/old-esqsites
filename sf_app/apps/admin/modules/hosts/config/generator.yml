@@ -1,0 +1,26 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Host
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          host
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        global_document_root: { label: Document Root }
+        status_string:        { label: Status }
+      list:
+        display:  [=name, global_document_root, save_max, type, status_string]
+        object_actions: []
+        batch_actions:  []
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

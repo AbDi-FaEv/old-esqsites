@@ -1,0 +1,1 @@
+<div class="append-bottom"><img src="/images/SkinCareArticles.jpg" width="679" height="193" alt=""></div>

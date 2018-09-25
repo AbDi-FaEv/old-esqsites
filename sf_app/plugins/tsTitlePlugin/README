@@ -1,0 +1,43 @@
+tsTitlePlugin
+=============
+
+tsTitlePlugin allows simply create nice title tag with info of default view.yml files. It ovecomes default symfony behavior, that overwrite content of tag title with every view.yml. Now it is possible to build "breadcrumb" title with nice delimiter without any other config files.
+
+Installation
+------------
+* Install the plugin
+
+    $ symfony plugin:install tsTitlePlugin
+
+* Clear the cache
+
+    $ symfony cache:clear 
+
+
+Usage
+-------------
+
+Simply add config in *app_dir/config/view.yml*
+
+    all:
+      metas:
+        title: 'My Site'
+
+Then add config in *module_dir/config/view.yml*
+
+    all:
+      metas:
+        title: 'My Module'
+
+Now your title tag will contain some like that:
+
+    <title>My Site | My Module</title>
+
+You can customize delimiter and direction of composite title redefine tsTitlePlugin config options
+
+    all:
+      title:
+        direction: "forward" # forward or backward
+        delimiter: ' | '
+
+

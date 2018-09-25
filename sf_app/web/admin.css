@@ -1,0 +1,206 @@
+html{color:#000;background:#f2f2f2;}
+a				{text-decoration:none;}
+a:hover			{text-decoration:underline;}
+a:active 		{outline: none;}
+
+#content		{clear:both;}
+#breadcrumb		{clear:both;}
+
+#sf_admin_container .radio_list li,
+#sf_admin_container .checkbox_list li{list-style:none;display:block;}
+
+/* --------------------  CUSTOM ADMIN THEME -------------------- */
+.sf_admin_actions	{float:right;clear:right}
+#sf_admin_content ul.sf_admin_actions	{float:left;margin:0 0 0 0px;padding:0}
+
+/* --------------------  TWEAK BUTTONS -------------------- */
+
+#sf_admin_container ul li.sf_admin_action_delete a{background:url(buttons/icons/cross.png) no-repeat 5px 5px;}
+ #sf_admin_container ul li.sf_admin_action_changes a, #sf_admin_container ul li.sf_admin_action_list a{background:url(buttons/icons/list.png) no-repeat 5px 5px;}
+#sf_admin_container ul li.sf_admin_action_edit a{background:url(buttons/icons/edit.png) no-repeat 5px 5px;}
+#sf_admin_container ul li.sf_admin_action_save a, #sf_admin_container ul li.sf_admin_action_new a, #sf_admin_container ul li.sf_admin_action_save input {background:url(buttons/icons/tick.png) no-repeat 5px 5px;}
+#sf_admin_container ul li.sf_admin_action_save input, .sf_admin_batch_actions_choice input[type="submit"] 	{padding:5px 10px 5px 28px;display:block;  float:left;  margin: 0.2em 0em 0.2em .3em; font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;  font-size:100%;  line-height:130%;  text-decoration:none!important;  font-weight:bold;  cursor:pointer;border:1px solid #dedede;  border-top:1px solid #eee;  border-left:1px solid #eee;}
+
+#sf_admin_container ul li.sf_admin_action_delete a{color:#565656; background-color:#f5f5f5; padding:5px 10px 5px 28px;display:block;  float:left;  margin: 0.2em 0em 0.2em .3em; font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;  font-size:100%;  line-height:130%;  text-decoration:none!important;  font-weight:bold;  cursor:pointer;border:1px solid #dedede;  border-top:1px solid #eee;  border-left:1px solid #eee; }
+#sf_admin_container ul li.sf_admin_action_delete a:hover {  background-color:#fbe3e4;  border:1px solid #fbc2c4;  color:#d12f19;}
+#sf_admin_container ul li.sf_admin_action_delete a:active {  background-color:#d12f19;  border:1px solid #d12f19;  color:#fff;}
+
+#sf_admin_container ul li.sf_admin_action_list a,#sf_admin_container ul li.sf_admin_action_changes a, #sf_admin_container ul li.sf_admin_action_edit a
+	{ color:#565656; background-color:#f5f5f5; padding:5px 10px 5px 28px;display:block;  float:left;  margin: 0.2em 0em 0.2em .3em; font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;  font-size:100%;  line-height:130%;  text-decoration:none!important;  font-weight:bold;  cursor:pointer;border:1px solid #dedede;  border-top:1px solid #eee;  border-left:1px solid #eee; }
+#sf_admin_container ul li.sf_admin_action_list a:hover ,#sf_admin_container ul li.sf_admin_action_changes a:hover , #sf_admin_container ul li.sf_admin_action_edit a:hover , .sf_admin_batch_actions_choice input[type="submit"]:hover 
+	{  background-color:#dff4ff;  border:1px solid #c2e1ef;  color:#336699;}
+#sf_admin_container ul li.sf_admin_action_list a:active,#sf_admin_container ul li.sf_admin_action_changes a:active, #sf_admin_container ul li.sf_admin_action_edit a:active, .sf_admin_batch_actions_choice input[type="submit"]:active 
+	{ background-color:#6299c5;  border:1px solid #6299c5;  color:#fff;}
+	
+
+#sf_admin_container ul li.sf_admin_action_save a, #sf_admin_container ul li.sf_admin_action_new a, #sf_admin_container ul li.sf_admin_action_save input,.sf_admin_batch_actions_choice input[type="submit"] 
+	{color:#565656; background-color:#f5f5f5; padding:5px 10px 5px 28px;display:block;  float:left;  margin: 0.2em 0em 0.2em .3em; font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;  font-size:100%;  line-height:130%;  text-decoration:none!important;  font-weight:bold;  cursor:pointer;border:1px solid #dedede;  border-top:1px solid #eee;  border-left:1px solid #eee; }
+#sf_admin_container ul li.sf_admin_action_save a:hover , #sf_admin_container ul li.sf_admin_action_new a:hover , #sf_admin_container ul li.sf_admin_action_save input:hover 
+	{   background-color:#E6EFC2;  border:1px solid #C6D880;  color:#529214;}
+#sf_admin_container ul li.sf_admin_action_save a:active, #sf_admin_container ul li.sf_admin_action_new a:active , #sf_admin_container ul li.sf_admin_action_save input:active 
+	{ background-color:#d12f19;  border:1px solid #d12f19;  color:#fff;}
+	
+#sf_admin_container ul li.sf_admin_batch_actions_choice	{display:block;float:left;margin:0 1.5em 0 0 }
+#sf_admin_container ul li.sf_admin_batch_actions_choice select	{padding:.5em .2em;margin:.2em 0 ;float:left}
+.sf_admin_batch_actions_choice input[type="submit"]	{padding-left:10px}
+
+
+/* --------------------  SORTABLE  -------------------- */
+.sort_list_container 			{float:right;margin-left:20px;width:300px;}
+.sort_list_container .help		{padding:10px !important;margin:0px;}
+
+div.status_indicator			{width:24px;height:24px;display:none;float:right;margin-top:10px;}
+div.status_indicator.busy		{background:url("../images/spinner.gif");display:block;}
+
+.ui-sortable li {list-style:none;}
+.sortable li.ui-state-default{ border: 1px solid #d3e3b6; background: #d3e3b6 url(ui/1011-theme/images/ui-bg_glass_100_e2f2c4_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #000000; outline: none; }
+
+/* --------------------  FLASH MESSAGE  -------------------- */
+#sf_admin_container .notice{background:url(../images/flash_notice.jpg) repeat-x;border-top:1px solid #ddd;border-bottom:1px solid #ddd;background-color:#ffc;margin:10px 0;padding:10px;}
+
+#dashboard			{float:left;width:68%;}
+#dashboard_sidebar	{float:right;width:30%;}
+#dashboard_sidebar td	{border:none;border-bottom:1px solid #ddd;font-size:.85em}
+.adminlogo	{background:url(../images/teneleven.png) no-repeat 50% 50%;height:120px;width:250px }
+
+/* -------------------- OVERWRITES sfAdminDashPlugin CSS -------------------- */
+
+body{  text-align: left;font:13px  Trebuchet MS, arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;margin:10px;padding:0}
+select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+#sf_admin_container input[type="text"], #sf_admin_container input[type="password"] {padding:4px;}
+#sf_admin_container textarea {padding:4px;}
+#sf_admin_container select {padding:4px;}  
+
+#sf_admin_container .sf_admin_form_row input[type="text"], 
+#sf_admin_container .sf_admin_form_row input[type="password"],
+#sf_admin_container .sf_admin_form_row textarea 	{width:50%;}
+
+ul.error_list		{border:none;background-image:none;color:red;}
+ul.error_list li	{padding:0;margin:0;}
+
+#sf_admin_container{padding:10px 10px !important; background:#fff;margin:10px}
+#logout{font-weight:700;text-align:right;padding-top:7px;padding-right:10px;font-size:.85em}
+
+#sf_admin_container h1{font-size:1.8em;color:#81a835;margin:0 0 10px;padding:0;text-transform:uppercase}
+#sf_admin_container h2 {color:#222;background:url(../images/background.jpg)  repeat-x;font-size:.9em;letter-spacing:.05em;font-weight:400;margin:0;padding:5px;text-transform:uppercase;font-style:normal;}
+#sf_admin_container thead tr,#sf_admin_content tfoot tr{background:url(../images/background.jpg);}
+
+.logincontainer	{padding:50px 0}
+.login{background:#fff;border:1px solid #CCC;width:60%;font-size:11px;margin:6em auto 2em;padding:15px;}
+.login h1{font-size:2.5em;height:auto;text-align:left;margin:0;padding:15px 4px 10px 0px;}
+.login p{padding:0 1em;}
+.form-block{background:#E9ECEF;border:1px solid #CCC;padding:15px 0 10px 15px;}
+.login-form{float:right;text-align:left;width:50%;}
+.login-text{float:left;text-align:left;width:50%;}
+.inputlabel {font-weight:700;text-align:left;clear:left;width:90px;}
+.inputlabel label{font-weight:700;text-align:left;width:auto !important;margin-right:0px}
+.form-block	div {float:left;}
+.form-block	button{margin:0}
+
+.inputbox{border:1px solid #CCC;width:150px;margin:0 0 1em;padding:3px;}
+
+.cpanel{text-align:center;vertical-align:middle;border:1px solid #ddd;margin-bottom:20px;padding:2px 2px 5px;}
+.cpanel div.icon{margin:3px;}
+.cpanel div.icon a{display:block;float:left;color:#333 !important;height:105px !important;width:108px !important;vertical-align:middle;text-decoration:none;border:1px solid #DDD;padding:2px 5px 1px;}
+.cpanel div.icon a:hover{color:#333;background-color:#f1f6e8;text-decoration:none !important;border:1px solid #96b857;padding:3px 4px 0 6px;}
+.cpanel div.icon img{margin-top:13px;}
+.cpanel div.icon span{display:block;padding-top:3px;}
+.cpanel div.icon a:link,.cpanel div.icon a:active,.cpanel div.icon a:visited{color:gray;}
+
+
+
+
+/* Drop Down Menu  */
+#sf_admin_menu ul{margin:0;padding:0;}
+#sf_admin_menu li{list-style:none;}
+li.node{display:block;float:left;position:relative;background:url(../images/menubardown.gif) no-repeat 92% 50%;padding:7px 24px 7px 16px;}
+li.nodehover{background:url( ../images/menubardownhover.gif) #d5e7b1 no-repeat  92% 50%;}
+li.node ul{position:absolute;top:32px;left:0px;display:none;background:#d5e7b1;border:#ccc solid 1px;border-top:none;width:180px;z-index:1000000}
+li.node ul li{padding:5px 10px;clear:left}
+li.node a,li.node a:visited{text-decoration:none;font-weight:700;color:#222;text-transform:uppercase}
+li.node a:hover{color:#222;}
+#sf_admin_menu li.node ul li a {text-transform:none;display:block;}
+#sf_admin_menu li.node ul li:hover {background:#fff}
+#sf_admin_menu li.node ul li img {float:left;margin-right:6px}
+#sf_admin_path a,#logout a{color:#708a3d;text-decoration:none;}
+#sf_admin_path strong a  {font-size:1.5em;letter-spacing:none;}
+
+/*sf_admin_theme_plugin styles */
+#sf_admin_theme_header {margin:0 0 0 20px;padding:0; height:29px;width:64px;background:url(../images/icons/home.png) no-repeat;line-height:29px;cursor:pointer;float:left;border:none;text-indent:-4000px;overflow:hidden}
+#sf_admin_menu{background:url(../images/navback.jpg) repeat-x;padding:0 8px; margin:10px}
+#sf_admin_path{background:#FFF;border:1px solid #ddd;padding:6px;font-size:.85em;margin:0 10px}
+#sf_admin_path a:hover,#logout a:hover,#sf_admin_path a:active,#logout a:active{color:#81a835;text-decoration:underline;}
+#sf_admin_footer{clear:both}
+#sf_admin_theme_footer{text-align:center;font-size:.9em;color:#666;}
+
+/* -----TABLE ATTRIBUTES--- */
+.sf_admin_list th, #sf_admin_bar th{font-wieght:400;font-size:.85em;text-transform:uppercase}
+
+
+/* -------------------- OVERWRITES sfPropelPlugin CSS -------------------- */
+
+	#sf_admin_container h1{margin:0 0 10px;padding:0;}
+	.sf_admin_list th{background:url(../images/background.jpg) repeat-x #E0EDC5;white-space:nowrap;}
+	#sf_admin_container th a, #sf_admin_container th a:hover {color:#474D3B;}	
+	#sf_admin_container fieldset h2{color:#222;background:url(../images/background.jpg) repeat-x;font-size:.9em;letter-spacing:.05em;font-weight:400;margin:0;padding:5px;text-transform:uppercase;font-style:normal;}
+
+
+/* -------------------- OVERWRITES sfDynamicCMSPlugin CSS -------------------- */
+
+	td#sfdynamiccms_sidebar{width:180px;background:#fff;padding:0 10px 0 0;}
+/************************************* ONGLET ************************************ */
+	div#sfdynamiccms_content{clear:both;background-color:#fff;background-image:url("###/sfDynamicCMSPlugin/images/bg-content.gif");background-repeat:repeat-x;padding:0 10px 10px;}
+
+/************************************* SIDEBAR ************************************ */
+	#containerul li div.sel{display:block;float:left;list-style-type:none;font-weight:700;border:0px;width:100%;padding:0 2px;}
+
+	div#menu-list{position:relative;border-top:1px dotted #000;padding-top:10px;clear:both;}
+	div#menu-list ul{list-style-type:none;margin:0 5px;padding:0}
+	div#menu-list li{margin-bottom:2px;list-style-type:none;}
+
+	div.menulegend{height:10px;width:10px;float:left;border:1px solid grey;margin-right:-15px}
+	
+	#containerul .symbols-plus{background-image:url(../images/plus.png);}
+	#containerul .symbols-minus{background-image:url(../images/minus.png);}
+	
+	div#sfdynamiccms_menu ul{list-style-type:none;width:100%;height:22px;background-image:url("/sfDynamicCMSPlugin/images/black-px.gif");background-repeat:repeat-x;background-position:bottom;margin:0 0 10px 0;padding:0;}
+	.sfdynamiccms_flash_error h2,.sfdynamiccms_flash_notice h2{color:#222;background:url(../images/background.jpg) repeat-x;font-size:.9em;letter-spacing:.05em;font-weight:400;margin:0;padding:5px;text-transform:uppercase;font-style:normal;}
+
+	
+		
+	/**************** NEW TEMPLATE ADDING SETTINGS TO CONTENT TAB	**************** */
+	#sfdynamiccms_page_settings				{float:right;width:250px;padding-left:10px; border-left:1px solid #ddd;}
+	
+	#sfdynamiccms_page_meta	input[type="text"], 
+	#sfdynamiccms_page_meta	textarea	{width:98%;padding:4px;}
+	#sf_admin_container .form-row .content	{padding-left: 0px;margin-top:4px;}
+	#sf_admin_container #sfdynamiccms_page_meta	.form-row	{clear:none;}
+	#sf_admin_container #sfdynamiccms_page_content	.form-row	{clear:none;margin-right:280px}
+	
+	#sfdynamiccms_page_settings fieldset	{border:none; width:250px;position: relative;}
+	#sfdynamiccms_page_settings fieldset legend	{color:#222;font-size:.9em;letter-spacing:.05em;font-weight:400;text-transform:uppercase;font-style:normal;}
+	#sfdynamiccms_page_settings fieldset legend span	{width:240px;position: absolute; top: 0; left: 0;background:url(../images/background.jpg) repeat-x;margin:0;padding:5px;}
+	
+	table#sfdynamiccms {width: 100%;border:none;}
+	table#sfdynamiccms td {border:none;}
+	td#sfdynamiccms_page {	  background-image: none; border-left: 1px solid #ddd !important;padding:0 0 0 10px}
+	
+	.ui-tabs { padding-bottom:0}
+	.ui-tabs  ul li {list-style:none;}
+	.ui-tabs a {background:none!important;display:pointer!important;padding:0}	
+	.ui-tabs a:hover {text-decoration:none!important; }	
+	.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: pointer;}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	

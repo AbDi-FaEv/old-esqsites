@@ -1,0 +1,39 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Domain
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          domain
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        website_id:        { label: Website }
+        registration_type_string: { label: Reg. Type }
+        status_string:     { label: Status }
+        type_string:       { label: Type }
+        is_auto_renew:     { label: Auto Renew }
+      list:
+        fields:
+          expiration_date: { date_format: d }
+          last_renewal_date: { date_format: d }
+        display:        [_status, name, registration_type_string, expiration_date, last_renewal_date, created_at]
+        object_actions:
+          show:         { label: Show, action: show }
+          showWebsite:  { label: Go To Website, action: showWebsite }
+        batch_actions:  []
+        sort:           [created_at, asc]
+        max_per_page:   false
+      filter:
+        display: [name, registration_type, status]
+      form:
+        class:  DomainAdminForm
+      edit:
+        title:  Edit Domain "%%name%%"
+      new:
+        title:  Add New Domain

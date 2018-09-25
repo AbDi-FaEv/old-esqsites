@@ -1,0 +1,8 @@
+#sf_admin_container ul li.sf_admin_action_up a
+{
+	background-image:url(../images/arrow_up.png);
+}
+#sf_admin_container ul li.sf_admin_action_down a
+{
+	background-image:url(../images/arrow_down.png);
+}

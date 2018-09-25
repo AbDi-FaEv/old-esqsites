@@ -1,0 +1,229 @@
+/*
+CSS for template 2.2
+*/
+body	{text-align:center;}
+#main	{margin-right:auto;margin-left:auto;}
+
+td.news {
+	/* background-image:  url('../images/grey_fade1.jpg');
+	background-repeat: repeat-x; *//*padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+	FONT-SIZE: 10px;
+	COLOR: #5B0303;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	padding: 7px;
+	line-height: 15px;
+
+}
+
+td.menu_bar {
+	
+	
+}
+
+td.menu_bar:hover {
+	
+	align : center;
+	
+	background-image:  url('../images/menu_bg_rollover.jpg');
+	background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px
+	
+}
+
+.menutext {
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	*/
+}
+
+.menutext:hover {
+	
+	/* font-family : Arial, san-serif;
+	font-size : 13px;
+	color : gold;
+	text-decoration : none;
+	font-weight: bold;
+	background-color: #999999;
+	border-bottom: 0px solid #FFFFFF;
+	display: block;
+	background-image:  url('images/menu_bg_rollover.jpg.jpg');
+	background-repeat: no-repeat; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+
+
+	FONT-SIZE: 10px;
+	COLOR: gold;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('images/menu_bg_rollover.jpg');
+	background-repeat: repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+}
+
+.menubar {
+	
+	background-image:  url('../images/menu_bg.jpg');
+	/* background-repeat: repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	 */
+}
+
+.slogan {
+	FONT-SIZE: 25px;
+	COLOR: #000000;
+	FONT-FAMILY: Georgia, Times New Roman, Times, serif
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+
+.lawOfficesOf_big {
+	FONT-SIZE: 20px;
+	COLOR: #000000;
+	FONT-FAMILY: Georgia, Times New Roman, Times, serif
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+
+
+.lefttext {
+	FONT-SIZE: 10px;
+	COLOR: #5B0303;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	padding: 7px;
+	line-height: 15px;
+
+
+
+
+
+
+}
+.formtextbody {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+}
+.innertextsorround {
+	
+	padding: 15px 20px 15px 30px;
+
+}
+.innertext2 {
+	FONT-SIZE: 11px;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 12px;
+
+
+}
+.innertext2a {
+	FONT-SIZE: 11px;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 12px;
+
+
+}
+.innertext2b {
+	FONT-SIZE: 11px;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 16px;
+
+
+}
+INPUT {
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	border: 1px solid #35577B;
+	height: 15px;
+	background-color: #FFFFA0;
+
+
+
+}
+.t01 {
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	padding-bottom: 5px;
+	padding-right: 3px;
+	padding-left: 3px;
+
+
+
+
+}
+
+.t01:hover {
+	FONT-SIZE: 11px;
+	COLOR: #FECA91;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+
+}
+.linksub {
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+
+}
+
+.linksub:hover {
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+	color: #DD0808;
+
+}
+.leftlink {
+	FONT-SIZE: 10px;
+	COLOR: #5B0303;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.leftlink:hover {
+	FONT-SIZE: 10px;
+	COLOR: #BA0505;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.bodytext {
+	FONT-SIZE: 13px;
+	COLOR: #4F807D;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.bodytext:hover {
+	FONT-SIZE: 11px;
+	COLOR: #6B0000;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}

@@ -1,0 +1,186 @@
+.firm_name  {
+  FONT-SIZE: 20px;
+  COLOR: #B24B15;
+  FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.esq_link_text {
+	FONT-SIZE: 10px;
+	COLOR: black;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	*/
+}
+
+.menutext {
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('../images/menu_bg_rollover.jpg');
+	 background-repeat: repeat-x; repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px	*/
+}
+
+.menutext:hover {
+	
+	/* font-family : Arial, san-serif;
+	font-size : 13px;
+	color : gold;
+	text-decoration : none;
+	font-weight: bold;
+	background-color: #999999;
+	border-bottom: 0px solid #FFFFFF;
+	display: block;
+	background-image:  url('images/menu_bg_rollover.jpg.jpg');
+	background-repeat: no-repeat; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+
+
+	FONT-SIZE: 10px;
+	COLOR: gold;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	/*background-image:  url('images/menu_bg_rollover.jpg');
+	background-repeat: repeat-y; padding-left:17px; padding-right:2px; padding-top:3px; padding-bottom:3px */
+}
+
+.lefttext {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 15px;
+
+
+
+
+
+
+}
+.formtextbody {
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+.innertext2 {
+	FONT-SIZE: 11px;
+	COLOR: #010000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 13px;
+
+
+}
+.innertext2a {
+	FONT-SIZE: 11px;
+	COLOR: #676767;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	TEXT-DECORATION: none;
+	font-weight: normal;
+	line-height: 14px;
+
+
+}
+
+.t01 {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	text-decoration: none;
+
+
+
+
+}
+
+.t01:hover {
+	FONT-SIZE: 10px;
+	COLOR: #8A8A8A;
+	FONT-FAMILY: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	text-decoration: none;
+
+}
+.leftlink {
+	FONT-SIZE: 10px;
+	COLOR: #5B5957;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.leftlink:hover {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.leftlink1 {
+	FONT-SIZE: 10px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.leftlink1:hover {
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.slogan {
+	FONT-SIZE: 15px;
+	COLOR: #B24B15;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.bodytext {
+	FONT-SIZE: 11px;
+	COLOR: #B24B15;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.bodytext:hover {
+	FONT-SIZE: 11px;
+	COLOR: #EC8C59;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.border
+{
+	border: 1px solid #000000;
+
+}
+.inputborder
+{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	FONT-FAMILY: verdana;
+	height: 15px;
+	background-color: #F5CAB8;
+	border: 1px solid #A03E14;
+
+}

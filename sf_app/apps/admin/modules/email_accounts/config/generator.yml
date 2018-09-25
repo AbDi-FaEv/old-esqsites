@@ -1,0 +1,31 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           EmailAccount
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              account
+    plural:                accounts
+    route_prefix:          email_account
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        customer_id:   { label: Customer }
+        status_string: { label: Status }
+        domain_name_id: { label: Domain }
+        website_id:     { label: Website }
+      list:
+        title:    Email Accounts
+        display:  [_website, =from_email, forwarding_address, _status, created_at]
+        object_actions: []
+        sort:     [created_at, desc]
+      filter:
+        display:  [website_id, domain_name_id, local_address, forwarding_address, status]
+      form:
+        class:    EmailAccountAdminForm
+      edit:    ~
+      new:
+        title:    Add New Email Account

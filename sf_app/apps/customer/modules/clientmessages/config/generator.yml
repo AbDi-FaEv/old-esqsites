@@ -1,0 +1,38 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           ClientMessage
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          client_message
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        created_at:  { label: Received }
+        is_viewed:   { label: Viewed }
+        website_id:  { label: Website }
+        name:        { label: Sender Name }
+        email:       { label: Sender Email }
+      list:
+        title:   Client Messages
+        layout:  stacked
+        params:  %%is_viewed%%<strong>%%subject%%</strong><br />%%message%%<br /><em>submitted by %%name%% (%%email%%) on %%created_at%%</em>
+        display: [name, email, subject, message, created_at]
+        object_actions:
+          _delete: ~
+          markAsViewed: { action: markAsViewed, label: Mark as Viewed }
+        sort:    [created_at, desc]
+        actions: []
+        batch_actions:
+          _delete: ~
+          markAsViewed: { label: Mark as Viewed }
+      filter:
+        display: [name, email, website_id, is_viewed, created_at]
+      form:    ~
+      edit:    ~
+      new:     ~

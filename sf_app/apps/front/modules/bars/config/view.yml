@@ -1,0 +1,3 @@
+showSuccess:
+  layout: bars
+  stylesheets: [-*, bar-discounts]

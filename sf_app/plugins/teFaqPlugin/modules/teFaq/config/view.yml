@@ -1,0 +1,5 @@
+all:
+  metas:
+    title: Frequently Asked Questions
+  stylesheets:
+    - /teFaqPlugin/css/screen

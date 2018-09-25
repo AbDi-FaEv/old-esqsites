@@ -1,0 +1,4 @@
+selectTemplateSuccess:
+  javascripts:  [jquery/jquery.cycle.js]
+  stylesheets:
+    - /esqTemplateSelectorPlugin/css/screen

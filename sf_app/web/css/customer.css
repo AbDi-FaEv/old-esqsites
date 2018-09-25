@@ -1,0 +1,139 @@
+.adminlogo	{background:url(../images/logo.jpg) no-repeat 50% 50%;height:90px;width:349px }
+
+#sf_admin_container a {color:#1F547F;}
+#sf_admin_container a:hover {color:#1F547F;}
+
+body          {margin:0px;padding:0px;}
+#esq_header   {background-color:white;}
+#esq_header #contact_info {text-align:right;float:right;margin-top:30px;margin-right:20px;color:#1a71a6}
+#esq_header #contact_info h1  {margin:0px;}
+#esq_header #contact_info h2  {margin:0px;}
+#logo         {margin-left:20px;margin-bottom:10px;margin-top:10px;}
+#logout a     {background:url("../images/door_in.png") no-repeat;color:#FFF !important;padding-left:20px;margin-right:10px;}
+
+#sf_admin_menu  {margin:0px;}
+/*#logo           {height:80px;}*/
+
+#pagetypes      {margin-left:470px;border-left:1px solid #aeaeae;padding-left:20px;}
+.pagetype img   {border:1px solid #aeaeae;float:left;margin-right:10px;}
+.pagetype .name {font-weight:bold;margin-bottom:5px;font-size:1.2em;}
+#pagetypes .conflict  {background:url('../images/error.png') no-repeat 10px 10px #FEFF7F;padding:10px;padding-left:35px;font-style: italic;}
+
+div.fixed       {width:800px;}
+
+#sf_admin_content .document       {width:600px;margin-bottom:15px;border:3px double black;padding:15px;font-family:"Courier New";max-height:500px;overflow:auto;}
+#sf_admin_container .document h2    {font-weight:bold;background:none;border-bottom:1px solid black;margin-bottom:15px;}
+.document p     {margin-bottom:10px;line-height:1.5em;}
+
+/* DASHBOARD STUFF */
+
+#dashboard_sidebar  {min-width:300px;}
+
+#website_list   {margin-bottom:20px;}
+#website_list .website:hover {background-color:#dae5eb;border:1px solid #aeaeae !important;}
+#website_list .website.current {background-color:#dae5eb;border:1px solid white;}
+.website img    {float:left;padding:2px;border:1px solid #aeaeae;margin-right:10px;background-color:white;}
+.website .name  {text-transform:uppercase;}
+.website        {height:50px;padding:5px;}
+
+#welcome_message        {padding:10px;}
+#welcome_message p      {width:600px;}
+#welcome_message .date  {float:right;color:gray;font-style:italic;}
+
+
+.boxed      {border-color:#ccc;padding:10px;}
+.boxed p    {margin-bottom:5px;}
+
+#sidebar    {margin-left:10px;padding-left:10px;float:right;width:300px;color:grey;}
+#main_area  {margin-right:320px;}
+
+table td, table th	{border:none;}
+th			{text-align:left;}
+
+.sf_admin_form ul              {list-style-type:none;margin:0px;padding:0px;}
+.sf_admin_form ul li           {list-style-type:none;margin:0px;padding:0px;}
+#sf_admin_container ul label                  {float:none;display:block;width:inherit;}
+#sf_admin_container ul.radio_list label       {display:inline;}
+ul.radio_list          {padding-top:5px;}
+ul.radio_list li       {margin-bottom:5px;}
+
+div.messagebox          {margin:20px 0px 20px 0px;padding:10px;min-height:50px;}
+
+div.note                {background-color:#eef2f3;}
+div.note p:first-child  {padding-left:60px;min-height:50px;background:url("../images/note.png") no-repeat;overflow:show; }
+div.time p:first-child  {padding-left:60px;min-height:50px;background:url("../images/clock.png") no-repeat #eef2f3 10px 10px;}
+
+div.cancel      {background:url('../images/cancel.png') no-repeat #ffefef 10px 10px;padding-left:65px;}
+div.cancel h2   {background:none !important;}
+
+.ghost      {color:#aeaeae;font-size:0.9em;}
+
+
+.inset      {border-top:1px solid #aeaeae;border-left:1px solid #aeaeae;border-bottom:1px solid white;border-right:1px solid white;}
+
+/* page edit page */
+.page_group {background-color:#eaeaea;padding:10px;margin-bottom:10px;padding-bottom:10px;background-color:white;}
+#sf_admin_container .page_group label {width:auto;display:inline;float:none;}
+
+.page_group .header          {margin:-10px;padding:0px;margin-bottom:10px;background:url(../images/background.jpg);}
+.page_group .header table    {margin:0px;padding:0px;width:100%;}
+
+
+
+table.lines td, table.lines th	{border-bottom:1px solid #eaeaea;}
+table.lines tr.last td	{border-bottom:none;}
+
+#sf_admin_container .help {  padding-left: 20px; background:url("../images/info.gif") no-repeat 0px 2px; }
+#sf_admin_container .sf_admin_row .help {  padding-left: 9em;background:none; }
+
+#sf_admin_container h1	{} 
+
+.red, .red a	{color:red !important;}
+.green, .green a	{color:green !important;}
+
+a.pagelink		{background:url("../images/page.png") no-repeat 0px 1px;padding-left:22px;}
+
+.sf_admin_list th	{background:url(../images/background.jpg) repeat-x #E0EDC5;white-space:nowrap;}
+#sf_admin_container h2 {background:url(../images/background.jpg);border-bottom:1px solid white;}
+#sf_admin_container fieldset h2{background:url(../images/background.jpg);}
+#sf_admin_container thead th {background:url(../images/background.jpg);}
+#sf_admin_menu		{background:url(../images/background.jpg);}
+
+#sf_admin_container h1					{color:#6e93b2;}
+#sf_admin_path a,#logout a				{color:#6e93b2;}
+#sf_admin_path a:hover,#logout a:hover	{color:#6e93b2;}
+
+li.nodehover				{background-color:#cae0ed;}
+li.node ul					{background-color:#cae0ed;border-left:1px solid #fff;border-right:1px solid #95b3cb;border-bottom:1px solid #95b3cb;}
+
+#sf_admin_container	input[type="text"],
+#sf_admin_container	input[type="password"],
+#sf_admin_container	textarea {width:400px;}
+
+#sf_admin_container input#email_account_local_address	{width:200px;}
+
+#page_content {width:600px;}
+
+#picture_instructions {width:600px;border:1px solid #aeaeae;padding:10px;margin-bottom:10px;background-color:#FFF;}
+#picture_instructions ul  {margin-left:25px;margin-top:10px;}
+#picture_instructions li  {list-style-type:disc;margin-bottom:8px;}
+
+div.cancellation  {background:url('../images/cancel.png') no-repeat 5px;padding-left:65px;}
+div.backup  {background:url('../images/disc.png') no-repeat 5px;padding-left:65px;}
+div.refund  {background:url('../images/payment.png') no-repeat 5px;padding-left:65px;}
+
+div.pretty-button {
+    background: url("../images/background.jpg") repeat scroll 0 0 transparent;
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+table.theme-selection {
+    width: auto;
+    margin-top: 15px;
+}
+    table.theme-selection td {
+        width: 150px;
+    }

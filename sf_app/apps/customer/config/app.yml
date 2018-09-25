@@ -1,0 +1,70 @@
+all:
+
+  lawpay:
+    #signup_url: https://www.lawpayapplication.com/esqsites
+    signup_url: https://www.lawpay.com/signup/esqsites
+    landing_url: http://www.lawpay.com/esqsites
+
+  title:
+    delimiter: ' &raquo; '
+
+# ADMIN DASHBOARD PLUGIN
+  sf_admin_dash:
+    logout_route:    "@logout"
+    include_path:    false
+    include_jquery:  false
+    site:            ESQSites
+    image_dir:       /teAdminThemePlugin/images/icons/
+    categories:
+      Your Website:
+        items:
+          Pages:
+            url:    "@page"
+            image:  content.png
+          Site Look:
+            url:    "@template_select"
+            image:  /images/icons/appearance.png
+          Website Info:
+            url:    "@site_info"
+            image:  /images/icons/website.png
+          Domains:
+            url:    "@domain"
+            image:  /images/icons/domains.png
+          Email Accounts:
+            url:    "@email_account"
+            image:  /images/icons/email.png
+#          Hosting Package:
+#            url:    "@hosting_plan"
+#            image:  /images/icons/package.png
+          Google Analytics:
+            url:    "@google_tools"
+            image:  /images/icons/stats.png
+          Collect Payments:
+            url:    "@payment_tools"
+            image:  /images/icons/collect-payment.png
+          Social Media:
+            url:    "@social_media"
+            image:  /images/icons/social_media.png
+          View Site:
+            url:    "@site_view"
+            image:  /images/icons/magnifier.png
+          Client Inbox:
+            url:    clientmessages/index
+            image:  /images/icons/inbox.png
+          File Manager:
+            url:    /js/ckfinder/ckfinder.html
+            image:  media.png
+      Your Account:
+        items:
+          Account Settings:
+            url:    "@account"
+            image:  /images/icons/settings.png
+          Billing Information:
+            url:    account/showBilling
+            image:  /images/icons/payment.png
+prod:
+
+  sf_google_analytics_plugin:
+    enabled:    true
+    profile_id: UA-10353874-1
+    tracker:    google

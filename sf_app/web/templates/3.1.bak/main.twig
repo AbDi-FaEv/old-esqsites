@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+  <link href="templates/3.1/css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<!--header start-->
+    
+    <div id="header">
+    
+    	<div id="headerarea">
+        
+        	<!--logo start-->
+            
+            <div id="logo">
+            
+                <a href="#">{{website.firmName|break}}</a>
+                
+            </div>
+        
+        	<!--logo end-->
+        
+        	<!--contactno start-->
+            
+            <div id="contact">
+            
+            	{{website.phone|format_phone}}<br />
+            
+            </div>
+        
+        	<!--contactno end-->
+        
+        </div>
+    
+    </div>
+
+	<!--header start-->
+
+	<!--navigation start-->
+    
+    <div id="nav">
+    
+   		<div id="navarea">
+        
+        	<ul>
+                {% for loop_page in website.mainMenu %}
+                    <li><a href="#"{% if loop_page.url == page.url %} class="navactive"{% endif %}>{{loop_page.linkName}}</a></li>
+                {% endfor %}            
+            </ul>
+        
+        </div>
+    
+    </div>
+
+	<!--navigation end-->
+
+	<!--body start-->
+    
+    <div id="conarea">
+    
+    	<!--bodyleft start-->
+        
+        <div id="conarealeft">
+        
+        	<div class="conleft">
+            
+                <h2>
+                {{page.title}}
+                </h2>
+
+                {{page.content}}
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyleft end-->
+    
+    	<!--bodyright start-->
+        
+        <div id="conarearight">
+        
+        	<div class="conright">
+            
+            	<div class="banarea">
+                
+                	<img src="templates/3.1/images/bannerimg01.png" alt="banner" title="banner" />
+                
+                </div>
+                
+                <div class="conboxright">
+                
+                	<h3>
+                    
+                    	Contact Us
+                    
+                    </h3>
+                    
+                    <div class="context">
+                    
+                    	<div class="context1">
+                        
+                        	Phone: {{website.phone|format_phone}}<br />
+							Fax: {{website.fax|format_phone}}<br />
+							Email: <a href="mailto:{{website.email}}">{{website.email}}</a>
+                        
+                        </div>
+                    
+                    	<div class="context2">
+                        
+                        	{{website.address}}<br />
+                            {{website.city}}<br />
+                            {{website.state}} {{website.zip}}
+                        
+                        </div>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyright end-->
+    
+    </div>
+
+	<!--body end-->
+
+	<!--footer start-->
+    
+    <div id="footer">
+    
+    	<!--footerbox start-->
+    
+    	<div id="footercon">
+        
+        
+        	<div id="footerconarea">
+            
+            	<!--conleft start-->
+                
+                <div id="footerconleft">
+                
+                	<ul>
+                    
+                    	<li><img src="templates/3.1/images/icon2.png" alt="icon" /></li>
+                    
+                    	<li>Legal Web Design by esqsites123.com</li>
+                    
+                    </ul>
+                
+                </div>
+            
+            	<!--conleft end-->
+            
+            	<!--conright start-->
+                
+                <div id="footerconright">
+                
+                	<ul>
+                        {% for loop_page in website.footerMenu %}    
+                    	   <li><a href="{{loop_page.url}}">{{loop_page.linkName}}</a></li>
+                            {% if not loop.last%}
+                                <li>|</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                
+                </div>
+            
+            	<!--conright end-->
+            
+            </div>
+        
+        </div>
+    
+    	<!--footerbox end-->
+    
+    	<!--footertext start-->
+        
+        <div id="footercopy">
+        Copyright&copy; 2012. All world rights reserved
+        </div>
+    
+    	<!--footertext end-->
+    
+    </div>
+
+	<!--footer end-->
+
+</body>
+</html>

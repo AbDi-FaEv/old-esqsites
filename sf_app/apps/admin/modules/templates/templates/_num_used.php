@@ -1,0 +1,1 @@
+<?php echo link_to($template -> getVirtualColumn("num_used"), "website_template_showWebsites", $template); ?>

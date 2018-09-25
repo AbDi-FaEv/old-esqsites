@@ -1,0 +1,1 @@
+<?php echo link_to($bar_association -> getNumCustomers(), "customer", array("filters[bar_association_id]" => $bar_association -> getId())); ?>

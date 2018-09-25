@@ -1,0 +1,8 @@
+all:
+  teFormHandlerPlugin:
+    all:
+      save: true
+      email:
+        subject: New Form Submission
+        type:    inform
+        message: Please log into the admin area for details

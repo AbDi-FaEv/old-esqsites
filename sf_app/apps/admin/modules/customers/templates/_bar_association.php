@@ -1,0 +1,2 @@
+<?php echo $customer -> getBarAssociation(); ?>
+<?php if($customer -> getBarAssociation() && $customer -> getCreditBarAssociation()) echo image_tag("award_star_gold_3.png", array("alt_title" => "Credited for Sale")); ?>

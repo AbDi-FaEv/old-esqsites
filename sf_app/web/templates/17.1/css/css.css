@@ -1,0 +1,122 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(../images/BACK.jpg);
+	background-repeat: repeat-x;
+	background-color:#f5f0ca;
+
+}
+.txt1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 15px;
+	color: #000000;
+	text-decoration: none;
+}
+.txt2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	color: #faee98;
+	text-decoration: none;
+}
+.txt3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 22px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.marquis1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.marquis2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	color: #faee98;
+	text-decoration: none;
+	font-weight: bold;
+}
+.combinacion1 {
+	background-image: url(../images/back-cel.jpg);
+	background-repeat: repeat-x;
+	background-color: #ffffff;
+}
+.campo{
+	width: 120px;
+	height: 16px;
+	border: 1px Solid #cccccc;
+	background: #ffffff;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.foot {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+.top {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #faee98;
+}
+
+.linktop {
+	text-decoration: none;
+	color: #faee98;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.linktop:hover {
+	text-decoration: underline;
+	color: #faee98;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+}
+.linkfooter {
+	text-decoration: none;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+
+.linkfooter:hover {
+	text-decoration: underline;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+.linkmail {
+	text-decoration: none;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.linkmail:hover {
+	text-decoration: underline;
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+}

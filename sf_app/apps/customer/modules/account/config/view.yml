@@ -1,0 +1,17 @@
+all:
+  layout: layout_wrapped
+  metas:
+    title: Account
+  
+editSuccess:
+  javascripts:  [jquery/jquery.maskedinput.js]
+
+editBillingSuccess:
+  stylesheets:
+    - /teSimpleCreditCardPlugin/css/forms
+  javascripts:
+    - jquery/jquery.maskedinput.js
+
+cancelSuccess:
+  stylesheets:
+    - forms

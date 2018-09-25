@@ -1,0 +1,46 @@
+.te_blog .comments 	{padding:12px; border: 1px solid #dddddd;-moz-border-radius: 6px; -webkit-border-radius: 6px; }	
+#te_blog_comments_sofar {float:right;}
+.te_blog .post 	{margin-bottom:1em}
+.te_blog .related_details {margin:6px 0;padding:3px 0;border-top:1px dotted #d7d4c5;}
+.te_blog .post h2, .te_blog_post h2 	{margin-bottom:0}
+.te_blog h2.sf_comments_title	{margin:0 0 10px 0;text-transform:uppercase;font-size:1.3em;}
+.te_blog_post {margin-bottom:1em}
+.te_blog .byline	{font-size:.9em;color:#888}
+
+.te_blog .sf_comment_info:before {content:"Posted By: ";}	
+.te_blog .sf_comment_info {color:#888;font-size:.9em;border-bottom:1px solid #d7d4c5;padding-bottom:6px;margin:6px 0 12px 0}
+.te_blog .sf_comment_text p 	{margin:12px 0 0 0}
+.te_blog .sf_comment_form	{display:block;width:440px;}
+.te_blog .sf_comment_form li	{float:left; margin-right:6px}
+.te_blog .sf_comment_form input[type="text"]	{width:200px}
+.te_blog .sf_comment_form textarea {width:420px;height:120px}
+.te_blog .sf_comment_form .submit	{clear:left; margin:12px 0}
+.te_blog .help {float:right}
+
+#te_blog_sidebar h2	{font-size:1.2em;letter-spacing:.01em;text-transform:uppercase;color:#5b5a54;margin:0 0 6px 0;border-bottom:1px solid #d7d4c5;}
+#te_blog_sidebar ul	{list-style:none;margin:0 0 12px 0;padding:0}
+#te_blog_sidebar ul#recent_post_list li	{margin:0 0 6px 0;}
+#te_blog_sidebar .author	{font-size:.85em;color:#888;float:left}
+#te_blog_sidebar .date	{font-size:.85em;color:#888;}
+
+#te_blog_sidebar ul.tag-cloud	{font-size:.9em}	
+#te_blog_sidebar ul.tag-cloud li	{display:inline;margin-right:10px}	
+#te_blog_sidebar ul.tag-cloud big	{font-size:130%}
+
+
+.recent_blog_posts p	{color:#5b5a54;margin:0}
+.recent_blog_posts a	{color:#5b5a54;text-decoration:none;}
+.recent_blog_posts h2	{font-size:1.1em;color:#5b5a54;margin:10px 0 0 0;font-weight:700}
+.recent_blog_posts a:hover, .recent_blog_posts a:hover h2, .recent_blog_posts a:hover p {text-decoration:none} 
+.recent_blog_posts a:hover, .recent_blog_posts a:hover h2, .recent_blog_posts a:hover p {text-decoration:none}
+
+
+#te_blog_archive_list.collapsed {max-height:200px;overflow:hidden;}
+
+#te_blog_archive_list a .num_posts  {float:right;color:#888;}
+#te_blog_pager	{list-style:none;margin:1em 0;padding:0}
+#te_blog_archive_toggle {border-top:1px solid #eaeaea;display:block;text-align:right;}
+
+#te_blog_pager li	{float:left;margin:0 .3em 0 0;}
+#te_blog_pager li a	{padding:.25em .5em;border:1px solid #ddd;background:#eee;color:#000}
+#te_blog_pager li a:hover,#te_blog_pager li a.current	{padding:.25em .5em;border:1px solid #ddd;background:#444;color:#fff;text-decoration:none}

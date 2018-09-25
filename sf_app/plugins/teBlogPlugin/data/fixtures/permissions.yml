@@ -1,0 +1,37 @@
+sfGuardPermission:
+
+  te_blog_post_list:
+    name: te_blog_post_list
+    title: "Blog: View List"
+
+  te_blog_post_crud:
+    name: te_blog_post_crud
+    title: "Blog Posts: Create/Update/Delete"
+
+  te_blog_post_category_crud:
+    name: te_blog_post_category_crud
+    title: "Blog Post Categories: Create/Update/Delete"
+
+  te_blog_comment_list:
+    name: te_blog_comment_list
+    title: "Blog Comments: View List"
+
+  te_blog_comment_moderate:
+    name: te_blog_comment_moderate
+    title: "Blog Comments: Moderate"
+
+  te_blog_post_publish:
+    name: te_blog_post_publish
+    title: "Blog Posts: Publish"
+
+  te_blog_post_assign:
+    name: te_blog_post_assign
+    title: "Blog Posts: Assign Author"
+
+  te_blog_post_crud_own:
+    name: te_blog_post_crud_own
+    title: "Blog Posts: Create/Update/Delete OWN"
+
+  te_blog_post_access_anonymous:
+    name: te_blog_post_access_anonymous
+    title: "Blog Posts: Access Anonymous"

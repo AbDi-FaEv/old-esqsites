@@ -1,0 +1,1 @@
+<?php echo $website -> getStatus() == Website::STATUS_ACTIVE ? image_tag("lightbulb") : image_tag("lightbulb_off"); ?>

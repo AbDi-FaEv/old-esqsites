@@ -1,0 +1,173 @@
+cg_log:
+  url:   /cg
+  params: { module: index, action: cgLog }
+
+sf_comment:
+  class: sfPropel15RouteCollection
+  options:
+    model:                sfComment
+    module:               sfCommentAdmin
+    prefix_path:          /notes
+    column:               id
+    with_wildcard_routes: true
+
+bar_association_promo_page_admin:
+  class: sfPropel15RouteCollection
+  options:
+    model:                BarAssociationPromoPage
+    module:               BarAssociationPromoPageAdmin
+    prefix_path:          /bars/pages
+    column:               id
+    with_wildcard_routes: true
+
+bar_association_admin:
+  class: sfPropel15RouteCollection
+  options:
+    model:                BarAssociation
+    module:               BarAssociationAdmin
+    prefix_path:          bars
+    column:               id
+    with_wildcard_routes: true
+    collection_actions:
+      export:             get
+
+page_content_display_type:
+  class: sfPropel15RouteCollection
+  options:
+    model:                PageContentDisplayType
+    module:               pagetypes
+    prefix_path:          pagetypes
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+member_feedback:
+  class: sfPropel15RouteCollection
+  options:
+    model:                MemberFeedback
+    module:               feedback
+    prefix_path:          feedback
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+email_account:
+  class: sfPropel15RouteCollection
+  options:
+    model:                EmailAccount
+    module:               email_accounts
+    prefix_path:          email_accounts
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+host:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Host
+    module:               hosts
+    prefix_path:          hosts
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+coupon:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Coupon
+    module:               coupons
+    prefix_path:          coupons
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+template_category:
+  class: sfPropel15RouteCollection
+  options:
+    model:                TemplateCategory
+    module:               template_categories
+    prefix_path:          template_categories
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+website_template:
+  class: sfPropel15RouteCollection
+  options:
+    model:                WebsiteTemplate
+    module:               templates
+    prefix_path:          templates
+    column:               id
+    with_wildcard_routes: true
+    object_actions:
+      showWebsites:       get
+  requirements:  { id: "[\d\w]+" }
+
+website_attribute:
+  class: sfPropel15RouteCollection
+  options:
+    model:                WebsiteAttribute
+    module:               website_attributes
+    prefix_path:          website_attributes
+    column:               id
+    with_wildcard_routes: true
+    object_actions:
+      showWebsites:       get
+  requirements:  { id: "[\d\w]+" }
+  
+domain:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Domain
+    module:               domains
+    prefix_path:          domains
+    column:               id
+    with_wildcard_routes: true
+  requirements:  { id: "[\d\w]+" }
+
+website:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Website
+    module:               websites
+    prefix_path:          websites
+    column:               id
+    with_wildcard_routes: true
+    object_actions:
+      createDirectory:    post
+      resetPages:         post
+  requirements:  { id: "[\d\w]+" }
+
+customer:
+  class: sfPropel15RouteCollection
+  options:
+    model:                Customer
+    module:               customers
+    prefix_path:          customers
+    column:               id
+    with_wildcard_routes: true
+    with_show:            true
+    collection_actions:
+      showInvoices:       get
+      forgetRecent:       post
+    object_actions:
+      cancel:             [get, post]
+      addCoupon:          [get, post]
+      resendWelcome:      [get, post]
+  requirements:  { id: "[\d\w]+" }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: sfAdminDash, action: dashboard }
+
+revenue:
+  url:   /revenue
+  param: { module: esqRevenue, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

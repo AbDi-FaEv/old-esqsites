@@ -1,0 +1,73 @@
+/* -----------------------------------------------------------------------
+	General Form Styles
+ ---------------------------------------------------------------------- */
+.form label                   {font-weight:normal;display:block;padding:0px;margin:0 5px 4px 0;}
+.form select                  {padding: 9px 5px 10px;margin:0px 0 2px 0;}
+.form input[type="text"],
+.form input[type="password"]  {padding: 9px 5px 10px;margin:0px 0 2px 0;}
+.form textarea                {margin:0px;height:100px;width:100%;}
+
+.form ul.radio_list           {list-style-type:none;margin-left:4px;}
+.form .help                   {width:100%;}
+
+#recaptcha_table  {clear:both;}
+
+/* -----------------------------------------------------------------------
+	UL Specific Form Styles
+ ---------------------------------------------------------------------- */
+ul.form					{list-style-type:none;margin:0px;padding:0px;font-size:.85em}
+ul.form li				{margin:0px;padding:0px;list-style:none;margin-bottom:2px;padding-bottom:2px;border-bottom:1px dotted #eaeaea;clear:left;}
+
+/* LIST LABLE LAYOUT */
+ul.form label			{float:left;width:25%;clear:left;}
+ul.form select 			{}
+ul.form input[type="text"],
+ul.form input[type="password"] {width:65%;}
+ul.form textarea		{width:65%;}
+
+.form ul.error          {list-style:none;}
+ul.form ul.error  		{margin:-6px 0 .2em 0; padding:0 3px; width:65%;}
+ul.form ul.error li		{padding:0.1em 0;}
+
+.error {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+
+ul.form li ul li    	{border:none;margin:0px;padding:0px;}
+ul.form li .help   		{margin:4px 0 4px 0; margin-left:26%;padding:0px;}
+
+.form .radio_list li, ul.form .checkbox_list li
+	{clear:none;}
+.form .radio_list input[type="radio"],ul.form .checkbox_list input[type="checkbox"]
+	{display:inline;}
+.form .radio_list label, .form .checkbox_list label
+	{width:auto;display:inline;float:none;text-transform:none;font-weight:400;font-size:1.2em;line-height:1.4em}
+
+/* STACKED LABLE LAYOUT */
+.form.stacked label				{width:auto;float:none;}
+.form.stacked select 				{}
+.form.stacked input[type="text"],
+.form.stacked input[type="password"] 	{width:95%;}
+.form.stacked textarea              {width:95%;}
+.form.stacked ul.error  			{list-style:none;float:none;clear:left;margin:-6px 0 .2em 0; padding:0 3px; width:95%;}
+ul.form.stacked .radio_list, ul.form.stacked .checkbox_list
+	{margin-bottom:6px}
+ul.form.stacked .radio_list li, ul.form.stacked .checkbox_list li
+	{clear:left;margin-left:0;}
+ul.form.stacked .radio_list input[type="radio"],ul.form.stacked .checkbox_list input[type="checkbox"]
+	{display:inline;}
+ul.form.stacked .radio_list label, ul.form.stacked .checkbox_list label
+	{width:auto;display:inline;float:none;text-transform:none;font-weight:400;font-size:1.2em;line-height:1.4em}
+
+/* columns */
+.form .two-col      {}
+.form .two-col div  {float:left;width:50%;}
+.form .two-col div input  {width:95%;}
+
+
+/* -----------------------------------------------------------------------
+	Date Picker Styles
+ ---------------------------------------------------------------------- */
+#sf_admin_container .sf_admin_form_row .te_date_range_filter label	{float:left;font-size:.85em;padding:0}
+#sf_admin_container .sf_admin_form_row .te_date_range_filter input.hasDatepicker {width:5.5em;background:url(../images/calendar.png) no-repeat right -18px;font-size:.9em;padding-right:24px} 
+#sf_admin_container .sf_admin_form_row .te_date_range_filter input.hasDatepicker.empty	{color:#ddd;background:url(../images/calendar.png) no-repeat right 2px;}
+.ui-datepicker {font-size:75%!important}

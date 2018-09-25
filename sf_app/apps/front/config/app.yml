@@ -1,0 +1,52 @@
+prod:
+  email_recipients:
+    signup:
+      - 6192488553@txt.att.net #tony
+      - Anthony@esqsites123.com
+      - marat.intech@gmail.com
+
+  teContactFormPlugin:
+    recipients:
+      - Anthony@esqsites123.com
+      - sophia@esqsites123.com
+
+dev:
+
+  email_recipients:
+    signup: []
+
+  teContactFormPlugin:
+    recipients: []
+
+  sf_google_analytics_plugin:
+    enabled:    false
+
+all:
+
+  mailer:
+    defaults:
+      subject-template: ESQSites123 - %s
+
+  teContactFormPlugin:
+    subject: New Contact Form Submission
+
+
+  teTwitterPlugin:
+    url:    http://twitter.com/esqsites123
+    feed:   http://twitter.com/statuses/user_timeline/35648466.rss
+    limit:  2
+
+  rcom:
+    disable: false
+
+  title:
+    direction: "backward" # forward or backward
+    delimiter: ' &raquo; '
+
+  authorize_dot_net:
+    customer_id: e9fc4697-229b-4dd2-83f9-142f3bd5d0ca
+
+  sf_google_analytics_plugin:
+    enabled:    true
+    profile_id: UA-13262238-1
+    tracker:    google

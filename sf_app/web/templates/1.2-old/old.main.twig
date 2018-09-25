@@ -1,0 +1,124 @@
+<!-- 1.2 twig -->
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/1.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#CACACA" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="700" id="main" height="638" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="98" colspan="5" valign="bottom">
+      <table width="700" border="0" cellpadding="0" cellspacing="0" background="templates/1.2/images/background_gray_fade.jpg">
+        <tr>
+          <td width="19" align="right" valign="top"><div align="left"></div></td>
+          <td width="49">&nbsp;</td>
+          <td width="423" valign="bottom"><span class="innertext2">{{website.address}}<br />{{website.city}}<br />{{website.state}} {{website.zip}}</span></td>
+          <td width="209" valign="middle" class="innertext2b">Phone: {{website.phone|format_phone}}<br>
+          Fax: {{website.fax|format_phone}}<br>
+          Email: {{website.email}}</td>
+        </tr>
+		  <tr>
+          <td width="19" height="50" align="right" valign="top"><div align="left"></div></td>
+          <td width="49"><img src="templates/1.2/images/squares1.jpg" alt="Law Company" border="0"></td>
+          <td width="423"><span class="titletext">{{website.firmName|break}}</span></td>
+          <td width="209" valign="top">
+            {% if website.socialMedia.avvo %}
+            <div style="margin:0px;margin-top:5px;">
+              <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo">
+                <img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" />
+              </a>
+            </div>
+            {% endif %}
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr bgcolor="#704C12">
+    <td height="9" colspan="5"><img src="templates/1.2/images/clear.gif" width="1" height="8"></td>
+  </tr>
+  <tr>
+    <td height="10" colspan="5" bgcolor="CEB056">
+	<table width="" border="0" cellpadding="8" cellspacing="0">
+
+	 {% for loop_page in website.mainMenu %}
+	
+     {# This is the highlighted menu tab #}
+     {% if loop_page.url == page.url %}
+		<td bgcolor="#704C12" background="templates/1.2/images/1.1/menu_bg_rollover.jpg" align="center" valign="bottom" >
+		<strong><a class="OnMenutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+		</td>
+     {% else %}
+      {# These are the regular menu tabs #}
+      <td bgcolor="#CEB056" align="center" valign="bottom" >
+      <strong><a class="menutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+      </td>
+    {% endif %}
+	{% endfor %}
+
+	</table>
+
+</td>
+  </tr>
+  <tr>
+    <td width="44" rowspan="3" valign="top" bgcolor="#EBE9AC"> </td>
+    <td width="12">&nbsp;</td>
+    <td width="433" rowspan="4" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td height="50"><font color="#13336F" size="4" face="Verdana, Arial, Helvetica, sans-serif" class="style1"><strong>{{page.title}}</strong></font></td>
+        </tr>
+        <tr>
+          <td height="18" valign="top">
+            {{page.body}}
+          </td>
+        </tr>
+    </table><img src="templates/1.2/images/clear.gif" width="1" height="2"></td>
+    <td width="8" height="251">&nbsp;</td>
+    <td width="203" align="right" valign="top"><img src="templates/1.2/images/main.jpg" width="203" height="251"></td>
+  </tr>
+  <tr>
+    <td width="12" height="19">&nbsp;</td>
+    <td height="19">&nbsp;</td>
+    <td width="203" align="right" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="12" height="2"><img src="templates/1.2/images/clear.gif" width="1" height="2"></td>
+    <td ><img src="templates/1.2/images/clear.gif" width="1" height="2"></td>
+    <td width="203" align="right" valign="top"><img src="templates/1.2/images/clear.gif" width="1" height="2"></td>
+  </tr>
+  <tr>
+    <td width="44" valign="bottom" bgcolor="#EBE9AC"></td>
+    <td width="12" height="193">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td width="203" align="right" valign="bottom" background="templates/1.2/images/background_gray_fade.jpg"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" background="templates/1.2/images/fade1.jpg">
+        <tr>
+          <td width="4%" height="77"align="right" valign="top"  class="right_text">&nbsp;</td>
+          <td width="92%"align="right" valign="middle"  class="titletext"><div align="center" class="style1">{{website.phone|format_phone}}</div></td>
+          <td width="4%"align="right" valign="top"  class="right_text">&nbsp;</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr bgcolor="#13336E">
+    <td height="34" bgcolor="#704C12"><img src="templates/1.2/images/citcle_bottom.jpg" width="39" height="24"></td>
+    <td height="34" bgcolor="#704C12">&nbsp;</td>
+    <td height="34" colspan="3" align="right" bgcolor="#704C12" class="t01"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="48%"><span class="OnMenutext"><a href="http://www.esqsites123.com" class="OnMenutext" style="text-decoration:underline">Legal Web Design</a> by esqsites123.com </span> <div align="right"></div></td>
+        <td width="50%"><div align="right">
+            {% for loop_page in website.footerMenu %}
+              <a href="{{loop_page.url}}" class="OnMenutext">{{loop_page.linkName}}</a>
+              {% if not loop.last %}
+              <font color="white"> &nbsp;|&nbsp; </font>
+              {% endif %}
+            {% endfor %}
+          </div></td>
+        <td width="2%">&nbsp;</td>
+      </tr>
+    </table>	</td>
+  </tr>
+</table>
+</body>
+</html>

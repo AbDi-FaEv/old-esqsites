@@ -1,0 +1,289 @@
+/* CSS Document */
+
+h1{
+color:#FFFFFF;
+}
+
+body{
+	font: 10px; 
+	text-align:center; /* hack para o IE */	
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding:0;
+	color:#000000;
+	background-color:#1e1003;
+	}
+		
+.page{
+	width:850px; /*ancho total de lo que se ve del sitio*/
+	height:auto;
+	position:relative;
+	height:100%;
+	min-height:500px;
+	/* background: url(../images/imgprincipal.jpg); */
+
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left; /* hack para o IE */	
+	color:#000000;
+	margin-top:0px;
+	padding-top:10px;
+	}
+
+.content{
+	float:left;
+	background-image:url(../images/rightbg.jpg);
+	background-repeat:repeat-x;
+	background-color:#5F2A00;
+	width:787px;
+	height:auto;
+	}
+
+.principal{
+	width:787px;
+	height:100%;
+	float:left;
+	position:relative;
+	}
+
+.central{
+	float:left;
+	margin:auto;
+	background-image:url(../images/sombracontenido.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	width:510px;
+	min-height:500px;
+	height:inherit;
+	background-color:#e8dcc4;
+	padding:20px;
+	
+	font-size:12px;
+	font-family:arial;
+	
+	
+	}
+	
+p {
+	font-size:12px;
+	font-family:arial;
+	margin-left:15px;
+	margin-right:15px;
+	margin-bottom:15px;
+	margin-top:10px;
+	height:100%;
+	text-decoration:none;
+	}	
+
+.header{
+	float:left;
+	width:787px;
+	
+	
+	background-repeat:no-repeat;
+	border-bottom:8px solid #e5a611;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	}
+	
+.menu, .menu-2{
+	width:767px;
+	
+	float:left;
+	position:relative;
+	/*background-image:url(../images/menuhome.jpg); */
+	background-repeat:no-repeat;
+	background: url(../images/tab-bg.jpg);
+	padding:10px;
+	padding-bottom:0px;
+	}
+	
+.menu-2{
+	width:524px;
+	
+	float:left;
+	position:relative;
+	left:610px;
+	top:85px;
+	background-image:url(../images/fondomenu2.jpg);
+	background-repeat:no-repeat;
+	padding-top:3px;
+	}	
+	
+.menu ul, .menu-2 ul{	
+	padding:0;
+	
+	margin:0;
+	
+	list-style:none;
+	}
+
+.menu li, .menu-2 li{
+	padding:10px;
+	padding-bottom:5px;
+	display:inline;
+	
+	/* margin-right:10px;
+	_margin-right:10px;
+	margin-left:10px;
+	_margin-left:10px; */
+	/* background: url(../images/tab-bg.jpg); */
+	
+	}
+	
+.menu li a, .menu-2 li a{
+	font-family:arial;
+	font-size:12px;
+	text-decoration:none;
+	color:#FFFFFF;
+	font-weight:bold;
+	
+	}
+	
+.menu a:hover, .menu2 a:hover, .menu-2 a:hover{
+	color:#fcdb6d;
+	}	
+
+#dest{
+	color:#FFCC00;
+	}
+	
+
+
+.imgprincipal{
+	background-image:url(http://esqsites123.com/templates/live/web/15.1/images/main-top.jpg);
+	background-repeat:no-repeat;
+	width:787px;
+	height:183px;
+	float:left;
+	}
+
+.izq{
+	float:left;
+	width:100px;
+	height:429px;
+	
+	background-repeat:no-repeat;
+	}
+	
+.btimg{
+	margin-left:10px;
+	margin-top:12px;
+	}
+
+.submenu2{
+	height:172px;
+	width:170px;
+	_width:160px;
+	float:left;
+	margin-left:10px;
+	_margin-left:5px;
+	margin-top:10px;
+	}
+
+
+.submenu2 ul{
+	padding:0;
+	margin:0;
+	}
+
+.submenu2 li {
+	list-style: none;
+	display: inline;
+	float:left;	
+	font-size:9px;
+	width:140px;
+	border-bottom:1px dotted #93561f;
+	}
+
+.submenu2 li a{
+	line-height:3;
+	float: left;
+	height:27 ;
+	text-decoration: none;
+	color:#ffffff;	
+	background:url(../images/cuadradito.jpg) no-repeat left;
+	padding-left:12px;
+	_padding-left:8px;
+	width:120px;
+	_width:125px;
+	padding-right:5px;
+	}
+
+.submenu2 li a:hover {
+		}
+
+
+
+
+.destacado{
+	color:#f54d00;
+	font-weight:bold;
+	}
+	
+.negrita{
+	font-weight:bold;
+	}	
+	
+.negrita2{
+	font-weight:bold;
+	font-size:12px;
+	}		
+	
+.titleimg{
+	margin-left:10px;
+	margin-top:10px;
+	}	
+	
+.imgtxt{
+	margin-left:270px;
+	margin-top:15px;
+	}	
+
+.right {
+	float:left;
+	width:200px;
+	height:429px;
+	_height:409px;
+	/* background-image:url(../images/fondoizq.jpg); */
+	background-repeat:no-repeat;
+	padding:10px;
+	color:#FFFFFF;
+	}
+
+.right a { color:#FFCC00;   }
+	
+.flechita{
+	margin-right:8px;
+	}	
+	
+.imgder{
+	margin-top:15px;
+	_margin-top:10px;
+	margin-bottom:15px;
+	_margin-bottom:8px;
+	}	
+	
+.buyonline{
+margin-left:88px;
+}
+
+.footer{
+	float:left;
+	width:787px;
+	height:31px;
+	color:#ffffff;
+	border-top:1px solid #dfa111;
+	background-color:#1e1003;
+	font-size:10px;
+	text-align:center;
+	padding-top:10px;
+	}	
+	
+.footertxt{
+display:inline;
+color:#332517;
+margin-left:10px;
+}	
+
+

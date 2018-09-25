@@ -1,0 +1,3 @@
+showPage:
+  enabled: true
+  with_layout: true

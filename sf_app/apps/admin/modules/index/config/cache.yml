@@ -1,0 +1,7 @@
+_invoices:
+  enabled:     true
+  lifetime:    600
+
+_codeUpdates:
+  enabled:     true
+  lifetime:    600

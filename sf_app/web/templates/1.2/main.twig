@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{# 1.2 TEMPLATE #}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% block title none|include_title %}
+    {{none|include_http_metas}}
+    {{none|include_metas}}
+    <link href="/templates/1.2/css/css.css" rel="stylesheet" type="text/css" />
+    <link href="/templates/base/css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<!--header start-->
+    
+    <div id="header">
+    
+    	<div id="headerarea">
+        
+        	<!--logo start-->
+            
+            <div id="logo">
+            
+            	<h1>
+                <a href="#">{{ website.firmName | break  }}</a>
+                </h1>
+                
+            </div>
+        
+        	<!--logo end-->
+        
+        	<!--contactno start-->
+            
+            <div id="contact">
+            
+            	<ul>
+                    
+                    <li>{{ website.phone | format_phone }}</li>
+                
+                	<li><img src="templates/1.2/images/contact.png" alt="" title="" align="left" /></li>
+                
+                </ul>
+            
+            </div>
+        
+        	<!--contactno end-->
+        
+        </div>
+    
+    </div>
+
+	<!--header start-->
+
+	<!--navigation start-->
+    
+    <div id="nav">
+    
+   		<div id="navarea">
+        
+        	<ul>
+
+                {% for loop_page in website.mainMenu %}
+                    <li>
+                        <a class="link02" href="{{ loop_page.url }}">
+                            {{ loop_page.linkName }}
+                        </a>
+                    </li>
+                {% endfor %}
+            
+            </ul>
+        
+        </div>
+    
+    </div>
+
+	<!--navigation end-->
+
+	<!--banner start-->
+    
+    <div id="banner">
+        <img src="templates/1.2/images/bannerimg01.png" alt="template" title="template" />
+    </div>
+
+	<!--banner end-->
+
+	<!--body start-->
+    
+    <div id="conarea">
+    
+    	<!--bodyleft start-->
+        
+        <div id="conarealeft">
+        
+        	<div class="conleft">
+            
+                <h2>
+                Contact
+                </h2>
+                
+                <div class="conboxleft">
+                    {{ website.address }}
+                    <br />
+                    {{ website.city }}, {{ website.state }} {{ website.zip }}
+                    <br />
+                </div>
+                
+                <div class="line"></div>
+                
+                <div class="conboxleft">
+                    Phone: {{ website.phone | format_phone }}
+                    <br />
+                    Fax: {{ website.fax | format_phone }}
+                    <br />
+                    Email: <a href="mailto:{{ website.email }}">{{ website.email }}</a>
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyleft end-->
+    
+    	<!--bodyright start-->
+        
+        <div id="conarearight">
+        
+        	<div class="conright">
+            
+            	<h3>
+                    {{ page.title }}
+                </h3>
+                
+                <div class="conboxright">
+
+                    {{ page.body }}
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyright end-->
+    
+    </div>
+
+	<!--body end-->
+
+	<!--footer start-->
+    
+    <div id="footer">
+    
+    	<!--footerbox start-->
+    
+    	<div id="footercon">
+        
+        	<div id="footerconarea">
+            
+            	<!--conleft start-->
+                
+                <div id="footerconleft">
+                
+                	<ul>
+                    
+                    	<li><img src="templates/1.2/images/icon.png" alt="icon" /></li>
+                    
+                    	<li>Legal Web Design by esqsites123.com</li>
+                    
+                    </ul>
+                
+                </div>
+            
+            	<!--conleft end-->
+            
+            	<!--conright start-->
+                
+                <div id="footerconright">
+                
+                	<ul>
+                    
+                    	<li><a href="/site_map">Site Map</a></li>
+                    
+                    	<li>|</li>
+                    
+                    	<li><a href="/disclaimer">Disclaimer</a></li>
+                    
+                    </ul>
+                
+                </div>
+            
+            	<!--conright end-->
+            
+            </div>
+        
+        </div>
+    
+    	<!--footerbox end-->
+    
+    	<!--footertext start-->
+        
+        <div id="footercopy">
+        Copyright&copy; 2012. All world rights reserved
+        </div>
+    
+    	<!--footertext end-->
+    
+    </div>
+
+	<!--footer end-->
+
+</body>
+</html>

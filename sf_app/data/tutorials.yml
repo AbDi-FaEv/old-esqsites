@@ -1,0 +1,60 @@
+#creating:
+#  file: Creating a website.flv
+#  image: Creating a website.jpg
+#  description:
+#changing_look:
+#  file: Changing Site Look.flv
+#  image: Changing Site Look.jpg
+#  description:
+link_to_video:
+  file: Creating a Link to Video File.flv
+  image: Creating a Link to Video File.jpg
+  description:
+logging_in:
+  file: Logging in.flv
+  image: Logging in.jpg
+  description:
+link_to_pdf:
+  file: Creating a Link to a PDF file.flv
+  image: Creating a Link to a PDF file.jpg
+  description:
+adding_content:
+  file: Adding Content to Your Website.flv
+  image: Adding Content to Your Website.jpg
+  description:
+uploading_image:
+  file: Uploading a photo or image.flv
+  image: Uploading a photo or image.jpg
+  description:
+renaming_pages:
+  file: Renaming Pages on Your website.flv
+  image: Renaming Pages on Your website.jpg
+  description:
+updating_contact_info:
+  file: Updating Website Contact Information.flv
+  image: Updating Website Contact Information.jpg
+  description:
+email_forwarding:
+  file: Setting up email forwarding.flv
+  image: Setting up email forwarding.jpg
+  description:
+activating_pages:
+  file: Activating and Deactivating Pages.flv
+  image: Activating and Deactivating Pages.jpg
+  description:
+checking_messages:
+  file: Checking Messages in Your ESQ Inbox.flv
+  image: Checking Messages in Your ESQ Inbox.jpg
+  description:
+updating_billing:
+  file: Updating Billing Information.flv
+  image: Updating Billing Information.jpg
+  description:
+ordering_pages:
+  file: Adjusting the Order of the pages on your website.flv
+  image: Adjusting the Order of the pages on your website.jpg
+  description:
+changing_username:
+  file: Changing Username and password.flv
+  image: Changing Username and password.jpg
+  description:

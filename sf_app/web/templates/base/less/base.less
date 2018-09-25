@@ -1,0 +1,64 @@
+.menu {
+  padding-left: 0;
+  a {
+    text-decoration: none;
+  }
+}
+
+.menu-vertical {
+  li {
+    display: block;
+  }
+}
+
+.menu-horizontal {
+  li {
+    display: inline;
+  }
+}
+
+.rounded(@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+#page-content {
+  ul {
+    padding-left: 1.5em;
+  }
+  ul.table {
+    .clearfix;
+    li {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+#social {
+  .clearfix;
+  a {
+    overflow: hidden;
+    text-indent: -9999px;
+    display: block;
+    float: left;
+    background: url('../images/social.png') no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  a.facebook {
+    //default
+  }
+  a.twitter {
+    background-position: -64px 0;
+  }
+  a.linkedin {
+    background-position: -32px 0;
+  }
+  a.avvo {
+    width: 120px;
+    height: 29px;
+    background: url('../images/avvo_badge.jpg') no-repeat;
+  }
+}

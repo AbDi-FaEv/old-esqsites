@@ -1,0 +1,5 @@
+propel:
+  sf_comment:
+    _attributes: { phpName: sfComment }
+    commentable_id:   varchar(255)
+    author_id:    {type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: Author }

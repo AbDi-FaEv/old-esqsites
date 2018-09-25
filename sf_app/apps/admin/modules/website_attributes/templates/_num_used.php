@@ -1,0 +1,1 @@
+<?php echo link_to($plan -> getVirtualColumn("num_used"), "website_attribute_showWebsites", $plan); ?>

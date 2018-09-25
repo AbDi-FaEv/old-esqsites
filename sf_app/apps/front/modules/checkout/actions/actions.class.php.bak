@@ -1,0 +1,262 @@
+<?php
+
+/**
+ * checkout actions.
+ *
+ * @package    esqsites123
+ * @subpackage checkout
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 12479 2008-10-31 10:54:40Z fabien $
+ */
+class checkoutActions extends sfActions
+{
+  public function preExecute()
+  {
+    $this -> getUser() -> hasCheckoutInProgress(true);
+    $this -> getRequest() -> setParameter("in_checkout", true);
+    $this -> steps = CheckoutSteps::getInstance($this -> getUser());
+  }
+
+  public function executeReturn(sfWebRequest $request)
+  {
+    $this -> redirect($this -> steps -> getHighest() -> getRoute());
+  }
+
+  public function executeOrderSummary(sfWebRequest $request)
+  {
+    $website = $this -> getUser() -> getTemporaryWebsite();
+    if($plan = WebsiteAttributePeer::retrieveByPK($request -> getParameter("hosting_plan")))
+    {
+      $website -> setWebsiteAttributeId($plan -> getId());
+    }
+    $cart = new esqCart($this -> getUser());
+    $cart -> setDomainType($request -> getParameter("domain_type", Domain::REGISTRATION_TYPE_ESQ));
+    return $this -> renderPartial('checkout/miniReceipt', array("website" => $website, "cart" => $cart));
+  }
+
+  public function executePlans(sfWebRequest $request)
+  {
+    if($id = $request -> getParameter("id"))
+    {
+      $plans = array(
+        "starter"   => "2ee8ff86b7a130d69f46735d313f7c2c",
+        "basic"     => "b6adb1a1d22428b350191b654cbcfa69",
+        "standard"  => "5127e53e7d24bf89d5c1b2632537913e",
+        "deluxe"    => "d800a5bd694f235c0e4a8006d73daf54",
+        "premium"   => "8abc0115affe9dfb472bcdea285e3fb5",
+      );
+      $website = $this -> getUser() -> getTemporaryWebsite();
+      $website -> setWebsiteAttributeId($plans[$id]);
+      $website -> save();
+      $this -> redirect("@preview_info");
+    }
+    $this -> steps -> setCurrent(CheckoutSteps::STEP_PLANS);
+  }
+
+  public function executePreviewInfo(sfWebRequest $request)
+  {
+    $this -> form = new CheckoutPreviewForm($this -> getUser() -> getFormInfo("previewInfo"));
+    if($request -> getMethod() == sfRequest::POST)
+    {
+      $this -> form -> bind($request -> getParameter($this -> form -> getName()));
+      if($this -> form -> isValid())
+      {
+        //store input & redirect
+        $values = $this -> form -> getValues();
+        $this -> getUser() -> setFormInfo("previewInfo", $values);
+
+        $website = $this -> getUser() -> getTemporaryWebsite();
+        $website -> fromArray($values, BasePeer::TYPE_FIELDNAME);
+        $website -> save();
+
+        $customer = $this -> getUser() -> getTemporaryCustomer();
+        $customer -> fromArray($values, BasePeer::TYPE_FIELDNAME);
+        $customer -> save();
+
+        $this -> redirect("@preview");
+      }
+    }
+    $this -> template = $this -> getUser() -> getTemporaryWebsite() -> getWebsiteTemplate();
+    $this -> steps -> setCurrent(CheckoutSteps::STEP_INFO);
+  }
+
+  public function executePreview(sfWebRequest $request)
+  {
+    $step = $this -> steps[CheckoutSteps::STEP_GALLERY];
+    if(!$step -> isCompleted()) //we need a template
+    {
+      $this -> forceStep($step);
+    }
+    $this -> steps -> setCurrent(CheckoutSteps::STEP_PREVIEW);
+  }
+
+  public function executeSwitchPreviewTemplate(sfWebRequest $request)
+  {
+    $template = $this -> getRoute() -> getObject();
+    $website = $this -> getUser() -> getTemporaryWebsite();
+    $website -> setTemplateId($template -> getId());
+    $website -> save();
+    $this -> redirect("/preview");
+  }
+
+  public function executePreviewTop(sfWebRequest $request)
+  {
+    $this -> templates = WebsiteTemplateQuery::create() -> filterByPublic() -> find();
+    $this -> steps -> setCurrent(CheckoutSteps::STEP_PREVIEW);
+  }
+
+  protected function forceStep(CheckoutStep $step)
+  {
+    switch($this -> steps -> getKeyForStep($step))
+    {
+      case CheckoutSteps::STEP_GALLERY:
+        $this -> getUser() -> setFlash("notice", "Please select a design first.");
+      break;
+      default:
+        $this -> getUser() -> setFlash("notice", "Please complete this step first.");
+      break;
+    }
+    $this -> redirect($step -> getRoute());
+  }
+
+  /**
+   * Main checkout method - validates all user input,
+   * charges credit card, creates account objects, etc
+   * 
+   * @param sfWebRequest $request
+   */
+  public function executeCheckout(sfWebRequest $request)
+  {
+    if(($step = $this -> steps -> getHighest(false)) != $this -> steps[CheckoutSteps::STEP_CHECKOUT])
+    {
+      $this -> forceStep($step);
+    }
+
+    $this -> form = new CheckoutForm($this -> getUser() -> getFormInfo("checkout"), array("user" => $this -> getUser()));
+    
+    if($request -> getMethod() == sfRequest::POST)
+    {
+      //we want to keep good track of the checkout process
+      $log_file = sfConfig::get("sf_log_dir")."/esq/checkout/".$this -> getUser() -> getTemporaryWebsite() -> getId().".log";
+      $logger = new esqLogger($this -> dispatcher, array("file" => $log_file));
+      $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => "Checkout Form Submitted")));
+
+      $this -> form -> bind($request -> getParameter($this -> form -> getName()));
+      $this -> getUser() -> setFormInfo("checkout", $this -> form -> getTaintedValues());
+      
+      if($this -> form -> isValid())
+      {
+        try
+        {
+          if($website = $this -> form -> save()) //this charges the cc and creates all the account objects
+          {
+            $this -> sendEmails($website); //success
+          }
+          //else
+          //something was invalid (CreditCard?). Regular error messages take care of this.
+        }
+        catch(Exception $e)
+        {
+          $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => $e -> getMessage())));
+          
+          //email a log file of what happened so far
+          $this -> getMailer() -> composeAndSend('no-reply@esqsites123.com', //sender
+            sfConfig::get("app_sfErrorNotifier_emailTo"), //recipient
+            'ESQ Checkout Trouble',  //subject
+            file_get_contents($log_file)); //body
+
+          if(sfConfig::get("sf_debug"))
+          {
+            throw $e;
+          }
+
+          return sfView::ERROR;
+        }
+
+        if($website) //success
+        {
+          $this -> getUser() -> reset();
+          $this -> getUser() -> setAttribute("last_checkout", $website -> getId());
+          $this -> redirect("@receipt"); //redirect throw an exception, which is why this needs to be outside the try block
+        }
+
+      } //end of valid submission
+      else
+      {
+        //log error messages to better understand how to make checkout easier
+        $errormessages = $this -> form -> getErrorSchema() -> getMessage();
+        $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => "Invalid Form Submission: ".$errormessages)));
+      }
+    }
+    $this -> steps -> setCurrent(CheckoutSteps::STEP_CHECKOUT);
+    if(!sfConfig::get("app_rcom_disable", false))
+    {
+      $this -> domain_recommendations = DomainPeer::generateDomainsForCustomer($this -> getUser() -> getTemporaryWebsite());
+    }
+  }
+
+  /**
+   * Sends notification emails to admin and customer
+   *
+   * @param Website $website
+   */
+  protected function sendEmails(Website $website)
+  {
+    try
+    {
+      $customer = $website -> getCustomer();
+
+      $this -> getMailer() -> send(new WelcomeEmail($website));
+      $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => "Welcome email sent")));
+
+      $message = "%s signed up at %s for a %s page website";
+      $message = sprintf($message, $customer -> getFullName(), $website -> getUpdatedAt(), $website -> getHostingPlan() -> getNumPages());
+
+      $this -> getMailer() -> composeAndSend("no-reply@esqsites123.com", sfConfig::get("app_email_recipients_signup"), 'New ESQ Customer', $message);
+      $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => "Admin email sent")));
+    }
+    catch(Exception $e)
+    {
+      $this -> dispatcher -> notify(new sfEvent($this, 'esq.log', array("message" => "Error sending emails.")));
+      if(sfConfig::get("sf_debug"))
+      {
+        throw $e;
+      }
+      //do nothing - order is completed, we can follow up manually
+    }
+  }
+
+  public function executeApplyCouponCode(sfWebRequest $request)
+  {
+    if($request -> getMethod() == sfRequest::POST)
+    {
+      $code = $request -> getParameter("code");
+      if(!$code)
+      {
+        $response = array("result" => false, "message" => "Please enter a coupon code.");
+      }
+      elseif(!CouponPeer::codeExists($code))
+      {
+        $response = array("result" => false, "message" => "This code seems invalid. Please try again.");
+      }
+      else
+      {
+        $response = array("result" => true);
+      }
+      
+      $this -> getResponse() -> setContentType('application/json');
+      return $this -> renderText(json_encode($response));
+    }
+  }
+
+  public function executeReceipt(sfWebRequest $request)
+  {
+    //verify and populate
+    $this -> website = WebsitePeer::retrieveByPk($this -> getUser() -> getAttribute("last_checkout"));
+    $this -> forward404Unless($this -> website);
+    
+    $this -> customer = $this -> website -> getCustomer();
+    $this -> domain   = $this -> website -> getPrimaryDomain();
+  }
+
+}

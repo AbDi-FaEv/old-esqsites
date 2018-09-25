@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block title none|include_title %}
+    {{none|include_http_metas}}
+    {{none|include_metas}}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="templates/1.1/css/css.css" rel="stylesheet" type="text/css" />
+    <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<!--header start-->
+    
+    <div id="header">
+    
+    	<div id="headerarea">
+        
+        	<!--logo start-->
+            
+            <div id="logo">
+            
+                <a href="#">{{website.firmName|break}}</a>
+                
+            </div>
+        
+        	<!--logo end-->
+        
+        	<!--contactno start-->
+            
+            <div id="contact">
+            
+            	{{website.phone|format_phone}}<br />
+				FAX: {{website.fax|format_phone}}<br />
+				Email: <a href="mailto:{{website.email}}">{{website.email}}</a>
+            
+            </div>
+        
+        	<!--contactno end-->
+        
+        </div>
+    
+    </div>
+
+	<!--header start-->
+
+	<!--navigation start-->
+    
+    <div id="nav">
+    
+   		<div id="navarea">
+        
+        	<ul>
+                {% for loop_page in website.mainMenu %}
+                    <li>
+                        <a {% if page.url == loop_page.url %}class="navactive"{% endif %} href="{{loop_page.url}}">{{loop_page.linkName}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        
+        </div>
+    
+    </div>
+
+	<!--navigation end-->
+
+	<!--banner start-->
+    
+    <div id="banner">
+    
+    	<img src="templates/1.1/images/bannerimg01.png" alt="template" title="template" />
+        
+    </div>
+
+	<!--banner end-->
+
+	<!--body start-->
+    
+    <div id="conarea">
+    
+    	<!--bodyleft start-->
+        
+        <div id="conarealeft">
+        
+        	<div class="conleft">
+            
+            	<h2>
+                    {{page.title}}
+                </h2>
+                
+                <div class="conboxleft">
+                
+                {{page.body}}
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyleft end-->
+    
+    	<!--bodyright start-->
+        
+        <div id="conarearight">
+        
+        	<div class="conright">
+            
+                <h3>
+                Contact Us
+                </h3>
+                
+                <div class="conboxright">
+                123 Firm Way<br />
+                San Diego<br />
+                CA San Diego
+                </div>
+                
+                <div class="line"></div>
+                
+                <div class="conboxright">
+                Phone: {{website.phone|format_phone}}<br />
+                Fax: {{website.fax|format_phone}}<br />
+                Email: <a href="mailto:{{website.email}}">{{website.email}}</a>
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    	<!--bodyright end-->
+    
+    </div>
+
+	<!--body end-->
+
+	<!--footer start-->
+    
+    <div id="footer">
+    
+    	<!--footerbox start-->
+    
+    	<div id="footercon">
+        
+        	<div id="footerconarea">
+            
+            	<!--conleft start-->
+                
+                <div id="footerconleft">
+                
+                	<ul>
+                    
+                    	<li><img src="images/icon1.png" alt="icon" /></li>
+                    
+                    	<li>Legal Web Design by esqsites123.com</li>
+                    
+                    </ul>
+                
+                </div>
+            
+            	<!--conleft end-->
+            
+            	<!--conright start-->
+                
+                <div id="footerconright">
+                
+                	<ul>
+                    
+                        {% for loop_page in website.footerMenu %}
+                        	<li>
+                                <a href="{{ loop_page.url }}">{{loop_page.linkName}}</a>
+                            </li>
+                            {% if not loop.last %}
+                        	   <li>|</li>
+                            {% endif %}
+                        {% endfor %}                    
+                    
+                    </ul>
+                
+                </div>
+            
+            	<!--conright end-->
+            
+            </div>
+        
+        </div>
+    
+    	<!--footerbox end-->
+    
+    	<!--footertext start-->
+        
+        <div id="footercopy">
+        Copyright&copy; 2012. All world rights reserved
+        </div>
+    
+    	<!--footertext end-->
+    
+    </div>
+
+	<!--footer end-->
+
+</body>
+</html>

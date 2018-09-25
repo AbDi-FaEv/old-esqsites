@@ -1,0 +1,279 @@
+.fdo {
+	background-color: #d9d1b7;
+	background-position:center top;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+.top {
+	background-image: url(../../images/14.1/top.jpg);
+}
+.bottom {
+	background-image: url(../../images/14.1/bottom.jpg);
+}
+.fdo_izq {
+	background-image: url(../../images/14.1/grad_izq.jpg);
+	background-repeat: repeat-y;	
+}
+.fdo_dch {
+	background-image: url(../../images/14.1/grad_dch.jpg);
+	background-repeat: repeat-y;
+}
+.copyright {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align: left;			
+}
+/* //////////   Top   /////////////////////////////////////////////////// */
+
+.Logo {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 25px;
+	color: #ffffff;
+	padding: 5px 30px 10px 50px;
+	line-height: 22pt;
+	text-align: Left;
+	vertical-align: bottom;
+}
+
+.Logo_bottom {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 12px;
+	color: #ffffff;
+	padding: 21px 20px 0px 50px;
+	line-height: 15pt;
+	text-align: left;
+	vertical-align: top;
+}
+.contacto {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #ffffff;
+	padding: 20px 20px 10px 15px;
+	line-height: 12pt;
+	text-align: left;
+	vertical-align: bottom;
+}
+.contacto_tel {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 24px 20px 0px 14px;
+	line-height: 12pt;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+}
+.menu_txt {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	padding: 0px 15px 0px 15px;
+	color: #474744;
+	line-height: 14pt;
+	text-align: right;
+	vertical-align: center;
+}
+.menu_linea1 {
+	background-image: url(../../images/14.1/menu_linea1.jpg);
+	background-repeat: repeat-x;
+}
+.menu_linea2 {
+	background-image: url(../../images/14.1/menu_linea2.jpg);
+	background-repeat: repeat-x;	
+}
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+.titulos {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	color: #7d2c26;
+	padding: 20px 0px 10px 53px;
+	line-height: 14pt;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+}
+.txt {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #717171;
+	padding: 15px 20px 40px 20px;
+	line-height: 14pt;
+	text-align: left;
+	vertical-align: top;	
+}
+.txt_color{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #006699;	
+}
+/* /////   Home   ///////////////////////////////////////////////////////// */
+
+.txt_grafico{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 14pt;
+	text-align: center;
+	vertical-align: center;
+	background-color: #7d2b26;
+}
+.home_txt_fotos{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #ffffff;
+	padding: 10px 0px 0px 0px;
+	line-height: 15pt;
+	text-align: center;
+	vertical-align: top;
+	font-weight: bold;
+}
+.home_color{
+	background-color: #eeebdf;
+}
+.home_grafico{
+	background-image: url(../../images/14.1/home_foto.jpg);
+}
+.home_grafico1{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #020200;
+	line-height: 15pt;
+	/*background-image: url(../../images/14.1/home_grafico1.jpg);*/
+	vertical-align: top;
+	padding: 20px 40px 21px 40px;
+	text-align: left;
+}
+.home_foto_ch1{
+	background-image: url(../../images/14.1/home_foto_ch1.jpg);	
+}
+.home_foto_ch2{
+	background-image: url(../../images/14.1/home_foto_ch2.jpg);
+}
+.home_foto_ch3{
+	background-image: url(../../images/14.1/home_foto_ch3.jpg);
+}
+.home_foto_ch4{
+	background-image: url(../../images/14.1/home_foto_ch4.jpg);
+}
+.home_foto_ch5{
+	background-image: url(../../images/14.1/home_foto_ch5.jpg);
+}
+.home_foto_ch6{
+	background-image: url(../../images/14.1/home_foto_ch6.jpg);
+}
+.home_grafico2{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 12px;
+	color: #020200;
+	padding: 20px 20px 20px 30px;
+	line-height: 15pt;
+	text-align: left;
+	/*background-image: url(../../images/14.1/home_grafico2.jpg);*/
+	background-color: #dcd7c5;
+	vertical-align: top;
+	font-weight: bold;
+}
+/* /////   interior   ///////////////////////////////////////////////////////// */
+
+.box{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 12px;
+	color: #020200;
+	padding: 20px 20px 30px 20px;
+	line-height: 15pt;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.box2{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 12px;
+	color: #020200;
+	/*padding: 5px 10px 5px 10px;*/
+	line-height: 15pt;
+	text-align: left;
+	/*vertical-align: top;*/
+	background-color: #e3ddc9;
+}
+.box2_grafic{
+	background-image: url(../../images/14.1/h_base.jpg);				
+}
+.box2_line{
+	background-image: url(../../images/14.1/box_line.jpg);
+	background-repeat: repeat-x;
+}	
+/* //////  sublinks  ////////////////////////////////////////////////////////////////////// */
+
+.columna_grafico {
+	background-image: url(../../images/14.1/columna_grafico1.jpg);
+	background-repeat: repeat-x;	
+}
+.columna{
+	background-color: #52507b;
+}
+.columna_destacado {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 14pt;
+	text-align: left;
+	padding: 15px 10px 5px 15px;
+	vertical-align: center;
+	background-image: url(../../images/14.1/columna_destacado.jpg);
+	background-repeat: repeat-x;
+	font-weight: bold;
+}
+.columna_txt {
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 11px;
+	color: #dad2b8;
+	padding: 15px 20px 15px 15px;
+	line-height: 14pt;
+	text-align: left;
+	vertical-align: top;
+}
+.sublink_txt{
+	font-family: Tahoma, Arial, Verdana;
+	font-size: 13px;
+	color: #dad2b8;
+	line-height: 12pt;
+	text-align: left;
+	vertical-align: top;
+}
+.sublink_ft1{
+	background-image: url(../../images/14.1/sublink_f1.jpg);
+}
+.sublink_ft2{
+	background-image: url(../../images/14.1/sublink_f2.jpg);
+}
+.sublink_ft3{
+	background-image: url(../../images/14.1/sublink_f3.jpg);
+}
+.sublink_ft4{
+	background-image: url(../../images/14.1/sublink_f4.jpg);				
+}
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+
+.email{
+    color: #EABB00;
+	TEXT-DECORATION: none;
+}
+.email:hover {
+    TEXT-DECORATION: none; 
+    color: #FFCC00
+}
+.email2{
+    color: #dad2b8;
+	TEXT-DECORATION: none;
+}
+.menu_link{
+    color: #474744;
+	TEXT-DECORATION: none;
+	font-size: 10pt;
+}
+.menu_link:hover {
+    TEXT-DECORATION: none; 
+    color: #7d2c26
+}

@@ -1,0 +1,2 @@
+<?php $post = sfPropelActAsCommentableToolkit::retrieveCommentableObject($sf_comment -> getCommentableModel(), $sf_comment -> getCommentableId()); ?>
+<?php echo link_to("Related Post: ".$post, "te_blog_post_admin_edit", $post); ?>

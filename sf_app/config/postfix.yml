@@ -1,0 +1,70 @@
+# mydomains - a list of aliases for your machine
+mydomains:
+  - localhost
+  - 103550-app1.alpha1.com
+  - esqsites123.com
+  - esqsites.com
+  - esqsitesblog.com
+  - 4-lawyer.com
+
+# virtual - on left side is the incoming email address and on the right side is the local recipient
+# or alias, like this:
+# .com                  postmaster
+# Catchalls go at the bottom.
+# Email aliases
+virtual:
+  anthony@4-lawyer.com:         anthonykalikas@gmail.com
+
+  akalikas@esqsites123.com:     anthonykalikas@gmail.com
+  anthony@esqsites123.com:      anthonykalikas@gmail.com
+  associate@esqsites123.com:    anthonykalikas@gmail.com
+  associates@esqsites123.com:   anthonykalikas@gmail.com
+  customercare@esqsites123.com: anthonykalikas@gmail.com
+  care@esqsites123.com:         anthonykalikas@gmail.com
+  jasmin@esqsites123.com:       jazzy4951@hotmail.com
+
+  employment@esqsites123.com:   anthonykalikas@gmail.com
+  info@esqsites123.com:         anthonykalikas@gmail.com
+  marketing@esqsites123.com:    anthonykalikas@gmail.com
+  media@esqsites123.com:        anthonykalikas@gmail.com
+  postmaster@esqsites123.com:   anthonykalikas@gmail.com
+  president@esqsites123.com:    anthonykalikas@gmail.com
+  productdevelopment@esqsites123.com:   anthonykalikas@gmail.com
+  sales@esqsites123.com:        anthonykalikas@gmail.com
+  steve@esqsites123.com:        anthonykalikas@gmail.com
+  john@esqsites123.com:         anthonykalikas@gmail.com, john.nichols.esq@gmail.com
+  suggestions@esqsites123.com:  anthonykalikas@gmail.com
+  support@esqsites123.com:      gsws01@gmail.com, anthonykalikas@gmail.com, sfelix.vhlq@gmail.com
+  webmaster@esqsites123.com:    anthonykalikas@gmail.com
+  dns@esqsites123.com:          anthonykalikas@gmail.com
+  dayana@esqsites123.com:       mrs.dayana@gmail.com
+  dalinaz@esqsites123.com:      dalinazenelaj@gmail.com
+  dalinaz@esqsites.com:         dalinazenelaj@gmail.com
+  sophia@esqsites123.com:       sfelix.vhlq@gmail.com
+
+  webmaster@esqsites.com:       anthonykalikas@gmail.com
+  postmaster@esqsites.com:      anthonykalikas@gmail.com
+  anthony@esqsites.com:         anthonykalikas@gmail.com
+  lena@esqsites.com:            sfelix.vhlq@gmail.com
+  info@esqsites.com:            anthonykalikas@gmail.com
+  customercare@esqsites.com:    anthonykalikas@gmail.com
+  employment@esqsites.com:      anthonykalikas@gmail.com
+  marketing@esqsites.com:       anthonykalikas@gmail.com
+  media@esqsites.com:           anthonykalikas@gmail.com
+  president@esqsites.com:       anthonykalikas@gmail.com
+  sales@esqsites.com:           anthonykalikas@gmail.com
+  steve@esqsites.com:           anthonykalikas@gmail.com
+  john@esqsites.com:            anthonykalikas@gmail.com, john.nichols.esq@gmail.com
+  suggestions@esqsites.com:     anthonykalikas@gmail.com
+  support@esqsites.com:         gsws01@gmail.com, anthonykalikas@gmail.com, sfelix.vhlq@gmail.com
+  dns@esqsites.com:             anthonykalikas@gmail.com
+  dayana@esqsites.com:          mrs.dayana@gmail.com
+
+  webmaster@esqsitesblog.com:   anthonykalikas@gmail.com
+  postmaster@esqsitesblog.com:  anthonykalikas@gmail.com
+  anthony@esqsitesblog.com:     anthonykalikas@gmail.com
+  support@esqsitesblog.com:     anthonykalikas@gmail.com
+  info@esqsitesblog.com:        anthonykalikas@gmail.com
+
+  lena@aeklaw.com:              anthonykalikas@gmail.com
+  anthony@aeklaw.com:           anthonykalikas@gmail.com

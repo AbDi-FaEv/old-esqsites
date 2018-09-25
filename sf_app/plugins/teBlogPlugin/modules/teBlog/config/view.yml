@@ -1,0 +1,5 @@
+all:
+  stylesheets:
+    - /teBlogPlugin/css/front
+  metas:
+    title: Blog

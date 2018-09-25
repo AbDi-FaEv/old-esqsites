@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           TemplateCategory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             true
+    singular:              ~
+    plural:                ~
+    route_prefix:          template_category
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title:  Template Categories
+        display: [name, _num_templates]
+        object_actions:
+          _edit: ~
+        batch_actions: []
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Edit "%%name%%"
+      new:
+        title: Add New Template Category

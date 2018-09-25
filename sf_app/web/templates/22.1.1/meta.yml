@@ -1,0 +1,20 @@
+stylesheets:
+  - templates/22.1.1/less/base.less
+
+themes:
+  red:   { name: Red,   color: A8150E, stylesheet: templates/22.1.1/less/theme1.less }
+  blue:  { name: Blue,  color: 174d89, stylesheet: templates/22.1.1/less/theme2.less }
+  brown: { name: Brown, color: 6d4112, stylesheet: templates/22.1.1/less/theme3.less }
+  #green: { name: Green, color: 0E6732, stylesheet: templates/22.1.1/less/theme4.less }
+  green: { name: Green, color: 106732, stylesheet: templates/22.1.1/less/theme4.less }
+
+default_theme: red
+
+javascripts:
+  - templates/base/js/less.js
+
+images:
+  main:
+    width:   520
+    default: stock1
+    options: [stock1, stock2, stock3, stock4, stock5]

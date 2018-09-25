@@ -1,0 +1,28 @@
+dev:
+  propel:
+    param:
+      classname:  DebugPDO
+
+test:
+  propel:
+    param:
+      classname:  DebugPDO
+
+cli:
+  propel:
+    param:
+      dsn:        mysql:dbname=esq_3;host=127.0.0.1
+      username:   esq_master
+      password:   r8GubUtr
+
+all:
+  propel:
+    class:        sfPropelDatabase
+    param:
+      classname:  PropelPDO
+      dsn:        mysql:dbname=esq_3;host=127.0.0.1
+      username:   mshannon
+      password:   sr71black
+      encoding:   utf8
+      persistent: true
+      pooling:    true

@@ -1,0 +1,19 @@
+propel:
+  _attributes:        { package: plugins.teTestimonialPlugin.lib.model }
+
+  te_testimonials:
+    _attributes: { phpName: teTestimonial }
+    id:
+    source:      { type: varchar(255) }
+    location:    varchar(255)
+    company:     varchar(255)
+    content:     longvarchar
+    date:        date
+    is_published: { type: boolean, default: false }
+    created_at:
+    updated_at:
+    created_by:       { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull }
+    updated_by:       { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull }
+    _behaviors:
+      sfPropelActAsSignableBehavior:
+        columns:      { created: te_testimonials.CREATED_BY, updated: te_testimonials.UPDATED_BY }

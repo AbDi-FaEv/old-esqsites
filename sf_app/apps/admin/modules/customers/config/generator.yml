@@ -1,0 +1,54 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Customer
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             true
+    singular:              ~
+    plural:                ~
+    route_prefix:          customer
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        status:        { label: Status }
+        type_string:   { label: Type }
+        created_at:    { label: Registered }
+        bar_association_id: { label: Bar Association }
+        credit_bar_association: { help: whether to give the selected bar association credit for this sale }
+        skill_level:   { help: Affects simplicity of wysiwyg editor and auto-cleanup of HTML }
+      list:
+        display:        [last_name, first_name, _bar_association, email, created_at, last_login, _status, type_string]
+        object_actions:
+          show:
+            action: show
+        batch_actions:  []
+        sort:           [created_at, desc]
+        actions:
+          _new:         { label: Create New Account }
+      filter:
+        class:     AdminCustomerFormFilter
+        display:   [keyword, group, bar_association_id, sales_person_id, coupon, created_at]
+      form:
+        class:     CustomerAdminForm
+        display:
+          Account:  [type, bar_association_id, credit_bar_association, sales_person_id, username, password, status]
+          Contact Info: [first_name, middle_name, last_name, email, birthdate, phone, fax]
+          Miscellaneous: [skill_level]
+        actions:
+          #_delete: { label: Cancel Account }
+          _list:   { label: Back }
+          _save:   ~
+      edit:
+        title:     Edit Customer "%%username%%"
+      new:
+        title:     Create New Customer Account
+        display:
+          Account:  [type, username, password, status]
+          Contact Info: [first_name, middle_name, last_name, email, birthdate, phone, fax]
+          Website Info: [website_form]
+        actions:
+          _list:        { label: Back }
+          _save:        { label: Create Account }

@@ -1,0 +1,99 @@
+<!-- 8.1 twig -->
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/8.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#CEDCEB" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="800" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="10" colspan="4"></td>
+    <td width="8" rowspan="10" background="templates/8.1/images/rightFade_transparency.png" bgcolor="#CEDCEB"></td>
+  </tr>
+  <tr>
+    <td width="19">&nbsp;</td>
+    <td width="586"><span class="titleText">{{website.firmName}}</span></td>
+    <td width="174">
+      <div align="right"><span class="t01">
+        Phone: {{website.phone|format_phone}}<br />
+        Fax: {{website.fax|format_phone}}<br />
+        {{website.email}}</span></div>
+    </td>
+    <td width="10"></td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+    <td height="10" colspan="2" valign="top"></td>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td height="1"></td>
+    <td height="1" colspan="2" bgcolor="#35577B"></td>
+    <td height="1"></td>
+  </tr>
+  <tr>
+    <td height="10">&nbsp;</td>
+    <td colspan="2"> <table width="" border="0" cellpadding="8" cellspacing="0">
+      {% for loop_page in website.mainMenu %}
+      {# This is the highlighted menu tab #}
+      {% if loop_page.url == page.url %}
+		<td class="menuTdOn" background="" align="center" valign="bottom" onClick="location.href='{{loop_page.url}}'">
+          <strong><a onMouseOver="className='menuText'" onMouseOut="className='menuTextOn'" class="menuTextOn" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>		</td>
+      {% else %}
+      {# These are the regular menu tabs #}
+		<td class="menuTd" onMouseOver="link_{{loop_page.url}}.className='menuTextOn'" onMouseOut="link_{{loop_page.url}}.className='menuText'" align="center" valign="bottom" onClick="location.href='{{loop_page.url}}'">
+		<strong><a id="link_{{loop_page.url}}" onMouseOver="className='menuTextOn'" onMouseOut="className='menuText'" class="menuText" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>		</td>
+      {% endif %}
+      {% endfor %}
+	</table>    </td>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td height="20">&nbsp;</td>
+    <td colspan="2">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="20">&nbsp;</td>
+    <td colspan="2"><span class="innertext2b">
+        {{page.body}}
+      </span></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="20">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="1"></td>
+    <td height="1" colspan="2" bgcolor="#35577B"></td>
+    <td height="1"></td>
+  </tr>
+  <tr>
+    <td height="35">&nbsp;</td>
+    <td class="t01">{{website.firmName}}</td>
+    <td align="right" class="t01"><?
+      {% for loop_page in website.footerMenu %}
+        <a href="{{loop_page.url}}" class="t01">{{loop_page.linkName}}</a>
+        {% if not loop.last %}
+          <font color="white"> &nbsp;&nbsp;|&nbsp;&nbsp; </font>
+        {% endif %}
+      {% endfor %}
+	</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="9" colspan="3" background="templates/8.1/images/bottomFade_transparency.png" bgcolor="#CEDCEB"></td>
+    <td height="9" background="templates/8.1/images/bottomFade_transparency.png" bgcolor="#CEDCEB"></td>
+    <td width="8" height="9" align="left" valign="top" bgcolor="#CEDCEB"><img src="templates/8.1/images/bottomRightCornerFade_trans.png"></td>
+  </tr>
+</table>
+</body>
+</html>

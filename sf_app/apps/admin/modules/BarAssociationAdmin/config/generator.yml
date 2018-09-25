@@ -1,0 +1,52 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           BarAssociation
+    theme:                 admin15
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          bar_association_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        affinity_expiration_date: { label: Affinity Expiration, help: leave empty if agreement is ongoing }
+        affinity_start_date:      { label: Affinity Start }
+        slug:             { label: URL Title, help: (optional) leave empty to auto-generate from name }
+        abbreviation:     { label: Username }
+        contact_info:     { label: Contact Info, help: used internally }
+        #num_customers:    { is_sortable: true }
+      list:
+        fields:
+          affinity_expiration_date: { date_format: d }
+        title:             Bar Associations
+        display:           [=name, abbreviation, _num_customers, affinity_expiration_date, last_login]
+        max_per_page:      50
+        batch_actions:     []
+        object_actions:
+          _edit: ~
+        sort:              [name, asc]
+        #query_methods:     [withNumCustomers]
+        actions:
+          _new: ~
+          export: { action: export, label: Export to Excel }
+      filter:
+        display:           [name, abbreviation]
+      form:
+        class:             BarAssociationAdminForm
+        display:
+          NONE:           [name, slug, affinity_start_date, affinity_expiration_date]
+          Login Info:     [abbreviation, password]
+          Contact Info:   [primary_contact_email, contact_info, notes]
+      edit:
+        title:             Edit "%%name%%"
+        actions:
+          _delete: ~
+          _list:   ~
+          _save:   ~
+          editProfile:    { label: Edit Profile, action: editProfile }
+      new:
+        title:             Add New Bar Association

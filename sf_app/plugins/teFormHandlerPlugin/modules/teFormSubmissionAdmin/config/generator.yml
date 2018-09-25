@@ -1,0 +1,32 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teFormSubmission
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              teFormSubmission
+    plural:                teFormSubmissions
+    route_prefix:          te_form_submission_admin
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:
+          label:           Received On
+      list:
+        title:             Form Submissions
+        display:           [is_viewed, form_type, created_at]
+        sort:              [created_at, desc]
+        actions:          
+          export:         { action: export, label: Export All }
+        object_actions:
+          view:           { action: show, label: View }
+          _delete: ~
+      filter:
+        display:           [form_type, is_viewed, created_at]
+      form:    ~
+      edit:    ~
+      new:     ~

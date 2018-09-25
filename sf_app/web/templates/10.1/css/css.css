@@ -1,0 +1,17 @@
+.texto {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #FFFFFF}
+
+.text02 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #836706}
+
+.detail {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #D8D9B9}
+
+.error_text {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color:#FF0000;}
+.white_text {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color:#FFFFFF;}
+
+A {TEXT-DECORATION: none; color: #FFFFFF}
+A:hover {TEXT-DECORATION: none; color: #0099FF}
+
+A.bottom {TEXT-DECORATION: none; color: #D8D9B9}
+A.bottom:hover {TEXT-DECORATION: none; color: #FFFFFF}
+
+A.menu {TEXT-DECORATION: none; color: #836706; font-size:11; }
+A.menu:hover {TEXT-DECORATION: none; color: #FFFFFF}

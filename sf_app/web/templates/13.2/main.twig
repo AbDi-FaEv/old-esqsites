@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+{% if(template.stylesheets) %}
+    {% for stylesheet in template.stylesheets %}
+	<link rel="stylesheet" type="text/css" media="screen" href="{{ stylesheet }}" />
+    {% endfor %}
+  {% endif %}
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+	<nav class="navbar navbar-custom" role="navigation"> 
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="container">
+		<div class="container navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		    <ul class="nav navbar-nav">
+	{% for loop_page in website.mainMenu %}
+	{# This is the highlighted menu tab #}
+	{% if loop_page.url == page.url %}
+			<li class="active"><a href="{{loop_page.url}}">{{loop_page.linkName}}</a></li>
+	{% else %}
+			<li><a href="{{loop_page.url}}">{{loop_page.linkName}}</a></li>
+	{% endif %}
+	{% endfor %}
+		    </ul>
+		</div>
+	    </div>
+	    <!-- /.navbar-collapse --> 
+	</nav>
+	<div id="header" class="jumbotron">
+	    <div class="container">
+		<div class="col-md-8">
+		    <h1>{{website.firmName|break}}</h1>
+		    {% if website.slogan %}
+		    <p>{{website.slogan}}</p>
+		    {% endif %}
+		</div>
+		<div id="well-header" class="col-md-4 well">{{website.address}}<br />
+      {{website.city}}, {{website.state}} {{website.zip}}<br />
+		    <strong>Phone:</strong> {{website.phone|format_phone}}<br />
+		    <strong>Fax:</strong> {{website.fax|format_phone}}<br />
+		    <strong>Email:</strong> <a href="mailto:{{website.email}}">{{website.email}}</a></div>
+	    </div>
+	</div>
+	<div class="alert date">
+	    <div class="container">
+		<p align="right">{{none|date('l, F j, Y')}}</p>
+	    </div>
+	</div>
+	<div class="container">
+	    <div id="main" class="jumbotron">
+		<div class="row">
+		    <div class="col-md-6">
+			{% if website.image.text %}
+			<h3>{{website.image.title}}</h3>
+			<p>{{website.image.text}}</p>
+			<a href="{{website.image.url}}" class="btn btn-case">{{website.image.linkText}}</a>
+			{% else %}
+			<h3></h3>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			{% endif %}
+		    </div>
+		</div>
+	    </div>
+	</div>
+	<div class="row hidden-sm hidden-xs"> &nbsp; </div>
+	<div class="container">
+	    <div class="row">
+		<div class="col-md-12">
+		    {{page.body}}
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>
+</div>
+<div class="row hidden-sm hidden-xs"> &nbsp; </div>
+{% if website.socialMedia.avvo %}
+<div class="container">
+    <div class="well">
+	<div class="row">
+	    {% if website.socialMedia.avvoText %}
+	    <div class="col-md-10">
+		{{website.socialMedia.avvoText}}
+	    </div>
+	    {% endif %}
+	    <div class="col-md-1">
+		<a href="{{website.socialMedia.avvo}}"><img src="templates/base/images/avvo_badge.jpg" ></a>
+	    </div>
+	</div>
+    </div>
+</div>
+{% endif %}
+
+
+</body>
+<footer>
+    <div class="date">
+	<div class="container">
+	    <div class="col-md-2">
+		{% for loop_page in website.footerMenu %}
+		<a href="{{loop_page.url}}" >{{loop_page.linkName}}</a>
+              {% if not loop.last %}
+		<font color="white"> &nbsp;&nbsp;|&nbsp;&nbsp; </font>
+              {% endif %}
+            {% endfor %}
+	    </div>
+	    <div style="text-align: right" class="col-md-5 col-md-push-5">Legal Web Design Made Easy - &copy; {{none|date('Y')}} <a href="http://esqsites123.com">ESQSites123.com</a></div></div>
+
+    </div>
+</div>
+{% if(template.javascripts) %}
+    {% for script in template.javascripts %}
+<script type="text/javascript" src="{{ script }}"></script>
+    {% endfor %}
+  {% endif %}
+</footer>
+</html>

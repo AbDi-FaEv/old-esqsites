@@ -1,0 +1,37 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Page
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          page
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:
+        # display:
+        #  Title:  [title]
+        #  Navigation: [link_name, url]
+        #  "SEO & Meta Settings": [meta_title, meta_content]
+      edit:
+        title:    Edit Page "%%title%%"
+        actions:
+          _delete:
+            confirm: |
+                      "Please note that by continuing all of the information
+                      on this page will be lost and will not be retrievable.
+                      Are you sure you want to proceed?"
+          _list: { label: Back }
+          _save: ~
+      new:
+        title:    Create New Page
+        actions:
+          _list:  { label: Back }
+          _save:  { label: Create Page }

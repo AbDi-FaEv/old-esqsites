@@ -1,0 +1,1 @@
+<?php echo $template_category -> countWebsiteTemplates(); ?>

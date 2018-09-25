@@ -1,0 +1,41 @@
+propel:
+  _attributes:       { package: plugins.teBlogPlugin.lib.model }
+  
+  te_blog_post:
+    _attributes:     { phpName: teBlogPost }
+    author_id:       { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade, fkPhpName: Author  }
+    title:           { type: varchar(255), required: true, primaryString: true }
+    extract:         longvarchar
+    content:         longvarchar
+    is_published:    { type: boolean, default: false }
+    allow_comments:  { type: boolean, default: true }
+    published_at:    { type: timestamp, required: true }
+    created_by:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: Creator }
+    updated_by:      { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: Updater }
+    _uniques:
+      slug_published_at:  [slug, published_at]
+    _propel_behaviors:
+      timestampable: {}
+      sluggable:     { permanent: true }
+    _behaviors:
+      sfPropelActAsCommentableBehavior: {}
+      sfPropelActAsTaggableBehavior: {}
+      sfPropelActAsSignableBehavior:
+        columns:      { created: te_blog_post.CREATED_BY, updated: te_blog_post.UPDATED_BY }
+  
+  te_blog_post_category:
+    _attributes:     { phpName: teBlogPostCategory }
+    name:            { type: varchar(255), required: true, primaryString: true }
+    _propel_behaviors:
+      auto_add_id:   {}
+      timestampable: {}
+      sluggable:     { permanent: true }
+  
+  te_blog_posts_to_categories:
+    _attributes:     { phpName: teBlogPostToCategoryLink, isCrossRef: true }
+    post_id:         { type: integer, foreignTable: te_blog_post, foreignReference: id, onDelete: cascade, primaryKey: true, fkPhpName: Post }
+    category_id:     { type: integer, foreignTable: te_blog_post_category, foreignReference: id, onDelete: cascade, primaryKey: true, fkPhpName: Category }
+    _propel_behaviors:
+      symfony:
+        form:   false
+        filter: false

@@ -1,0 +1,8 @@
+all:
+  layout: layout_wrapped
+
+editSuccess:
+  layout: layout
+
+newSuccess:
+  layout: layout

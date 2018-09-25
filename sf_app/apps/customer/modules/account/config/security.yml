@@ -1,0 +1,5 @@
+editBilling:
+  require_ssl: true
+
+edit:
+  require_ssl: true

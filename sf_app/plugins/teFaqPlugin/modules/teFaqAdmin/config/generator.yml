@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           teFaq
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          te_faq_admin
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        actions:
+          _new: ~
+          #order: { label: Order Questions, sf_method: post }
+        title: Frequently Asked Questions
+        display:          [=question]
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Edit FAQ
+      new:
+        title: New FAQ

@@ -1,0 +1,165 @@
+<!-- 19.1 twig -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/19.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="902" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="140"><table width="902" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="46" background="templates/19.1/images/head.jpg"><img src="templates/19.1/images/head_left.jpg" width="10" height="146" /></td>
+        <td width="655" background="templates/19.1/images/head.jpg" class="firmName"><p>{{website.firmName}}</p></td>
+        <td width="190" background="templates/19.1/images/head.jpg">
+          <table width="90%" border="0" cellspacing="0" cellpadding="0">
+          {% if website.phone %}
+          <tr>
+            <td height="25"><div align="right"><span class="arial_18"><nobr>Phone: {{website.phone|format_phone}}</nobr></span></div></td>
+          </tr>
+          {% endif %}
+          {% if website.fax %}
+          <tr>
+            <td height="25"><div align="right"><span class="arial_18">Fax: {{website.fax|format_phone}}</span></div></td>
+          </tr>
+          {% endif %}
+          <tr>
+            <td height="25"><div align="right"><a href="mailto:{{website.email}}" class="arial_14_li">{{website.email}}</a></div></td>
+          </tr>
+          <tr></tr>
+        </table></td>
+        <td width="11" background="templates/19.1/images/head.jpg"><div align="right"><img src="templates/19.1/images/head_rigth.jpg" width="10" height="146" /></div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="902" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="208" valign="top"><table width="195" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><table width="195" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="76" background="templates/19.1/images/contact01.jpg"><table width="170" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="arial_11_color">
+                      {{website.address}}
+                      <br />{{website.city}}, {{website.state}} {{website.zip}}<br />
+                      <span class="arial_18">{{website.phone|format_phone}}</span>
+                    </td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="34" background="templates/19.1/images/contact02.jpg"><a href="mailto:{{website.email}}" class="arial_12_li">or Click here</a></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="195" border="0" cellpadding="0" cellspacing="0">
+
+{% for loop_page in website.mainMenu %}
+<tr>
+  <td height="31" background="templates/19.1/images/menu_left_over.jpg" class="menu">
+    <a href="{{loop_page.url}}" class="menu_nav">{{loop_page.linkName}}</a>
+  </td>
+</tr>
+{% endfor %}
+            <tr>
+              <td>
+                <div id=badge_container" style="margin-top:4px;">
+                  {% if website.socialMedia.avvo  %}
+                    <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo">
+                      <img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" />
+                    </a>
+                  {% endif %}
+                </div>
+              </td>
+            </tr>
+            </table></td>
+          </tr>
+          <tr></tr>
+        </table></td>
+        <td width="694" valign="top"><table width="694" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="110" background="templates/19.1/images/img_seccion.jpg"><table width="350" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="90" class="slogan">ARE YOU IN NEED OF <br />
+                  LEGAL ASSISTANCE?<span class="txt_images/19.1"><br />
+                  </span></td>
+              </tr>
+              <tr></tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="694" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40" valign="top" class="txt_title">{{page.title}}</td>
+              </tr>
+              <tr>
+                <td valign="top" class="content"><table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td height="30">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><p class="txt">
+		{{page.body}}
+			</p>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table></td>
+                </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="30">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><table width="902" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="51" background="templates/19.1/images/footer.jpg" class="footer"><div align="center">
+          <p><strong>
+{% for loop_page in website.mainMenu %}
+  <a href="{{loop_page.url}}" class="footer_li">{{loop_page.linkName}}</a> |
+{% endfor %}
+
+{% for loop_page in website.footerMenu %}
+  <a href="{{loop_page.url}}" class="footer_li">{{loop_page.linkName}}</a> |
+{% endfor %}
+</strong></p>
+        </div></td>
+      </tr>
+      <tr>
+        <td height="65"><div align="center" class="footer_color">{{website.address}}, {{website.city}} {{website.state}}<br />
+          Copyright © 2008. All world rights reserved.  Unauthorized duplication is unlawful.<br />
+          Legal web design made easy - EsqSites123.com</div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

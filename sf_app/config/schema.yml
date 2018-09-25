@@ -1,0 +1,354 @@
+propel:
+  _propel_behaviors:
+    auto_add_pk:    {}
+
+  esq_customers:
+    _attributes:   { phpName: Customer }
+    id:           { type: varchar(32), primaryKey: true }
+    bar_association_id: { type: integer, foreignTable: esq_bar_associations, foreignReference: id, onDelete: setNull }
+    credit_bar_association: { type: boolean, default: false }
+    sales_person_id: { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: setNull, fkPhpName: SalesPerson }
+    mb_client_id: { type: integer }
+    icontact_id:  { type: varchar(255) }
+    referral_code: { type: varchar(255) }
+    referred_by:   { type: varchar(32), foreignTable: esq_customers, foreignReference: id, onDelete: setNull, fkPhpName: Referrer }
+    type:         { type: integer, required: true }
+    username:     { type: varchar(255), required: true }
+    password:     { type: varchar(255), required: true }
+    email:        { type: varchar(255), required: true }
+    first_name:   { type: varchar(255), required: true }
+    middle_name:  varchar(255)
+    last_name:    { type: varchar(255), required: true }
+    birthdate:    varchar(255)
+    phone:        varchar(255)
+    fax:          varchar(255)
+    status:       { type: integer, required: true }
+    last_login:   timestamp
+    skill_level:  { type: integer, default: 0 }
+    _uniques:
+      mb_client_id: [mb_client_id]
+      referral_code: [referral_code]
+    _propel_behaviors:
+      timestampable: {}
+    _behaviors:
+      sfPropelActAsCommentableBehavior: []
+  
+  esq_hosts:
+    _attributes:   { phpName: Host }
+    id:            { type: varchar(255), unique: true, primaryKey: true }
+    internal_ip:   varchar(255)
+    external_ip:   { type: varchar(255), required: true }
+    port:          integer
+    name:          { type: varchar(255), required: true }
+    global_document_root: { type: varchar(255), required: true }
+    save_max:      { type: integer, required: true }
+    type:          integer
+    status:        integer
+    _propel_behaviors:
+      timestampable:  {}
+    _uniques:
+      name:        [name]
+      external_ip: [external_ip]
+
+  esq_websites:
+    _attributes:  { phpName: Website }
+    id:           { type: varchar(255), unique: true, primaryKey: true }
+    cg_id:        { type: varchar(255) }
+    cim_customer_profile_id: { type: varchar(255) }
+    cim_payment_profile_id: { type: varchar(255) }
+    customer_id:  { type: varchar(255), foreignTable: esq_customers, foreignReference: id, required: true, onDelete: cascade }
+    type:         integer
+    rank:         integer
+    firm_name:    { type: varchar(255), primaryString: true, required: true }
+    firm_type:    varchar(255)
+    website_name: { type: varchar(255) }
+    primary_domain_id: { type: varchar(255), foreignTable: esq_domain_names, foreignReference: id, onDelete: setNull, fkPhpName: PrimaryDomain, fkSkipSql: true }
+    email:        varchar(255)
+    address:      varchar(255)
+    city:         varchar(255)
+    state:        varchar(255)
+    zip:          varchar(255)
+    phone:        varchar(255)
+    fax:          varchar(255)
+    template_id:  { type: varchar(255), foreignTable: esq_templates, foreignReference: id, onDelete: setNull }
+    website_attribute_id: { type: varchar(255), foreignTable: esq_website_attributes, foreignReference: id, onDelete: setNull }
+    status:       integer
+    path:         varchar(255)
+    host_id:      { type: varchar(255), foreignTable: esq_hosts, foreignReference: id, onDelete: setNull, required: true }
+    analytics_code: varchar(255)
+    payment_account_id:   varchar(255)
+    meta_description: varchar(255)
+    meta_keywords:  varchar(255)
+    social_media:   longvarchar
+    last_payment_update: timestamp
+    last_billing_date: date
+    cancelled_at:   timestamp
+    _propel_behaviors:
+      sortable:      { rank_column: rank, use_scope: true, scope_column: customer_id }
+      timestampable: {}
+    _uniques:
+      customer_name: [customer_id, firm_name]
+      host_path:     [host_id, path]
+
+  esq_domain_names:
+    _attributes:  { phpName: Domain }
+    id:           { type: varchar(255), unique: true, primaryKey: true }
+    website_id:   { type: varchar(255), foreignTable: esq_websites, foreignReference: id, required: true, onDelete: cascade, fkPhpName: Website, fkRefPhpName: Domain }
+    name:         { type: varchar(255), required: true, primaryString: true }
+    type:         varchar(255)
+    registration_type: varchar(255)
+    is_auto_renew: { type: boolean, default: true }
+    status:       integer
+    expiration_date: date
+    last_renewal_date: date
+    _propel_behaviors:
+      timestampable: {}
+
+  esq_domain_checks:
+    _attributes:  { phpName: DomainCheck }
+    id:
+    domain_id:    { type: varchar(32), foreignTable: esq_domain_names, foreignReference: id, onDelete: cascade }
+    status_code:  integer
+    host:         varchar(255)
+    created_at:
+
+  esq_website_attributes:
+    _attributes:  { phpName: WebsiteAttribute }
+    id:           { type: varchar(255), unique: true, primaryKey: true }
+    cg_code:      { type: varchar(255), required: true }
+    rank:         integer
+    description:  varchar(255)
+    max_main_menu_pages: integer
+    max_emails:          integer
+    price:               float
+    setup_price:         float
+    status:        integer
+    includes_payment_page: { type: boolean, default: false }
+    _uniques:
+      code:        [cg_code]
+    _propel_behavior:
+      timestampable: {}
+      sortable:      { rank_column: rank }
+
+  esq_coupons_to_hosting_plans:
+    _attributes:   { phpName: CouponToHostingPlanLink, isCrossRef: true }
+    coupon_id:     { type: varchar(255), foreignTable: esq_coupons, foreignReference: id, onDelete: cascade, primaryKey: true }
+    hosting_plan_id: { type: varchar(255), foreignTable: esq_website_attributes, foreignReference: id, onDelete: cascade, primaryKey: true }
+    #discount
+    _propel_behaviors:
+      symfony:
+        form: false
+        filter: false
+    
+  esq_templates:
+    _attributes:   { phpName: WebsiteTemplate }
+    id:            { type: varchar(255), unique: true, primaryKey: true }
+    type:          { type: varchar(255), required: true }
+    reference:     { type: varchar(255), required: true }
+    category_id:   { type: varchar(255), foreignTable: esq_template_categories, foreignReference: id, onDelete: setNull }
+    title:         { type: varchar(255) }
+    description:   longvarchar
+    customer_id:   { type: varchar(255), foreignTable: esq_customers, foreignReference: id, onDelete: setNull }
+    status:        integer
+    _uniques:
+      reference:   [reference]
+    _propel_behaviors:
+      timestampable:  {}
+      sortable:       { rank_column: rank }
+
+  esq_template_categories:
+    _attributes:   { phpName: TemplateCategory }
+    id:            { type: varchar(255), unique: true, primaryKey: true }
+    name:          { type: varchar(255), required: true, unique: true }
+    description:   longvarchar
+    _propel_behaviors:
+      timestampable:  {}
+
+  esq_coupons:
+    _attributes:   { phpName: Coupon }
+    id:            { type: varchar(255), primaryKey: true }
+    code:          { type: varchar(255), required: true }
+    status:        integer
+    description:   { type: longvarchar, required: true }
+    setup:         float
+    current_usage: integer
+    max_usage:     integer
+    bar_association_id: { type: integer, foreignTable: esq_bar_associations, foreignReference: id, onDelete: setNull }
+    activation_date: timestamp
+    expiration_date: timestamp
+    _uniques:
+      code:        [code]
+    _propel_behaviors:
+      timestampable:  {}
+  
+  esq_coupon_usage:
+    _attributes:   { phpName: CouponUsage, isCrossRef: true }
+    website_id:    { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade }
+    coupon_code:   { type: varchar(255), foreignReference: code, foreignTable: esq_coupons }
+    coupon_description: { type: varchar(255) }
+    coupon_raw_dump: { type: longvarchar }
+    created_at:
+    _propel_behaviors:
+      symfony:
+        form: false
+        filter: false
+  
+  esq_email_accounts:
+    _attributes:   { phpName: EmailAccount }
+    id:            { type: varchar(255), primaryKey: true }
+    website_id:    { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade }
+    domain_name_id: { type: varchar(255), required: true, foreignTable: esq_domain_names, foreignReference: id, onDelete: cascade }
+    local_address:  { type: varchar(255), required: true }
+    forwarding_address: { type: varchar(255), required: true }
+    status:         integer
+    _propel_behaviors:
+      timestampable:  {}
+    _uniques:
+      local_domain: [domain_name_id, local_address]
+
+  esq_member_feedbacks:
+    _attributes:   { phpName: MemberFeedback }
+    id:            { type: varchar(255), primaryKey: true }
+    customer_id:   { type: varchar(255), foreignTable: esq_customers, foreignReference: id, onDelete: cascade }
+    reply_email:   varchar(255)
+    subject:       varchar(255)
+    message:       longvarchar
+    _propel_behaviors:
+      timestampable:  {}
+
+  esq_page_content_display_types:
+    _attributes:   { phpName: PageContentDisplayType }
+    id:            { type: varchar(255), primaryKey: true }
+    rank:          integer
+    name:          { type: varchar(255), required: true }
+    notes:         varchar(255)
+    description:   longvarchar
+
+  esq_template_types:
+    _attributes:    { phpName: TemplateType }
+    id:             { type: varchar(255), primaryKey: true }
+    rank:           integer
+    name:           { type: varchar(255), required: true }
+    description:    longvarchar
+    _uniques:
+      name:         [name]
+
+  esq_pages:
+    _attributes:   { phpName: Page }
+    id:            { type: varchar(255), primaryKey: true }
+    website_id:    { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade }
+    template_type_id: { type: varchar(255), foreignTable: esq_template_types, foreignReference: id, onDelete: setNull }
+    menu_type:     integer
+    page_content_display_type_id: { type: varchar(255), foreignTable: esq_page_content_display_types, foreignReference: id, onDelete: setNull, required: true }
+    rank:          integer
+    title:         { type: varchar(255), primaryString: true, required: true }
+    meta_title:    varchar(255)
+    meta_description: varchar(255)
+    meta_keywords: varchar(255)
+    meta_content:  varchar(255)
+    link_name:     { type: varchar(255) }
+    url:           { type: varchar(255) }
+    status:        integer
+    _propel_behaviors:
+      sluggable:       { permanent: true, slug_column: url, slug_pattern: "{Title}" }
+      timestampable:   {}
+    _uniques:
+      url:         [url, website_id]
+      link:        [link_name, website_id]
+      title:       [title, website_id]
+  
+  esq_page_groups:
+    _attributes:   { phpName: PageGroup }
+    id:            { type: varchar(255), primaryKey: true }
+    page_id:       { type: varchar(255), foreignTable: esq_pages, foreignReference: id, onDelete: cascade }
+    rank:          integer
+    data:          longvarchar
+    _propel_behaviors:
+      sortable:    { rank_column: rank, use_scope: true, scope_column: page_id }
+      timestampable:   {}
+    
+  esq_page_entries:
+    _attributes:   { phpName: PageEntry }
+    id:            { type: varchar(255), primaryKey: true }
+    group_id:      { type: varchar(255), foreignTable: esq_page_groups, foreignReference: id, onDelete: cascade }
+    rank:          integer
+    data:          longvarchar
+    _propel_behaviors:
+      sortable:    { rank_column: rank, use_scope: true, scope_column: group_id }
+      timestampable:   {}
+  
+  esq_client_messages:
+    _attributes:   { phpName: ClientMessage }
+    id:            { type: varchar(255), primaryKey: true }
+    website_id:    { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade }
+    domain:         varchar(255)
+    name:           { type: varchar(255), required: true }
+    email:          { type: varchar(255), required: true }
+    phone:          varchar(255)
+    subject:        varchar(255)
+    message:        longvarchar
+    submitted_by_ip: { type: varchar(255) }
+    submitted_by_user_agent: { type: longvarchar }
+    is_spam:        { type: boolean, default: false }
+    is_viewed:      { type: boolean, default: false }
+    _propel_behaviors:
+      soft_delete:   {}
+      timestampable: {}
+
+  esq_bar_associations:
+    _attributes:    { phpName: BarAssociation }
+    name:           { type: varchar(255), required: true, primaryString: true }
+    abbreviation:   varchar(255)
+    primary_contact_email: varchar(255)
+    contact_info:   longvarchar
+    notes:          longvarchar
+    password:       varchar(255)
+    last_login:     timestamp
+    affinity_expiration_date: date
+    affinity_start_date: date
+    _uniques:
+      name:         [name]
+      code:         [abbreviation]
+    _propel_behaviors:
+      timestampable:  {}
+      auto_add_id:    {}
+      sluggable:      { permanent: true }
+
+  esq_bar_association_promo_pages:
+    _attributes:    { phpName: BarAssociationPromoPage }
+    id:             { type: integer, primaryKey: true, foreignTable: esq_bar_associations, foreignReference: id }
+    title:          { type: varchar(255), required: true }
+    content:        { type: longvarchar }
+    _propel_behaviors:
+      timestampable:  {}
+      symfony:
+        filter: false
+
+  esq_resource_categories:
+    _attributes:    { phpName: ResourceCategory }
+    id:             { type: varchar(255), primaryKey: true }
+    name:           { type: varchar(255), primaryString: true, required: true }
+    url:            varchar(255)
+
+  esq_resources:
+    _attributes:    { phpName: Resource }
+    id:             { type: varchar(255), primaryKey: true }
+    category_id:    { type: varchar(255), foreignTable: esq_resource_categories, foreignReference: id, onDelete: setNull }
+    company_name:   { type: varchar(255), required: true }
+    image_url:      varchar(255)
+    url:            varchar(255)
+    url_title:      varchar(255)
+    email:          varchar(255)
+    description:    longvarchar
+    created_at:
+
+  esq_template_customizations:
+    _attributes:    { phpName: TemplateCustomization }
+    website_id:     { type: varchar(255), foreignTable: esq_websites, foreignReference: id, onDelete: cascade, required: true }
+    template_id:    { type: varchar(255), foreignTable: esq_templates, foreignReference: id, onDelete: cascade, required: false }
+    type:           { type: varchar(255), required: true }
+    content:        { type: longvarchar(255) }
+    reference:      { type: varchar(255) }
+    related_file:   { type: varchar(255) }
+    _propel_behaviors:
+      timestampable: {}

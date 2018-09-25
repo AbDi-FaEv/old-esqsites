@@ -1,0 +1,145 @@
+<!-- 3.1 twig -->
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/3.1/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#97A8AF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="723" height="603" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="border">
+  <tr>
+    <td height="106" colspan="2"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="192" height="106" background="templates/3.1/images/eagle.jpg" colspan="3" style="background-repeat:no-repeat">&nbsp;</td>
+        <td width="187" class="leftlink">
+          <div class="firmName">{{website.firmName|break}}</div>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+<td colspan="3" background="templates/3.1/images/menu_bg.jpg">
+
+	<table width="" border="0" cellpadding="8" cellspacing="0">
+    {% for loop_page in website.mainMenu %}
+      {# This is the highlighted menu tab #}
+      {% if loop_page.url == page.url %}
+        <td background="templates/3.1/images/menu_bg_rollover.jpg" align="center" valign="bottom" height="48">
+          <strong><a class="menutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+        </td>
+      {% else %}
+      {# These are the regular menu tabs #}
+        <td  align="center" valign="bottom" height="48">
+          <strong><a class="menutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+        </td>
+      {% endif %}
+    {% endfor %}
+	</table>
+  
+</td>
+</tr>
+  <tr>
+    <td width="272" height="411" valign="top"> <table width="272" height="411" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="14">&nbsp;</td>
+          <td width="244" height="75" valign="middle"><span class="slogan">{{page.title}}</span></td>
+          <td width="14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="14">&nbsp;</td>
+          <td height="189" valign="top" class="innertext2">
+            {{page.body}}
+          </td>
+          <td width="14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center" valign="middle">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="14" bgcolor="#A03E14">&nbsp;</td>
+          <td height="105" align="center" valign="middle" bgcolor="#A03E14"> </td>
+          <td width="14" bgcolor="#A03E14">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td width="451" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="2" align="right" valign="top"><img src="templates/3.1/images/main.jpg" width="100%" height="235"></td>
+        </tr>
+        <tr>
+          <td height="176" align="center" valign="top" bgcolor="#D3D3D3"> <table width="225" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="8" rowspan="2"><img src="templates/3.1/images/clear.gif" width="13" height="1"></td>
+                <td width="200" height="44">&nbsp;</td>
+                <td width="8" rowspan="2"><img src="templates/3.1/images/clear.gif" width="12" height="1"></td>
+              </tr>
+              <tr>
+                <td valign="top" class="lefttext">&nbsp;</td>
+              </tr>
+            </table></td>
+          <td align="center" valign="top" bgcolor="#FF952D">
+            <table width="225" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="8" rowspan="3"><img src="templates/3.1/images/clear.gif" width="13" height="1"></td>
+                <td width="200" height="44"><span class="style1"><font size="2" face="Arial, Helvetica, sans-serif">Contact us</font> </span></td>
+                <td width="8" rowspan="3"><img src="templates/3.1/images/clear.gif" width="12" height="1"></td>
+              </tr>
+              <tr>
+                <td valign="top" class="lefttext">&nbsp;</td>
+              </tr>
+              <tr>
+                <td valign="top" class="lefttext">
+                  <p>
+                    Phone: {{website.phone|format_phone}}<br />
+                    Fax: {{website.fax|format_phone}}<br />
+                    Email: <span class="leftlink">{{website.email}}</span>
+                  </p>
+                  <p>
+                    {{website.address}}<br />
+                    {{website.city}} {{website.state}} {{website.zip}}
+                  </p>
+                  {% if website.socialMedia.avvo  %}
+                    <div style="margin:5px 0px;">
+                      <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                    </div>
+                  {% endif %}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr align="right">
+    <td height="54" colspan="2" valign="middle" class="t01"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10" colspan="4"></td>
+      </tr>
+      <tr>
+        <td width="4%">&nbsp;</td>
+        <td width="53%" class="t01">{{website.firmName}}</td>
+        <td width="41%"><div align="right">
+          {% for loop_page in website.footerMenu %}
+            <a href="{{loop_page.url}}" class="innertext2">{{loop_page.linkName}}</a>
+            {% if not loop.last %}
+            <font color="grey"> &nbsp;|&nbsp; </font>
+            {% endif %}
+          {% endfor %}
+		</div>
+            </td>
+        <td width="2%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10"></td>
+        <td height="10" class="esq_link_text"><a href="http://www.esqsites123.com/">Legal Web Design</a> by EsqSites123.com</td>
+        <td height="10" colspan="2"></td>
+      </tr>
+    </table>
+    ï¿½</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!-- 3.2 twig -->
+<html>
+<head>
+  {% block title none|include_title %}
+  {{none|include_http_metas}}
+  {{none|include_metas}}
+  <link href="templates/3.2/css/css.css" rel="stylesheet" type="text/css">
+  <link href="templates/base/css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#97A8AF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="723" height="227" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="border">
+  <tr>
+    <td height="106" colspan="2" align="left"><table width="100%" height="106"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="14">&nbsp;</td>
+        <td width="350" class="background_image"><span class="firmName">{{website.firmName|break}}</span></td>
+        <td width="165" colspan="2" background="templates/3.2/images/eagle2.jpg">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+   <tr>
+<td colspan="3" background="templates/3.2/images/menu_bg.jpg">
+  <table width="" border="0" cellpadding="8" cellspacing="0">
+	<tr>
+    {% for loop_page in website.mainMenu %}
+    {# This is the highlighted menu tab #}
+	{% if loop_page.url == page.url %}
+      <td background="templates/3.2/images/menu_bg_rollover.jpg" align="center" valign="bottom" height="48">
+		<strong><a class="menutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+      </td>
+    {% else %}
+	{# These are the regular menu tabs #}
+      <td  align="center" valign="bottom" height="48">
+		<strong><a class="menutext" href="{{loop_page.url}}">{{loop_page.linkName}}</a></strong>
+      </td>
+    {% endif %}
+    {% endfor %}
+	</tr>
+  </table>
+</td>
+</tr>
+  <tr>
+    <td width="494" height="19" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="4%" height="38" valign="bottom">&nbsp;</td>
+          <td valign="bottom"><span class="slogan">{{page.title}}</span></td>
+        </tr>
+        <tr>
+          <td height="9" colspan="2"><img src="templates/3.2/images/clear.gif" width="1" height="9"></td>
+        </tr>
+        <tr>
+          <td valign="top" class="innertext2a"> <p>&nbsp;</p></td>
+          <td valign="top" class="innertext2a"><p>
+            {{page.body}}
+          </p>
+          </td>
+        </tr>
+        <tr>
+          <td height="30" valign="top" class="innertext2a">&nbsp;</td>
+          <td valign="top" class="innertext2a">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="left" valign="top" >&nbsp;</td>
+        </tr>
+      </table> </td>
+    <td width="227" height="19" align="right" valign="top"><table class="background_image_sub_page" width="213" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="19" height="20">&nbsp;</td>
+          <td width="170" height="20">&nbsp;</td>
+          <td width="28" height="20">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="102" colspan="3"><div align="right"><img src="templates/3.2/images/flag_malet.jpg"></div></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td align="center">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td height="35" align="right" class="lefttext">
+            <p><font color="#A13F14" size="2" face="Arial, Helvetica, sans-serif"><strong>Contact us<br />
+              </strong></font><br>
+              <span class="innertext2a">
+                Phone: {{website.phone|format_phone}}<br />
+                Fax: {{website.fax|format_phone}}<br />
+                Email: {{website.email}}
+              </span>
+            </p>
+            <p class="innertext2a">
+              {{website.address}}<br />
+              {{website.city}} {{website.state}} {{website.zip}}
+            </p>
+              {% if website.socialMedia.avvo  %}
+                <div style="margin:5px 0px;">
+                  <a href="{{website.socialMedia.avvo}}" id="avvo_badge" title="View my profile on Avvo"><img src="templates/base/images/avvo_badge.jpg" alt="View my profile on Avvo" title="View my profile on Avvo" /></a>
+                </div>
+              {% endif %}
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="54" colspan="2" align="right" class="t01"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="10" colspan="4"></td>
+        </tr>
+      <tr>
+        <td width="4%">&nbsp;</td>
+        <td width="57%" class="t01">{{website.firmName}}</td>
+        <td width="36%"><div align="right">
+          {% for loop_page in website.footerMenu %}
+            <a href="{{loop_page.url}}" class="innertext2">{{loop_page.linkName}}</a>
+            {% if not loop.last %}
+            <font color="grey"> &nbsp;|&nbsp; </font>
+            {% endif %}
+          {% endfor %}
+		</div></td>
+        <td width="3%"></td>
+      </tr>
+      <tr>
+        <td height="10"></td>
+        <td height="10"><a href="http://esqsites123.com" class="esq_link_text">Legal web design made easy - Esqsites123.com</a></td>
+        <td height="10" colspan="2"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
